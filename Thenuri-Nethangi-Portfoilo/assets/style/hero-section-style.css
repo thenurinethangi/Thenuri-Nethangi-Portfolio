@@ -593,7 +593,7 @@ body{
 
     width: 100vw;
     height: 150vh;
-    /*background-color: var(--main-color);*/
+    background-color: #9747FF;
     position: absolute;
     bottom: 0;
     left: 0; /* Ensure it's aligned to the left */
