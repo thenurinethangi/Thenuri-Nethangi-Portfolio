@@ -17,7 +17,7 @@
 }
 
 html{
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 
@@ -69,12 +69,12 @@ body{
     left: 0; /* Ensure it's aligned to the left */
     right: 0; /* Ensure it stretches full width */
     transform: translateY(0px);
-    /*view-timeline: --section-scroll block;*/
-    /*animation-timeline: --section-scroll;*/
-    /*animation-name: fadeIn;*/
-    /*animation-duration: 20s;*/
-    /*animation-fill-mode: both;*/
-    /*animation-range: entry 100% cover 100%;*/
+    view-timeline: --section-scroll block;
+    animation-timeline: --section-scroll;
+    animation-name: fadeIn;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-range: entry 100% cover 100%;
     z-index: 2;
 
 }
