@@ -653,13 +653,13 @@ body{
 
 @media all and (max-width: 850px) {
 
-    #hero-section{
+    /*#hero-section{*/
 
-        width: 100vw;
-        height: 120vh;
-        background-color: lightcoral;
+    /*    width: 100vw;*/
+    /*    height: 120vh;*/
+    /*    background-color: lightcoral;*/
 
-    }
+    /*}*/
 
     #hero-section-content-container{
 
@@ -707,13 +707,13 @@ body{
 
 @media all and (max-width: 670px) {
 
-    #hero-section{
+    /*#hero-section{*/
 
-        width: 100vw;
-        height: 120vh;
-        background-color: lightcoral;
+    /*    width: 100vw;*/
+    /*    height: 120vh;*/
+    /*    background-color: lightcoral;*/
 
-    }
+    /*}*/
 
     #hero-section-content-container{
 
