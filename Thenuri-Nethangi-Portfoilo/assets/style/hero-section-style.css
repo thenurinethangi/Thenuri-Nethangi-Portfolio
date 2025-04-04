@@ -19,6 +19,7 @@
 
 html,body{
     height: auto;
+    overflow-x: hidden;
 }
 
 
@@ -37,7 +38,7 @@ body{
 
 #hero-container{
 
-    width: 100%;
+    width: 100vw;
     height: 250vh;
     background-color: var(--white-color);
     position: relative;
@@ -50,7 +51,8 @@ body{
     height: 100vh;
     background-color: var(--main-color);
     position: absolute;
-    top: 0;
+    top: 65vh;
+    transform: translateY(0px);
     view-timeline: --section-scroll block;
     animation-timeline: --section-scroll;
     animation-name: fadeIn;
@@ -89,6 +91,7 @@ body{
     justify-content: space-between;
     align-items: center;
     transition: all var(--transition-medium);
+    display: none;
 }
 
 #page-header.scrolled {
@@ -137,7 +140,8 @@ body{
 
     width: 82%;
     height: 625px;
-    /*background-color: #9747FF;*/
+    background-color: #9747FF;
+    border: 3px solid crimson;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -219,7 +223,7 @@ body{
 
 #side-navigation{
 
-    /*background-color: crimson;*/
+    background-color: crimson;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -265,7 +269,7 @@ body{
 #main-content{
 
     width: 100%;
-    /*background-color: forestgreen;*/
+    background-color: forestgreen;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -289,6 +293,7 @@ body{
 
     font-size: 3.5rem;
     margin-bottom: -7px;
+    text-align: center;
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards 4.1s;
@@ -609,7 +614,102 @@ body{
 }
 
 
+@media all and (max-width: 1024px) {
+
+    #hero-section-content-container{
+
+        width: 87%;
+        height: 625px;
+    }
+
+    #main-content{
+
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 850px) {
+
+    #hero-section-content-container{
+
+        width: 90%;
+        height: 625px;
+    }
+
+    #main-content{
+
+        width: 100%;
+    }
+}
 
 
+@media all and (max-width: 670px) {
+
+    #hero-section-content-container{
+
+        width: 93%;
+        height: 625px;
+    }
+
+    #main-content{
+
+        width: 100%;
+    }
+
+    #main-content>p{
+
+        font-size: 14px;
+        opacity: 0;
+        /*margin-bottom: 18px;*/
+    }
+
+    #main-content>h1{
+
+        font-size: 3.2rem;
+        margin-left: 0.5em;
+        margin-bottom: -7px;
+
+    }
+
+    #main-content>h2{
+
+        font-size: 17px;
+        margin-bottom: 27px;
+    }
+}
 
 
+@media all and (max-width: 500px) {
+
+    #hero-section-content-container{
+
+        width: 95%;
+        height: 625px;
+    }
+
+    #main-content{
+
+        width: 100%;
+    }
+
+    #main-content>p{
+
+        font-size: 13px;
+        opacity: 0;
+        /*margin-bottom: 18px;*/
+    }
+
+    #main-content>h1{
+
+        font-size: 3.0rem;
+        margin-left: 0.5em;
+        margin-bottom: -7px;
+
+    }
+
+    #main-content>h2{
+
+        font-size: 15px;
+        margin-bottom: 27px;
+    }
+}
