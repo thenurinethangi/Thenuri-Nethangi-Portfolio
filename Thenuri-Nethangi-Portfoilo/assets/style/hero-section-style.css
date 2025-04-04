@@ -38,7 +38,7 @@ body{
 #hero-container{
 
     width: 100%;
-    height: 230vh;
+    height: 250vh;
     background-color: var(--white-color);
     position: relative;
 }
@@ -295,6 +295,13 @@ body{
     /*font-weight: 800;*/
 }
 
+
+#main-content>p:hover{
+
+    transform: skew(-10deg, 0deg);
+}
+
+
 #main-content>h2{
 
     font-size: 19px;
@@ -321,6 +328,7 @@ body{
 
 #hero-section-btn>button{
 
+    position: relative;
     background-color: #8643DC;
     width: 130px;
     height: 37px;
@@ -331,13 +339,74 @@ body{
     font-weight: lighter;
     font-size: 15px;
     margin-right: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(134, 67, 220, 0.3);
+    transition: all 0.3s ease;
 }
+
+
+#hero-section-btn>button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(134, 67, 220, 0.4);
+}
+
+
+#hero-section-btn>button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    transition: all 0.6s ease;
+}
+
+
+#hero-section-btn>button:hover::before {
+    left: 100%;
+}
+
+
+#hero-section-btn>button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(134, 67, 220, 0.4);
+    background-color: #7438c0;
+}
+
+
 
 #hero-section-btn>a{
 
+    position: relative;
     color: #ffffff;
     font-size: 17px;
     font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+#hero-section-btn>a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width var(--transition-medium);
+}
+
+#hero-section-btn>a:hover::after {
+    width: 100%;
 }
 
 
@@ -499,14 +568,14 @@ body{
 #about-section{
 
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     /*background-color: var(--main-color);*/
     position: absolute;
     bottom: 0;
     view-timeline: --section-scroll block;
     animation-timeline: --section-scroll;
     animation-name: down;
-    animation-duration: 3s;
+    animation-duration: 7s;
     animation-fill-mode: both;
     animation-range: entry 95% cover 50%;
 }
@@ -528,6 +597,7 @@ body{
     font-size: 2rem;
     font-weight: 600;
     margin: 2em;
+    color: brown;
 }
 
 
@@ -535,7 +605,7 @@ body{
 
     width: 100%;
     height: 100vh;
-    background-color: var(--main-color);
+    background-color: #9747FF;
 }
 
 
