@@ -57,24 +57,21 @@
         /* Hero section */
         #hero-container {
             width: 100%;
-            height: 250vh;
+            height: auto;
             background-color: var(--white-color);
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
-            overflow: visible;
+            overflow: hidden;
         }
 
         #hero-section {
             width: 100%;
             height: 100vh;
             background-color: var(--main-color);
-            position: sticky;
-            top: 0;
-            left: 0;
-            right: 0;
+            position: relative;
             z-index: 2;
         }
 
@@ -91,11 +88,11 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
             transition: all var(--transition-medium);
         }
 
         #page-header > img {
-            margin-left: 8em;
             animation-name: logo-animation;
             animation-duration: 3s;
             animation-timing-function: ease-in-out;
@@ -120,24 +117,18 @@
             transform: scale(1.1);
         }
 
-        #page-header > a {
-            margin-top: 2.3em;
-        }
-
         /* Hero section content */
         #hero-section-content-container {
-            width: 82%;
-            height: 625px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
+            width: 90%;
+            max-width: 1200px;
+            height: 100%;
+            position: relative;
+            margin: 0 auto;
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
+            padding-top: 80px;
         }
 
         #hero-section-bg {
@@ -148,7 +139,9 @@
             right: 0;
             margin: auto;
             width: 80%;
+            max-width: 1200px;
             opacity: 0.6;
+            object-fit: contain;
         }
 
         /* Glow effects */
@@ -156,35 +149,26 @@
             position: absolute;
             right: 0;
             top: 70px;
-            width: 500px;
+            width: 40%;
+            max-width: 500px;
             height: 400px;
             background: radial-gradient(#9747FF, transparent 70%);
             opacity: 0.1;
             clip-path: circle(50%);
-            animation-name: glow;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: both;
-            animation-direction: alternate;
+            animation: glow 10s infinite alternate ease-in-out;
         }
 
         #glow-circle-two {
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 500px;
+            width: 40%;
+            max-width: 500px;
             height: 400px;
             background: radial-gradient(#9747FF, transparent 70%);
             opacity: 0.1;
             clip-path: circle(50%);
-            animation-name: glow;
-            animation-delay: 10s;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: both;
-            animation-direction: alternate;
+            animation: glow 10s infinite alternate ease-in-out 5s;
         }
 
         @keyframes glow {
@@ -225,9 +209,7 @@
         }
 
         #side-navigation > nav > ul > li {
-            transition-duration: 1s;
-            transition-timing-function: ease-in-out;
-            transition-property: transform;
+            transition: transform 1s ease-in-out;
         }
 
         #side-navigation > nav > ul > li:hover {
@@ -237,55 +219,60 @@
         /* Main content */
         #main-content {
             width: 100%;
+            max-width: 800px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            gap: 2em;
-            padding-top: 5em;
+            text-align: center;
+            gap: 1.5em;
+            padding: 0 1rem;
         }
 
         #main-content > p {
             font-weight: 450;
-            font-size: 16px;
+            font-size: clamp(16px, 2vw, 18px);
             opacity: 0;
             transform: translateY(30px);
-            animation: slideUp 0.8s forwards 3.9s;
+            animation: slideUp 0.8s forwards 0.5s;
         }
 
         #main-content > h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             margin-bottom: -7px;
             text-align: center;
             opacity: 0;
             transform: translateY(30px);
-            animation: slideUp 0.8s forwards 4.1s;
+            animation: slideUp 0.8s forwards 0.7s;
         }
 
         #main-content > p:hover {
             transform: skew(-10deg, 0deg);
+            transition: transform 0.3s ease;
         }
 
         #main-content > h2 {
-            font-size: 19px;
+            font-size: clamp(16px, 2vw, 19px);
             color: #D0D0D0;
             font-weight: 300;
             margin-bottom: 27px;
             opacity: 0;
             transform: translateY(30px);
-            animation: slideUp 0.8s forwards 4.3s;
+            animation: slideUp 0.8s forwards 0.9s;
         }
 
         /* Button styling */
         #hero-section-btn {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 6em;
+            gap: 1em;
+            margin-bottom: 3em;
             opacity: 0;
             transform: translateY(30px);
-            animation: slideUp 0.8s forwards 4.5s;
+            animation: slideUp 0.8s forwards 1.1s;
+            flex-wrap: wrap;
         }
 
         #hero-section-btn > button {
@@ -299,7 +286,6 @@
             color: #ffffff;
             font-weight: lighter;
             font-size: 15px;
-            margin-right: 16px;
             cursor: pointer;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(134, 67, 220, 0.3);
@@ -341,10 +327,13 @@
         #hero-section-btn > a {
             position: relative;
             color: #ffffff;
-            font-size: 17px;
+            font-size: clamp(14px, 1.5vw, 17px);
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         #hero-section-btn > a::after {
@@ -362,9 +351,17 @@
             width: 100%;
         }
 
+        #hero-section-btn > a > img {
+            margin-left: 8px;
+        }
+
         /* Scroll icon */
         #scroll-icon {
             animation: bounce 2s infinite;
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         @keyframes bounce {
@@ -400,77 +397,63 @@
             font-family: "Anton SC", sans-serif;
             font-weight: 400;
             font-style: normal;
-            font-size: 8.5rem;
+            font-size: clamp(4rem, 10vw, 8.5rem);
             letter-spacing: 6px;
-            animation-name: landing-animation;
-            animation-timing-function: ease-in-out;
-            animation-duration: 1.2s;
-            animation-delay: 2.6s;
-            animation-fill-mode: both;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: landing-animation 1.2s forwards ease-in-out;
+            animation-delay: 1s;
         }
 
-        #landing > div:nth-child(2) {
-            position: absolute;
-            top: 60%;
-            left: 80%;
-            animation-name: landing-title-animation;
-            animation-timing-function: ease-in-out;
-            animation-duration: 0.4s;
-            animation-delay: 2.5s;
-            animation-fill-mode: both;
+        #landing h1 {
+            position: relative;
             z-index: 10;
-        }
-
-        #landing > div:first-child {
-            width: 210px;
-            height: 200px;
-            background-color: rgba(20, 17, 26);
-            position: absolute;
-            top: 32%;
-            left: 79%;
-            z-index: 20;
+            animation: landing-title-animation 0.4s forwards ease-in-out;
+            animation-delay: 0.8s;
         }
 
         @keyframes landing-animation {
             0% {
-                transform: translateY(0px);
+                transform: translateY(0);
+                opacity: 1;
             }
             100% {
-                transform: translateY(-1000px);
+                transform: translateY(-100vh);
+                opacity: 0;
+                visibility: hidden;
             }
         }
 
         @keyframes landing-title-animation {
             0% {
-                transform: translateY(0px);
+                transform: translateY(0);
             }
             100% {
-                transform: translateY(-170px);
+                transform: translateY(-50px);
             }
         }
 
         /* Skills line */
+        #skills-line-container {
+            width: 100%;
+            height: 60px;
+            position: relative;
+            overflow: hidden;
+            background-color: #EEEEEE;
+        }
+
         #line {
             background-color: #EEEEEE;
             color: var(--main-color);
-            min-width: 100%;
             white-space: nowrap;
-            width: 100%;
+            width: auto;
             height: 60px;
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
             align-items: center;
-            padding-inline: 1em;
             position: absolute;
-            top: 100vh;
-            z-index: 1;
-            overflow: hidden;
-            animation-name: round;
-            animation-duration: 15s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            animation-fill-mode: both;
+            animation: scrollText 20s linear infinite;
         }
 
         #line > div {
@@ -479,6 +462,7 @@
             justify-content: flex-start;
             align-items: center;
             gap: 1.2em;
+            padding: 0 2em;
         }
 
         #line > div > p {
@@ -486,29 +470,27 @@
             font-weight: 500;
         }
 
-        @keyframes round {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-100vw);
-            }
+        @keyframes scrollText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         /* About section */
         #about-section {
             width: 100%;
-            min-height: 150vh;
+            min-height: 50vh;
             background-color: var(--main-color);
             position: relative;
             z-index: 0;
-            padding-top: 150px;
+            padding: 5rem 1rem;
             opacity: 0;
-            transition: opacity 1s ease;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
         }
 
         #about-section.visible {
             opacity: 1;
+            transform: translateY(0);
         }
 
         #about-section > .content {
@@ -517,233 +499,98 @@
             padding: 2em;
         }
 
-        #about-section > h2 {
-            font-size: 3rem;
-            margin-bottom: 1em;
+        #about-section > .content > h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5em;
             color: var(--text-light);
             text-align: center;
         }
 
-        #about-section > p {
-            font-size: 1.2rem;
+        #about-section > .content > p {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
             line-height: 1.6;
             color: var(--text-secondary);
             max-width: 800px;
             margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Observer for scroll effects using CSS */
+        .reveal {
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Responsive styles */
-        @media all and (max-width: 1024px) {
+        @media screen and (max-width: 1024px) {
             #hero-section-content-container {
-                width: 87%;
-                height: 625px;
-                max-width: 100%;
-            }
-
-            #main-content {
-                width: 100%;
-            }
-
-            #page-header > img {
-                margin-left: 5em;
-            }
-        }
-
-        @media all and (max-width: 850px) {
-            #hero-section-content-container {
-                width: 90%;
-                height: 625px;
-            }
-
-            #main-content {
-                width: 100%;
-            }
-
-            #hero-section {
-                width: 100%;
-                height: 100vh;
-            }
-
-            #main-content > p {
-                font-size: 14px;
-            }
-
-            #main-content > h1 {
-                font-size: 3.2rem;
-                margin-left: 0.5em;
-                margin-bottom: -7px;
-            }
-
-            #main-content > h2 {
-                font-size: 18px;
-                margin-bottom: 27px;
-            }
-
-            #page-header > img {
-                margin-left: 3.1em;
-            }
-        }
-
-        @media all and (max-width: 720px) {
-            #hero-section-content-container {
-                width: 100%;
-                height: 625px;
-                gap: 0;
-            }
-
-            #main-content {
-                width: 670px;
-                margin-right: 2.5em;
-            }
-
-            #main-content > p {
-                font-size: 14px;
-            }
-
-            #main-content > h1 {
-                width: 100%;
-                font-size: 3rem;
-                margin-right: 0.5em;
-                margin-bottom: -7px;
-            }
-
-            #main-content > h2 {
-                font-size: 18px;
-                margin-bottom: 27px;
+                flex-direction: column;
+                padding-top: 100px;
             }
 
             #side-navigation {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 1em;
-                padding-bottom: 4em;
-                align-self: flex-end;
-                margin-left: 2em;
-                margin-top: 2em;
+                flex-direction: row;
+                padding-bottom: 0;
+                margin-bottom: 2em;
+            }
+
+            #line-in-side-navigation {
+                width: 55px;
+                height: 3.5px;
             }
 
             #side-navigation > nav > ul {
-                list-style: none;
-                display: flex;
+                flex-direction: row;
+                gap: 1.5em;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #page-header {
+                padding: 0 1rem;
+            }
+
+            #hero-section-btn {
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                gap: 0.65em;
-            }
-
-            #side-navigation > nav > ul > li {
-                transition-duration: 1s;
-                transition-timing-function: ease-in-out;
-                transition-property: transform;
-            }
-
-            #page-header > img {
-                margin-left: 2em;
-            }
-        }
-
-        @media all and (max-width: 660px) {
-            #main-content > p {
-                font-size: 14px;
-            }
-
-            #main-content > h1 {
-                width: 100%;
-                font-size: 2.7rem;
-                margin-right: 0.5em;
-                margin-bottom: -7px;
-            }
-
-            #main-content > h2 {
-                font-size: 18px;
-                margin-bottom: 27px;
-            }
-
-            #page-header > img {
-                margin-left: 2em;
-                width: 34px;
-            }
-
-            #menu {
-                width: 100px;
-            }
-        }
-
-        @media all and (max-width: 545px) {
-            #hero-section-content-container {
-                width: 100%;
-                height: 625px;
-            }
-
-            #main-content {
-                width: 450px;
-            }
-
-            #main-content > p {
-                font-size: 15px;
-            }
-
-            #main-content > h1 {
-                font-size: 2.3rem;
-                margin-left: 0.5em;
-                margin-bottom: -7px;
-            }
-
-            #main-content > h2 {
-                font-size: 17px;
-                margin-bottom: 27px;
             }
 
             #hero-section-btn > a {
-                font-size: 13px;
+                margin-top: 1em;
             }
 
-            #page-header > img {
-                margin-left: 1.9em;
-                width: 32px;
-            }
-
-            #menu {
-                width: 98px;
+            #hero-section-btn > a > img {
+                display: none;
             }
         }
 
-        @media all and (max-width: 480px) {
-            #hero-section-btn > button {
-                width: 110px;
-                height: 37px;
-                font-size: 12px;
-                margin-right: 10px;
-            }
-
-            #hero-section-btn > a {
-                font-size: 10px;
-            }
-
-            #main-content > p {
-                font-size: 14px;
-            }
-
+        @media screen and (max-width: 480px) {
             #main-content > h1 {
-                font-size: 2rem;
-                margin-left: 0.5em;
-                margin-bottom: -7px;
+                font-size: 2.2rem;
             }
 
             #main-content > h2 {
                 font-size: 16px;
-                margin-bottom: 27px;
             }
 
-            #page-header > img {
-                margin-left: 1.5em;
-                width: 30px;
+            #side-navigation > nav > ul {
+                gap: 1em;
             }
 
-            #menu {
-                width: 90px;
+            #side-navigation > nav > ul > li img {
+                width: 18px;
+                height: auto;
+            }
+
+            #about-section > .content {
+                padding: 1em;
             }
         }
     </style>
@@ -758,8 +605,7 @@
         <section id="hero-section">
             <!-- Landing/loading -->
             <div id="landing">
-                <div></div>
-                <div><h1>TN.</h1></div>
+                <h1>TN.</h1>
             </div>
 
             <!-- Header -->
@@ -792,54 +638,55 @@
                     <h2>a freelance Web Developer</h2>
                     <div id="hero-section-btn">
                         <button>Let's Talk</button>
-                        <a href="" data-text="Download Resume">Download Resume</a>
-                        <img src="assets/image/hero-section-image/arrow-in-hero.png" alt="arrow icon" width="38px">
+                        <a href="">Download Resume <img src="assets/image/hero-section-image/arrow-in-hero.png" alt="arrow icon" width="24px"></a>
                     </div>
-                    <img src="assets/image/hero-section-image/Scroll.png" alt="scroll icon" width="50px" id="scroll-icon">
                 </div>
+                <img src="assets/image/hero-section-image/Scroll.png" alt="scroll icon" width="50px" id="scroll-icon">
             </div>
         </section>
 
         <!-- Skills line -->
-        <div id="line">
-            <div>
-                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-                <p>Web Development</p>
-            </div>
+        <div id="skills-line-container">
+            <div id="line">
+                <div>
+                    <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                    <p>Web Development</p>
+                </div>
 
-            <div>
-                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-                <p>UI/UX Design</p>
-            </div>
+                <div>
+                    <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                    <p>UI/UX Design</p>
+                </div>
 
-            <div>
-                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-                <p>Game Development</p>
-            </div>
+                <div>
+                    <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                    <p>Game Development</p>
+                </div>
 
-            <div>
-                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-                <p>Mobile Application</p>
-            </div>
+                <div>
+                    <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                    <p>Mobile Application</p>
+                </div>
 
-            <div>
-                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-                <p>Desktop Application</p>
-            </div>
+                <div>
+                    <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                    <p>Desktop Application</p>
+                </div>
 
-            <div>
-                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-                <p>Web Development</p>
-            </div>
+                <div>
+                    <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                    <p>Web Development</p>
+                </div>
 
-            <div>
-                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-                <p>UI/UX Design</p>
+                <div>
+                    <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                    <p>UI/UX Design</p>
+                </div>
             </div>
         </div>
 
         <!-- About us section -->
-        <section id="about-section">
+        <section id="about-section" class="reveal">
             <div class="content">
                 <h2>About Me</h2>
                 <p>I'm a passionate web developer with expertise in creating modern, responsive websites and applications. With a keen eye for design and a strong foundation in coding, I bring creative ideas to life through clean, efficient code. My goal is to deliver exceptional digital experiences that not only look great but also perform flawlessly across all devices.</p>
@@ -849,39 +696,25 @@
 </div>
 
 <script>
-    // Script to handle scroll effects
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        const heroSection = document.getElementById('hero-section');
-        const aboutSection = document.getElementById('about-section');
-        const heroContainer = document.getElementById('hero-container');
-        const header = document.getElementById('page-header');
-
-        // Header scroll effect
-        if (scrollPosition > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        // About section visibility
-        if (scrollPosition > window.innerHeight * 0.7) {
-            aboutSection.classList.add('visible');
-        }
-
-        // Hero section transition effect - moves up as you scroll
-        if (scrollPosition > 0) {
-            heroSection.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
-        } else {
-            heroSection.style.transform = 'translateY(0)';
-        }
-    });
-
-    // Preload animations
+    // Minimal JavaScript just to handle revealing sections on scroll - could be done with CSS but this is more reliable
     document.addEventListener('DOMContentLoaded', function() {
+        // Hide landing screen after animation completes
         setTimeout(function() {
             document.getElementById('landing').style.display = 'none';
-        }, 3800);
+        }, 2200);
+
+        // Simple reveal effect for about section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {threshold: 0.1});
+
+        document.querySelectorAll('.reveal').forEach(element => {
+            observer.observe(element);
+        });
     });
 </script>
 </body>
