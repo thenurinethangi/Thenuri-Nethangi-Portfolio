@@ -2,137 +2,975 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thenuri Nethangi - Home Page</title>
-    <link rel="icon" type="image/ico" href="assets/image/favicon.png" >
+    <title>Working</title>
+    <link rel="icon" type="image/ico" href="assets/image/favicon.png">
 
     <meta name="keywords" content="html, css, javascript, portfolio, web development, software engineering, computer science">
     <meta name="author" content="Thenuri">
     <meta name="description" content="I am Thenuri Nethangi, Welcome to my portfolio, a showcase of my journeys and achievements, I'm a passionate web developer dedicated to creating innovative web pages.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style/hero-section-style.css">
-    <link rel="stylesheet" href="assets/style/about-us-section-style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        :root{
+            --white-color: #FFFFFF;
+            --main-color: #25202F;
+            --accent-color: #9747FF;
+            --text-light: #F5F5F7;
+            --text-secondary: #B8B8B8;
+            --transition-slow: 0.5s ease;
+            --transition-medium: 0.3s ease;
+            --transition-fast: 0.2s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            height: auto;
+        }
+
+        body {
+            font-family: "Red Hat Display", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 13px;
+            color: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Main container for all sections */
+        .main-container {
+            width: 100%;
+            position: relative;
+        }
+
+        /* Hero section */
+        #hero-container {
+            width: 100%;
+            height: 250vh;
+            background-color: var(--white-color);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow: visible;
+        }
+
+        #hero-section {
+            width: 100%;
+            height: 100vh;
+            background-color: var(--main-color);
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        /* Header styling */
+        #page-header {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(37, 32, 47, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            transition: all var(--transition-medium);
+        }
+
+        #page-header > img {
+            margin-left: 8em;
+            animation-name: logo-animation;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes logo-animation {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        #menu {
+            cursor: pointer;
+            transition: transform var(--transition-medium);
+        }
+
+        #menu:hover {
+            transform: scale(1.1);
+        }
+
+        #page-header > a {
+            margin-top: 2.3em;
+        }
+
+        /* Hero section content */
+        #hero-section-content-container {
+            width: 82%;
+            height: 625px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #hero-section-bg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            opacity: 0.6;
+        }
+
+        /* Glow effects */
+        #glow-circle {
+            position: absolute;
+            right: 0;
+            top: 70px;
+            width: 500px;
+            height: 400px;
+            background: radial-gradient(#9747FF, transparent 70%);
+            opacity: 0.1;
+            clip-path: circle(50%);
+            animation-name: glow;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+        }
+
+        #glow-circle-two {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 500px;
+            height: 400px;
+            background: radial-gradient(#9747FF, transparent 70%);
+            opacity: 0.1;
+            clip-path: circle(50%);
+            animation-name: glow;
+            animation-delay: 10s;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+        }
+
+        @keyframes glow {
+            from {
+                opacity: 0.05;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 0.07;
+                transform: scale(1.1);
+            }
+        }
+
+        /* Side navigation */
+        #side-navigation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            padding-bottom: 4em;
+        }
+
+        #line-in-side-navigation {
+            width: 3.5px;
+            height: 55px;
+            background-color: #8643DC;
+            border-radius: 20px;
+        }
+
+        #side-navigation > nav > ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.65em;
+        }
+
+        #side-navigation > nav > ul > li {
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            transition-property: transform;
+        }
+
+        #side-navigation > nav > ul > li:hover {
+            transform: rotateY(360deg);
+        }
+
+        /* Main content */
+        #main-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2em;
+            padding-top: 5em;
+        }
+
+        #main-content > p {
+            font-weight: 450;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s forwards 3.9s;
+        }
+
+        #main-content > h1 {
+            font-size: 3.5rem;
+            margin-bottom: -7px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s forwards 4.1s;
+        }
+
+        #main-content > p:hover {
+            transform: skew(-10deg, 0deg);
+        }
+
+        #main-content > h2 {
+            font-size: 19px;
+            color: #D0D0D0;
+            font-weight: 300;
+            margin-bottom: 27px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s forwards 4.3s;
+        }
+
+        /* Button styling */
+        #hero-section-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6em;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s forwards 4.5s;
+        }
+
+        #hero-section-btn > button {
+            position: relative;
+            background-color: #8643DC;
+            width: 130px;
+            height: 37px;
+            border: 1px solid #8643DC;
+            border-radius: 30px;
+            padding: 3px;
+            color: #ffffff;
+            font-weight: lighter;
+            font-size: 15px;
+            margin-right: 16px;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(134, 67, 220, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        #hero-section-btn > button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(134, 67, 220, 0.4);
+        }
+
+        #hero-section-btn > button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                    to right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-20deg);
+            transition: all 0.6s ease;
+        }
+
+        #hero-section-btn > button:hover::before {
+            left: 100%;
+        }
+
+        #hero-section-btn > button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 8px rgba(134, 67, 220, 0.4);
+            background-color: #7438c0;
+        }
+
+        #hero-section-btn > a {
+            position: relative;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        #hero-section-btn > a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width var(--transition-medium);
+        }
+
+        #hero-section-btn > a:hover::after {
+            width: 100%;
+        }
+
+        /* Scroll icon */
+        #scroll-icon {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Landing animation */
+        #landing {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(20, 17, 26);
+            position: fixed;
+            z-index: 1001;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 8.5rem;
+            letter-spacing: 6px;
+            animation-name: landing-animation;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1.2s;
+            animation-delay: 2.6s;
+            animation-fill-mode: both;
+        }
+
+        #landing > div:nth-child(2) {
+            position: absolute;
+            top: 60%;
+            left: 80%;
+            animation-name: landing-title-animation;
+            animation-timing-function: ease-in-out;
+            animation-duration: 0.4s;
+            animation-delay: 2.5s;
+            animation-fill-mode: both;
+            z-index: 10;
+        }
+
+        #landing > div:first-child {
+            width: 210px;
+            height: 200px;
+            background-color: rgba(20, 17, 26);
+            position: absolute;
+            top: 32%;
+            left: 79%;
+            z-index: 20;
+        }
+
+        @keyframes landing-animation {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-1000px);
+            }
+        }
+
+        @keyframes landing-title-animation {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-170px);
+            }
+        }
+
+        /* Skills line */
+        #line {
+            background-color: #EEEEEE;
+            color: var(--main-color);
+            min-width: 100%;
+            white-space: nowrap;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-inline: 1em;
+            position: absolute;
+            top: 100vh;
+            z-index: 1;
+            overflow: hidden;
+            animation-name: round;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+        }
+
+        #line > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.2em;
+        }
+
+        #line > div > p {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        @keyframes round {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100vw);
+            }
+        }
+
+        /* About section */
+        #about-section {
+            width: 100%;
+            min-height: 150vh;
+            background-color: var(--main-color);
+            position: relative;
+            z-index: 0;
+            padding-top: 150px;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        #about-section.visible {
+            opacity: 1;
+        }
+
+        #about-section > .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        #about-section > h2 {
+            font-size: 3rem;
+            margin-bottom: 1em;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        #about-section > p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+
+
+
+
+        /* Responsive styles */
+        @media all and (max-width: 1130px) {
+            #hero-section-content-container {
+                width: 87%;
+                height: 625px;
+                max-width: 100%;
+                /*background-color: #7438c0;*/
+                padding-top: 10em;
+            }
+
+            #main-content {
+                width: 100%;
+            }
+
+            #page-header > img {
+                margin-left: 5em;
+            }
+
+            #main-content > p {
+                font-size: 18px;
+            }
+
+            #main-content > h1 {
+                font-size: 3.3rem;
+
+            }
+
+            #main-content > h2 {
+                font-size: 19px;
+                margin-bottom: 27px;
+            }
+
+            #hero-section-btn {
+                margin-bottom: 6em;
+            }
+        }
+
+
+
+
+
+
+        @media all and (max-width: 870px) {
+            #hero-section-content-container {
+                width: 90%;
+                height: 625px;
+                padding-top: 13em;
+            }
+
+            #main-content {
+                width: 100%;
+                gap: 1.5em;
+                /*padding-top: 5em;*/
+                padding-right: 2.5em;
+            }
+
+
+            #hero-section {
+                width: 100%;
+                height: 100vh;
+            }
+
+            #main-content > p {
+                font-size: 14px;
+            }
+
+            #main-content > h1 {
+                font-size: 3rem;
+                margin-left: 0.5em;
+                margin-bottom: -7px;
+            }
+
+            #main-content > h2 {
+                font-size: 18px;
+                margin-bottom: 22px;
+            }
+
+            #page-header > img {
+                margin-left: 3.5em;
+            }
+
+            #hero-section-btn {
+                margin-bottom: 5em;
+            }
+
+            #side-navigation {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+                padding-bottom: 4em;
+                align-self: flex-end;
+                margin-left: 2em;
+                margin-top: 2em;
+            }
+        }
+
+
+
+
+
+
+
+        @media all and (max-width: 780px) {
+
+            #hero-section-content-container {
+                padding-top: 10em;
+                width: 100%;
+                height: 625px;
+                gap: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #main-content {
+                width: 670px;
+                /*background-color: red;*/
+            }
+
+            #main-content > p {
+                font-size: 16px;
+            }
+
+            #main-content > h1 {
+                width: 100%;
+                font-size: 2.7rem;
+                /*margin-right: 0.5em;*/
+                margin-bottom: -7px;
+            }
+
+            #main-content > h2 {
+                font-size: 18px;
+                margin-bottom: 27px;
+            }
+
+            #side-navigation {
+                display: none;
+            }
+
+            #page-header > img {
+                margin-left: 2em;
+            }
+        }
+
+
+
+
+
+        @media all and (max-width: 660px) {
+            #main-content > p {
+                font-size: 16px;
+            }
+
+            #main-content > h1 {
+                width: 100%;
+                font-size: 2.7rem;
+                margin-bottom: -7px;
+                padding-right: 0;
+                margin-right: 0;
+            }
+
+            #main-content > h2 {
+                font-size: 18px;
+                margin-bottom: 27px;
+            }
+
+            #page-header > img {
+                margin-left: 2em;
+                width: 34px;
+            }
+
+            #menu {
+                width: 100px;
+            }
+        }
+
+
+
+
+
+
+        @media all and (max-width: 545px) {
+
+            #hero-section-content-container {
+                width: 100%;
+                height: 625px;
+            }
+
+            #main-content {
+                width: 100%;
+                padding-right: 0;
+                margin-right: 0;
+            }
+
+            #main-content > p {
+                font-size: 16px;
+            }
+
+            #main-content > h1 {
+                font-size: 2.5rem;
+                margin-left: 0.5em;
+                margin-bottom: -7px;
+            }
+
+            #main-content > h2 {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            #hero-section-btn > a {
+                font-size: 14px;
+            }
+
+            #page-header > img {
+                margin-left: 1.9em;
+                width: 32px;
+            }
+
+            #menu {
+                width: 98px;
+            }
+
+            #hero-section-btn{
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.8em;
+                margin-bottom: 1em;
+
+            }
+        }
+
+
+
+
+
+
+        @media all and (max-width: 480px) {
+
+            /*#hero-section-btn > button {*/
+            /*    width: 110px;*/
+            /*    height: 37px;*/
+            /*    font-size: 12px;*/
+            /*    margin-right: 10px;*/
+            /*}*/
+
+            #main-content {
+                width: 90%;
+                padding-right: 0;
+                margin-right: 0;
+                /*background-color: green;*/
+                align-items: center;
+            }
+
+            #hero-section-btn > a {
+                font-size: 14px;
+            }
+
+            #main-content > p {
+                font-size: 15px;
+                text-align: center;
+            }
+
+            #main-content > h1 {
+                font-size: 2.2rem;
+                margin-left: 0.5em;
+                margin-bottom: -7px;
+                text-align: center;
+            }
+
+            #main-content > h2 {
+                font-size: 17px;
+                margin-bottom: 27px;
+                text-align: center;
+            }
+
+            #page-header > img {
+                margin-left: 1.5em;
+                width: 30px;
+            }
+
+            #menu {
+                width: 90px;
+            }
+
+            #scroll-icon {
+                margin-left: 1.7em;
+            }
+        }
+    </style>
+
+
+
+
+
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@1,800&family=Rubik:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@1,800&family=Rubik:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!--    hero section and about us section container-->
-<section id="hero-container">
-
-    <!--        hero section-->
-    <section id="hero-section">
-        <!--         landing/loading-->
-        <div id="landing">
-            <div></div>
-            <div><h1>TN.</h1></div>
-        </div>
-
-        <!--         header-->
-        <header id="page-header">
-            <img src="assets/image/hero-section-image/logo.png" alt="portfolio logo" width="35px">
-            <a><img src="assets/image/hero-section-image/Menu.png" alt="menu icon" width="105px" id="menu"></a>
-        </header>
-
-        <!--         hero section content box-->
-        <div id="hero-section-content-container">
-
-            <img id="hero-section-bg" src="assets/image/hero-section-image/hero-bg.png" alt="hero section background image">
-            <div id="glow-circle"></div>
-            <div id="glow-circle-two"></div>
-
-            <div id="side-navigation">
-                <div id="line-in-side-navigation"></div>
-                <nav>
-                    <ul>
-                        <li><a href=""><img src="assets/image/hero-section-image/instagram%20(2).png" alt="instagram icon" width="15px"></a></li>
-                        <li><a href=""><img src="assets/image/hero-section-image/linkedin%20(2).png" alt="linkedin icon" width="15px"></a></li>
-                        <li><a href=""><img src="assets/image/hero-section-image/github.png" alt="github icon" width="18px"></a></li>
-                        <li><a href=""><img src="assets/image/hero-section-image/whatsapp%20(1).png" alt="whatsapp icon" width="17px"></a></li>
-                    </ul>
-                </nav>
+<div class="main-container">
+    <!-- Hero section and About us section container -->
+    <section id="hero-container">
+        <!-- Hero section -->
+        <section id="hero-section">
+            <!-- Landing/loading -->
+            <div id="landing">
+                <div></div>
+                <div><h1>TN.</h1></div>
             </div>
 
-            <div id="main-content">
-                <p>Hello,</p>
-                <h1>I'm Thenuri Nethangi</h1>
-                <h2>a freelance Web Developer</h2>
-                <div id="hero-section-btn">
-                    <button>Let's Talk</button>
-                    <div id="hero-section-btn-resume">
+            <!-- Header -->
+            <header id="page-header">
+                <img src="assets/image/hero-section-image/logo.png" alt="portfolio logo" width="35px">
+                <a><img src="assets/image/hero-section-image/Menu.png" alt="menu icon" width="105px" id="menu"></a>
+            </header>
+
+            <!-- Hero section content box -->
+            <div id="hero-section-content-container">
+                <img id="hero-section-bg" src="assets/image/hero-section-image/hero-bg.png" alt="hero section background image">
+                <div id="glow-circle"></div>
+                <div id="glow-circle-two"></div>
+
+                <div id="side-navigation">
+                    <div id="line-in-side-navigation"></div>
+                    <nav>
+                        <ul>
+                            <li><a href=""><img src="assets/image/hero-section-image/instagram%20(2).png" alt="instagram icon" width="15px"></a></li>
+                            <li><a href=""><img src="assets/image/hero-section-image/linkedin%20(2).png" alt="linkedin icon" width="15px"></a></li>
+                            <li><a href=""><img src="assets/image/hero-section-image/github.png" alt="github icon" width="18px"></a></li>
+                            <li><a href=""><img src="assets/image/hero-section-image/whatsapp%20(1).png" alt="whatsapp icon" width="17px"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="main-content">
+                    <p>Hello,</p>
+                    <h1>I'm Thenuri Nethangi</h1>
+                    <h2>a freelance Web Developer</h2>
+                    <div id="hero-section-btn">
+                        <button>Let's Talk</button>
                         <a href="" data-text="Download Resume">Download Resume</a>
                         <img src="assets/image/hero-section-image/arrow-in-hero.png" alt="arrow icon" width="38px">
                     </div>
+                    <img src="assets/image/hero-section-image/Scroll.png" alt="scroll icon" width="50px" id="scroll-icon">
                 </div>
-                <img src="assets/image/hero-section-image/Scroll.png" alt="scroll icon" width="50px" id="scroll-icon">
+            </div>
+        </section>
+
+        <!-- Skills line -->
+        <div id="line">
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Web Development</p>
             </div>
 
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>UI/UX Design</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Game Development</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Mobile Application</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Desktop Application</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Web Development</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>UI/UX Design</p>
+            </div>
         </div>
+
+        <!-- About us section -->
+        <section id="about-section">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I'm a passionate web developer with expertise in creating modern, responsive websites and applications. With a keen eye for design and a strong foundation in coding, I bring creative ideas to life through clean, efficient code. My goal is to deliver exceptional digital experiences that not only look great but also perform flawlessly across all devices.</p>
+            </div>
+        </section>
     </section>
+</div>
 
-    <div id="line">
-        <div>
-            <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-            <p>Web Development</p>
-        </div>
+<script>
+    // Script to handle scroll effects
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const heroSection = document.getElementById('hero-section');
+        const aboutSection = document.getElementById('about-section');
+        const heroContainer = document.getElementById('hero-container');
+        const header = document.getElementById('page-header');
 
-        <div>
-            <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-            <p>UI/UX Design</p>
-        </div>
+        // Header scroll effect
+        if (scrollPosition > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
 
-        <div>
-            <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-            <p>Game Development</p>
-        </div>
+        // About section visibility
+        if (scrollPosition > window.innerHeight * 0.7) {
+            aboutSection.classList.add('visible');
+        }
 
-        <div>
-            <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-            <p>Mobile Application</p>
-        </div>
+        // Hero section transition effect - moves up as you scroll
+        if (scrollPosition > 0) {
+            heroSection.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
+        } else {
+            heroSection.style.transform = 'translateY(0)';
+        }
+    });
 
-        <div>
-            <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-            <p>Desktop Application</p>
-        </div>
-
-        <div>
-            <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-            <p>Web Development</p>
-        </div>
-
-        <div>
-            <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
-            <p>UI/UX Design</p>
-        </div>
-
-        <!--            <div>-->
-        <!--                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">-->
-        <!--                <p>Game Development</p>-->
-        <!--            </div>-->
-
-        <!--            <div>-->
-        <!--                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">-->
-        <!--                <p>Mobile Application</p>-->
-        <!--            </div>-->
-
-        <!--            <div>-->
-        <!--                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">-->
-        <!--                <p>Desktop Application</p>-->
-        <!--            </div>-->
-
-    </div>
-
-    <!--        about us section-->
-    <section id="about-section">
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum et eveniet fugiat molestiae quaerat quod reiciendis tempore veniam voluptatem? Consequatur cum, fugit impedit iusto modi quaerat ratione repudiandae temporibus?</p>
-    </section>
-
-</section>
-
+    // Preload animations
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.getElementById('landing').style.display = 'none';
+        }, 3800);
+    });
+</script>
 </body>
 </html>
