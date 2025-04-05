@@ -965,14 +965,41 @@
     </section>
 
     <!-- About us section -->
-    <section id="about-section" class="scroll-animate">
-        <div class="content">
-            <h2>About Me</h2>
-            <p>I'm a passionate web developer with expertise in creating modern, responsive websites and applications. With a keen eye for design and a strong foundation in coding, I bring creative ideas to life through clean, efficient code. My goal is to deliver exceptional digital experiences that not only look great but also perform flawlessly across all devices.</p>
+    <section id="about-section">
+
+        <header class="section-headers">
+            <div class="titles">
+                <div>
+                    <h5 class="section-title">About Me</h5>
+                    <img src="assets/image/every-page-title-underline.png" alt="underline image">
+                </div>
+                <h2 class="title-desc">Who Is Thenuri Nethangi</h2>
+            </div>
+
+            <div>
+                <img src="assets/image/hero-section-image/Menu.png" alt="menu icon" width="105px">
+            </div>
+        </header>
+
+        <div id="about-me-section-content-container">
+            <div>
+                <img src="assets/image/about-us-section-image/about-us-bg.png" alt="my image background" width="500px">
+                <img src="assets/image/about-us-section-image/pink-Ellipse%2028.png" alt="pink ellipse" width="364">
+                <img src="assets/image/about-us-section-image/purple-Ellipse%2027.png" alt="purple ellipse" width="351">
+                <img src="assets/image/about-us-section-image/about-us-myImage.png" alt="my image" width="280">
+            </div>
+
+            <div id="description-box">
+                <p id="para">Hello, I’m Thenuri Nethangi. I’m a Web Developer based in Sri Lanka. I am currently studying at the Institute of Software Engineering, where I have developed a passion for coding and problem-solving. I aim to become a skilled software engineer and am dedicated to mastering the essential skills for this field. I strive to deliver seamless user experiences and impactful online solutions. My goal is turn ideas into reality by blending creativity with technical excellence. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut corporis culpa cum, dolore, enim expedita maxime minima nulla placeat, porro possimus quam quas quasi quia quos tenetur veritatis voluptatem.</p>
+                <a href="" id="about-me-section-learn-more-link">MORE ABOUT ME</a>
+            </div>
         </div>
+
     </section>
 
 </section>
+
+<section id="hey"></section>
 
 
 <script>
@@ -1005,6 +1032,25 @@
         // Update CSS variable
         document.documentElement.style.setProperty('--scroll', scrollProgress);
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const aboutSection = document.getElementById('about-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aboutSection.classList.add('dark-bg');
+                } else {
+                    aboutSection.classList.remove('dark-bg');
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of section is visible
+        });
+
+        observer.observe(aboutSection);
+    });
+
 
 </script>
 
