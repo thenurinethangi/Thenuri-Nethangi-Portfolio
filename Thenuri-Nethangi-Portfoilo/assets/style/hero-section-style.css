@@ -643,14 +643,32 @@ body{
 }
 
 
-@media all and (max-width: 1024px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1074px) {
 
     #hero-section-content-container{
 
         width: 87%;
         height: 625px;
         max-width: 100%;
-        /*background-color: #B8B8B8;*/
+        background-color: #B8B8B8;
     }
 
     #main-content{
@@ -663,6 +681,17 @@ body{
         margin-left: 5em;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (max-width: 850px) {
 
@@ -721,6 +750,18 @@ body{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media all and (max-width: 720px) {
@@ -856,6 +897,16 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
 @media all and (max-width: 660px) {
 
 
@@ -938,6 +989,17 @@ body{
         transition: transform var(--transition-medium);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media all and (max-width: 545px) {
@@ -1025,6 +1087,12 @@ body{
     }
 
 }
+
+
+
+
+
+
 
 
 
