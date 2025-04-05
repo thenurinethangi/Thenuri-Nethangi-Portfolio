@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Working</title>
+    <title>Currently</title>
     <link rel="icon" type="image/ico" href="assets/image/favicon.png">
+    <link rel="stylesheet" href="assets/style/temp.css">
 
     <meta name="keywords" content="html, css, javascript, portfolio, web development, software engineering, computer science">
     <meta name="author" content="Thenuri">
@@ -30,6 +31,7 @@
         html {
             overflow-x: hidden;
             scroll-behavior: smooth;
+            --scroll-opacity: 1;
         }
 
         html, body {
@@ -57,25 +59,29 @@
         /* Hero section */
         #hero-container {
             width: 100%;
-            height: 250vh;
+            height: 100vh;
             background-color: var(--white-color);
-            position: relative;
+            position: fixed;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             overflow: visible;
+            z-index: 5;
         }
 
         #hero-section {
             width: 100%;
             height: 100vh;
             background-color: var(--main-color);
-            position: sticky;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 2;
+
+            opacity: calc(1 - (var(--scroll) * 2));
+            transition: opacity 0.3s ease;
         }
 
         /* Header styling */
@@ -449,88 +455,88 @@
             }
         }
 
-        /* Skills line */
-        #line {
-            background-color: #EEEEEE;
-            color: var(--main-color);
-            min-width: 100%;
-            white-space: nowrap;
-            width: 100%;
-            height: 60px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            padding-inline: 1em;
-            position: absolute;
-            top: 100vh;
-            z-index: 1;
-            overflow: hidden;
-            animation-name: round;
-            animation-duration: 15s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            animation-fill-mode: both;
-        }
+        /*!* Skills line *!*/
+        /*#line {*/
+        /*    background-color: #EEEEEE;*/
+        /*    color: var(--main-color);*/
+        /*    !*min-width: 100%;*!*/
+        /*    !*white-space: nowrap;*!*/
+        /*    width: 200vw;*/
+        /*    height: 60px;*/
+        /*    display: flex;*/
+        /*    flex-direction: row;*/
+        /*    justify-content: space-evenly;*/
+        /*    align-items: center;*/
+        /*    padding-inline: 1em;*/
+        /*    position: absolute;*/
+        /*    top: 100vh;*/
+        /*    z-index: 1;*/
+        /*    overflow: hidden;*/
+        /*    animation-name: round;*/
+        /*    animation-duration: 15s;*/
+        /*    animation-iteration-count: infinite;*/
+        /*    animation-timing-function: linear;*/
+        /*    animation-fill-mode: both;*/
+        /*}*/
 
-        #line > div {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 1.2em;
-        }
+        /*#line > div {*/
+        /*    display: flex;*/
+        /*    flex-direction: row;*/
+        /*    justify-content: flex-start;*/
+        /*    align-items: center;*/
+        /*    gap: 1.2em;*/
+        /*}*/
 
-        #line > div > p {
-            font-size: 1rem;
-            font-weight: 500;
-        }
+        /*#line > div > p {*/
+        /*    font-size: 1rem;*/
+        /*    font-weight: 500;*/
+        /*}*/
 
-        @keyframes round {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-100vw);
-            }
-        }
+        /*@keyframes round {*/
+        /*    from {*/
+        /*        transform: translateX(0);*/
+        /*    }*/
+        /*    to {*/
+        /*        transform: translateX(-100vw);*/
+        /*    }*/
+        /*}*/
 
-        /* About section */
-        #about-section {
-            width: 100%;
-            min-height: 150vh;
-            background-color: var(--main-color);
-            position: relative;
-            z-index: 0;
-            padding-top: 150px;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
+        /*!* About section *!*/
+        /*#about-section {*/
+        /*    width: 100%;*/
+        /*    min-height: 150vh;*/
+        /*    background-color: var(--main-color);*/
+        /*    position: relative;*/
+        /*    z-index: 0;*/
+        /*    padding-top: 150px;*/
+        /*    opacity: 0;*/
+        /*    transition: opacity 1s ease;*/
+        /*}*/
 
-        #about-section.visible {
-            opacity: 1;
-        }
+        /*#about-section.visible {*/
+        /*    opacity: 1;*/
+        /*}*/
 
-        #about-section > .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2em;
-        }
+        /*#about-section > .content {*/
+        /*    max-width: 1200px;*/
+        /*    margin: 0 auto;*/
+        /*    padding: 2em;*/
+        /*}*/
 
-        #about-section > h2 {
-            font-size: 3rem;
-            margin-bottom: 1em;
-            color: var(--text-light);
-            text-align: center;
-        }
+        /*#about-section > h2 {*/
+        /*    font-size: 3rem;*/
+        /*    margin-bottom: 1em;*/
+        /*    color: var(--text-light);*/
+        /*    text-align: center;*/
+        /*}*/
 
-        #about-section > p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        /*#about-section > p {*/
+        /*    font-size: 1.2rem;*/
+        /*    line-height: 1.6;*/
+        /*    color: var(--text-secondary);*/
+        /*    max-width: 800px;*/
+        /*    margin: 0 auto;*/
+        /*}*/
 
 
 
@@ -887,7 +893,13 @@
                 </div>
             </div>
         </section>
+    </section>
+</div>
 
+<!--line with about us section-->
+<section id="about-us-container">
+
+    <section id="line-section">
         <!-- Skills line -->
         <div id="line">
             <div>
@@ -924,53 +936,77 @@
                 <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
                 <p>UI/UX Design</p>
             </div>
-        </div>
 
-        <!-- About us section -->
-        <section id="about-section">
-            <div class="content">
-                <h2>About Me</h2>
-                <p>I'm a passionate web developer with expertise in creating modern, responsive websites and applications. With a keen eye for design and a strong foundation in coding, I bring creative ideas to life through clean, efficient code. My goal is to deliver exceptional digital experiences that not only look great but also perform flawlessly across all devices.</p>
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Web Development</p>
             </div>
-        </section>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>UI/UX Design</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Game Development</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Mobile Application</p>
+            </div>
+
+            <div>
+                <img src="assets/image/puzzle.png" alt="puzzle icon" width="38px">
+                <p>Desktop Application</p>
+            </div>
+        </div>
     </section>
-</div>
+
+    <!-- About us section -->
+    <section id="about-section" class="scroll-animate">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>I'm a passionate web developer with expertise in creating modern, responsive websites and applications. With a keen eye for design and a strong foundation in coding, I bring creative ideas to life through clean, efficient code. My goal is to deliver exceptional digital experiences that not only look great but also perform flawlessly across all devices.</p>
+        </div>
+    </section>
+
+</section>
+
 
 <script>
-    // Script to handle scroll effects
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        const heroSection = document.getElementById('hero-section');
-        const aboutSection = document.getElementById('about-section');
-        const heroContainer = document.getElementById('hero-container');
-        const header = document.getElementById('page-header');
+    // Add this script at the end of your body tag
+    window.addEventListener('scroll', () => {
+        // Calculate how far down the page the user has scrolled
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
 
-        // Header scroll effect
-        if (scrollPosition > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        // Calculate scroll progress (0 to 1)
+        // This determines how fast the hero section fades out
+        let scrollProgress = Math.min(scrollY / windowHeight, 1);
 
-        // About section visibility
-        if (scrollPosition > window.innerHeight * 0.7) {
-            aboutSection.classList.add('visible');
-        }
-
-        // Hero section transition effect - moves up as you scroll
-        if (scrollPosition > 0) {
-            heroSection.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
-        } else {
-            heroSection.style.transform = 'translateY(0)';
-        }
+        // Update CSS variable
+        document.documentElement.style.setProperty('--scroll', scrollProgress);
     });
 
-    // Preload animations
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            document.getElementById('landing').style.display = 'none';
-        }, 3800);
+    window.addEventListener('scroll', () => {
+        // Calculate scroll progress more smoothly
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.scrollHeight;
+
+        // Calculate scroll progress (0 to 1) with better precision
+        let scrollProgress = Math.min(scrollY / (windowHeight * 0.8), 1);
+
+        // Clamp value between 0 and 1
+        scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+
+        // Update CSS variable
+        document.documentElement.style.setProperty('--scroll', scrollProgress);
     });
+
 </script>
+
 </body>
 </html>

@@ -937,40 +937,40 @@
 </div>
 
 <script>
-    // Script to handle scroll effects
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        const heroSection = document.getElementById('hero-section');
-        const aboutSection = document.getElementById('about-section');
-        const heroContainer = document.getElementById('hero-container');
-        const header = document.getElementById('page-header');
-
-        // Header scroll effect
-        if (scrollPosition > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        // About section visibility
-        if (scrollPosition > window.innerHeight * 0.7) {
-            aboutSection.classList.add('visible');
-        }
-
-        // Hero section transition effect - moves up as you scroll
-        if (scrollPosition > 0) {
-            heroSection.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
-        } else {
-            heroSection.style.transform = 'translateY(0)';
-        }
-    });
-
-    // Preload animations
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            document.getElementById('landing').style.display = 'none';
-        }, 3800);
-    });
+    // // Script to handle scroll effects
+    // window.addEventListener('scroll', function() {
+    //     const scrollPosition = window.scrollY;
+    //     const heroSection = document.getElementById('hero-section');
+    //     const aboutSection = document.getElementById('about-section');
+    //     const heroContainer = document.getElementById('hero-container');
+    //     const header = document.getElementById('page-header');
+    //
+    //     // Header scroll effect
+    //     if (scrollPosition > 50) {
+    //         header.classList.add('scrolled');
+    //     } else {
+    //         header.classList.remove('scrolled');
+    //     }
+    //
+    //     // About section visibility
+    //     if (scrollPosition > window.innerHeight * 0.7) {
+    //         aboutSection.classList.add('visible');
+    //     }
+    //
+    //     // Hero section transition effect - moves up as you scroll
+    //     if (scrollPosition > 0) {
+    //         heroSection.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
+    //     } else {
+    //         heroSection.style.transform = 'translateY(0)';
+    //     }
+    // });
+    //
+    // // Preload animations
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     setTimeout(function() {
+    //         document.getElementById('landing').style.display = 'none';
+    //     }, 3800);
+    // });
 </script>
 </body>
 </html>
