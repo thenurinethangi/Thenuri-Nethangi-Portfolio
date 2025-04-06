@@ -999,7 +999,7 @@
 
 </section>
 
-<!--<section id="hey"></section>-->
+<section id="hey"></section>
 
 
 <script>
@@ -1035,13 +1035,32 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         const aboutSection = document.getElementById('about-section');
+        const sectionTitle = document.querySelector('.section-title');
+        const titleDesc = document.querySelector('.title-desc');
+        const aboutParagraph = document.getElementById('about-paragraph');
 
+        // Observer for the about section
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
+                // Only change colors when the section becomes visible
+                // Don't change back when scrolling past it
                 if (entry.isIntersecting) {
+                    // Change to dark background
                     aboutSection.classList.add('dark-bg');
-                } else {
-                    aboutSection.classList.remove('dark-bg');
+
+                    // Change text colors to light
+                    if (sectionTitle) sectionTitle.classList.remove('dark-text');
+                    if (sectionTitle) sectionTitle.classList.add('light-text');
+
+                    if (titleDesc) titleDesc.classList.remove('dark-text');
+                    if (titleDesc) titleDesc.classList.add('light-text');
+
+                    // The paragraph already has white color in CSS
+                    if (aboutParagraph) aboutParagraph.style.color = 'rgba(255, 255, 255, 0.77)';
+
+                    // Disconnect the observer after making the change
+                    // This prevents it from changing back when scrolling more
+                    observer.disconnect();
                 }
             });
         }, {
@@ -1050,7 +1069,6 @@
 
         observer.observe(aboutSection);
     });
-
 
 </script>
 
