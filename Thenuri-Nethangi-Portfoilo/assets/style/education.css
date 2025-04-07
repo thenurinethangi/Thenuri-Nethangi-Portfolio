@@ -1,0 +1,278 @@
+/* Fixed education section styles */
+#education-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-color: #25202F;
+    border: 2px solid crimson;
+    /* Add specific view timeline for this section */
+    view-timeline-name: --education-timeline;
+    view-timeline-axis: block;
+    padding-bottom: 4em;
+}
+
+#education-section > div {
+
+    width: 80%;
+    /*height: 130px;*/
+    background-color: rgba(255, 255, 255, 0.05);;
+    color: #B8B8B8;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1em;
+    position: relative;
+    padding-block: 1.5em;
+    border-radius: 10px;
+    transition: all var(--transition-medium);
+}
+
+#education-section > div:hover {
+    transform: translateX(10px);
+}
+
+
+#first-education{
+
+    margin-top: 1.5em;
+}
+
+
+
+.single-education-box-content{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /*background-color: #7438c0;*/
+    padding: 2em 4em;
+    gap: 7em;
+}
+
+
+.single-education-box-content>p{
+
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+
+.institute>p:first-child{
+
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+
+.institute>p:nth-child(2){
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+
+.line-in-education{
+
+    width: 20%;
+    height: 1.7px;
+    border-radius: 25px;
+    background-color: rgba(184, 184, 184, 0.77);
+}
+
+.institute{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*gap: 0.2em;*/
+    /*margin-left: 1em;*/
+}
+
+
+
+
+.box{
+
+    border-radius: 10px;
+}
+
+/* Rest of your box hover animations remain unchanged */
+.box:first-child {
+    width: 0px;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    transition-duration: 0.5s;
+}
+
+.box:nth-child(2) {
+    width: 0px;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.box:nth-child(3) {
+    width: 0px;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.box:nth-child(4) {
+    width: 0px;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    transition-duration: 0.5s;
+}
+
+#education-section > div:hover .box:first-child {
+    animation: color-change-one 0.3s ease-in-out;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+#education-section > div:hover .box:nth-child(2) {
+    animation: color-change-two 0.3s ease-in-out 0.3s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+#education-section > div:hover .box:nth-child(3) {
+    animation: color-change-three 0.6s ease-in-out 0.6s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+#education-section > div:hover .box:nth-child(4) {
+    animation: color-change-four 0.9s ease-in-out 0.9s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+.single-education-box-content>p {
+    z-index: 9999;
+    /*margin: 0 15px;*/
+}
+
+.institute>p{
+
+    z-index: 9999;
+    /*margin: 0 15px;*/
+}
+
+/* Keyframes remain the same */
+@keyframes color-change-one {
+    0% {
+        width: 0px;
+        background-color: transparent;
+    }
+    100% {
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@keyframes color-change-two {
+    0% {
+        width: 0px;
+        background-color: transparent;
+    }
+    100% {
+        width: 100%;
+        background-color: rgba(255, 89, 193, 0.60);
+    }
+}
+
+@keyframes color-change-three {
+    0% {
+        width: 0px;
+        background-color: transparent;
+    }
+    100% {
+        width: 100%;
+        background-color: #8643DC;
+    }
+}
+
+@keyframes color-change-four {
+    0% {
+        width: 0px;
+        background-color: transparent;
+    }
+    100% {
+        width: 100%;
+        background-color: #25202F;
+    }
+}
+
+@keyframes edu {
+    from {
+        opacity: 0;
+        scale: 0.5;
+        transform: translateX(-500px);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes edu-two {
+    from {
+        opacity: 0;
+        scale: 0.5;
+        transform: translateX(500px);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+
+
+
+/*!* Apply animation to each education box individually *!*/
+/*#education-section > div:first-child {*/
+/*    animation-timeline: --education-timeline;*/
+/*    animation-name: edu;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 5% cover 30%;*/
+/*    animation-duration: 1s;*/
+/*}*/
+
+/*#education-section > div:nth-child(2) {*/
+/*    animation-timeline: --education-timeline;*/
+/*    animation-name: edu-two;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 15% cover 40%;*/
+/*    animation-duration: 1s;*/
+/*}*/
+
+/*#education-section > div:nth-child(3) {*/
+/*    animation-timeline: --education-timeline;*/
+/*    animation-name: edu;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 25% cover 50%;*/
+/*    animation-duration: 1s;*/
+/*}*/
