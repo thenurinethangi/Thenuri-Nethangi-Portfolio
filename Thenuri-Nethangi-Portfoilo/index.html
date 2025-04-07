@@ -6,6 +6,8 @@
     <link rel="icon" type="image/ico" href="assets/image/favicon.png">
     <link rel="stylesheet" href="assets/style/temp.css">
     <link rel="stylesheet" href="assets/style/service.css">
+    <link rel="stylesheet" href="assets/style/education.css">
+    <link rel="stylesheet" href="assets/style/text-animation.css">
 
     <meta name="keywords" content="html, css, javascript, portfolio, web development, software engineering, computer science">
     <meta name="author" content="Thenuri">
@@ -414,7 +416,10 @@
             animation-duration: 1.2s;
             animation-delay: 2.6s;
             animation-fill-mode: both;
+            /*animation: slide-out-container 4s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;*/
+            /*animation-fill-mode: forwards;*/
         }
+
 
         #landing > div:nth-child(2) {
             position: absolute;
@@ -437,6 +442,22 @@
             left: 79%;
             z-index: 20;
         }
+
+
+        @keyframes slide-out-container {
+            0% {
+                height: 100vh;
+            }
+
+            40% {
+                height: 100vh;
+            }
+
+            100% {
+                height: 0%;
+            }
+        }
+
 
         @keyframes landing-animation {
             0% {
@@ -1053,9 +1074,27 @@
 
     </section>
 
+    <section id="text-animation-section">
+        <div class="container">
+            <div class="text-wrapper">
+                <div class="text-1 text">Thenuri Nethangi</div>
+                <div class="text-2 text">Thenuri Nethangi</div>
+                <div class="text-3 text">Thenuri Nethangi</div>
+                <div class="text-4 text">Thenuri Nethangi</div>
+                <div class="text-5 text">Thenuri Nethangi</div>
+                <div class="text-6 text">Thenuri Nethangi</div>
+                <div class="text-7 text">Thenuri Nethangi</div>
+                <div class="text-8 text">Thenuri Nethangi</div>
+                <div class="text-9 text">Thenuri Nethangi</div>
+<!--                <div class="text-10 text">less is more</div>-->
+<!--                <div class="text-11 text">less is more</div>-->
+            </div>
+        </div>
+    </section>
+
 </section>
 
-<section id="hey"></section>
+
 
 
 <script>
@@ -1154,6 +1193,42 @@
     //     // Add scroll event listener
     //     window.addEventListener('scroll', handleScroll);
     // });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Create the Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If the element is in the viewport
+                if (entry.isIntersecting) {
+                    // Add the visible class to trigger animation
+                    entry.target.classList.add('visible');
+
+                    // Unobserve after animation has been triggered once
+                    observer.unobserve(entry.target);
+
+                    // Re-observe after animation completes (after 5 seconds)
+                    setTimeout(() => {
+                        // Reset animation state
+                        entry.target.classList.remove('visible');
+
+                        // Start observing again after reset
+                        setTimeout(() => {
+                            observer.observe(entry.target);
+                        }, 100);
+                    }, 5500); // 5.5 seconds = duration of our animations
+                }
+            });
+        }, {
+            root: null, // viewport
+            threshold: 0.5, // trigger when 50% of element is visible
+            rootMargin: '0px'
+        });
+
+        // Start observing the animation container
+        const animationContainer = document.getElementById('animation');
+        observer.observe(animationContainer);
+    });
 
 </script>
 
