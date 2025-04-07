@@ -140,6 +140,14 @@
     color: #FFFFFF;
 }
 
+
+#about-us-section-menu{
+
+    position: fixed;
+    z-index: 30;
+}
+
+
 #about-me-section-content{
     width: 100%;
     max-width: 1400px;
