@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#service-section{
+
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #25202F;
+    color: #FFFFFF;
+    /*border: 2px solid #B8B8B8;*/
+    position: relative;
+    overflow: hidden;
+}
+
+
+#service-section-content-container{
+
+    width: 82%;
+    /*height: 200px;*/
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5em;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.service-box{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2em;
+    /*border: 2px solid blue;*/
+
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    flex: 1;
+    padding: 1.2em;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(37, 32, 47, 0.57);
+    background-color: rgba(37, 32, 47, 0.57);
+    border-radius: 4px;
+}
+
+.top-box{
+
+    /*margin-bottom: 2em;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.7em;
+}
+
+
+.top-box>h4{
+
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+.bot-box>p{
+
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 0.9rem;
+}
+
+
+.top-box img {
+    transition: transform 0.5s ease;
+}
+
+.service-box:hover .top-box img {
+    transform: rotate(10deg) scale(1.2);
+}
+
+
+/* Card hover effect */
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+
+.service-box:hover::before {
+    opacity: 1;
+}
+
+
+#service-section {
+    view-timeline-name: --section-scroll;
+    view-timeline-axis: block;
+    /* other styles remain the same */
+}
+
+/*.service-box:nth-child(1) {*/
+/*    view-timeline: --section-scroll block;*/
+/*    animation-timeline: --section-scroll;*/
+/*    animation-name: fade-slide-in;*/
+/*    animation-duration: 1s;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 15% cover 0%;*/
+/*    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);*/
+/*}*/
+
+/*.service-box:nth-child(2) {*/
+/*    view-timeline: --section-scroll block;*/
+/*    animation-timeline: --section-scroll;*/
+/*    animation-name: fade-slide-in;*/
+/*    animation-duration: 1s;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 20% cover 0%;*/
+/*    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);*/
+/*    !*animation-delay: 1s;*!*/
+/*}*/
+
+/*.service-box:nth-child(3) {*/
+/*    view-timeline: --section-scroll block;*/
+/*    animation-timeline: --section-scroll;*/
+/*    animation-name: fade-slide-in;*/
+/*    animation-duration: 1s;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 25% cover 0%;*/
+/*    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);*/
+/*    !*animation-delay: 2s;*!*/
+/*}*/
+
+
+@keyframes fade-slide-in {
+    0% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* For browsers that don't support CSS scroll-driven animations */
+@supports not (animation-timeline: --service-reveal) {
+    .service-box {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*.service-box.visible {*/
+/*    opacity: 1;*/
+/*    transform: translateY(0);*/
+/*}*/
+
+/*!* Delay each service box animation *!*/
+/*.service-box:nth-child(1) {*/
+/*    transition-delay: 0.1s;*/
+/*}*/
+
+/*.service-box:nth-child(2) {*/
+/*    transition-delay: 0.3s;*/
+/*}*/
+
+/*.service-box:nth-child(3) {*/
+/*    transition-delay: 0.5s;*/
+/*}*/
+
+
+
+
+/*#service-section-content-container > div:first-child {*/
+/*    view-timeline: --section-scroll block;*/
+/*    animation-timeline: --section-scroll;*/
+/*    animation-name: fade-slide-in;*/
+/*    animation-duration: 1s;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 25% cover 40%;*/
+/*    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);*/
+/*}*/
+
+/*#service-section-content-container > div:nth-child(2) {*/
+/*    view-timeline: --section-scroll block;*/
+/*    animation-timeline: --section-scroll;*/
+/*    animation-name: fade-slide-in;*/
+/*    animation-duration: 1s;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 25% cover 45%;*/
+/*    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);*/
+/*    animation-delay: 1s;*/
+/*}*/
+
+/*#service-section-content-container > div:nth-child(3) {*/
+/*    view-timeline: --section-scroll block;*/
+/*    animation-timeline: --section-scroll;*/
+/*    animation-name: fade-slide-in;*/
+/*    animation-duration: 1s;*/
+/*    animation-fill-mode: both;*/
+/*    animation-range: entry 25% cover 50%;*/
+/*    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);*/
+/*    animation-delay: 2s;*/
+/*}*/
+
+/*@keyframes fade-slide-in {*/
+/*    0% {*/
+/*        transform: translateX(-40px);*/
+/*        opacity: 0;*/
+/*    }*/
+
+/*    100% {*/
+/*        transform: translateX(0);*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
+
+
+
+@media all and (max-width: 1050px) {
+
+    #service-section{
+
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #25202F;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+    #service-section-content-container{
+
+        width: 90%;
+        /*height: 200px;*/
+        /*background-color: red;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5em;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+@media all and (max-width: 920px) {
+
+    #service-section{
+
+        width: 100vw;
+        min-height: 140vh;
+        background-color: #25202F;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+
+    #service-section-content-container{
+
+        /*padding-top: 8em;*/
+        width: 60%;
+        /*height: 200px;*/
+        /*background-color: red;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .service-box{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2em;
+        /*border: 2px solid blue;*/
+    }
+
+    .bot-box>p{
+
+        /*text-align: center;*/
+    }
+}
+
+
+
+@media all and (max-width: 578px) {
+
+    #service-section{
+
+        width: 100vw;
+        min-height: 140vh;
+        background-color: #25202F;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+
+    #service-section-content-container{
+
+        width: 80%;
+        /*height: 200px;*/
+        /*background-color: red;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5em;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .service-box{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2em;
+        /*border: 2px solid blue;*/
+    }
+
+    .bot-box>p{
+
+        /*text-align: center;*/
+    }
+}
+
+
+
+
+
