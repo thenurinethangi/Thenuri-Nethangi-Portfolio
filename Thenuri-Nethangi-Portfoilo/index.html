@@ -5,6 +5,7 @@
     <title>Index</title>
     <link rel="icon" type="image/ico" href="assets/image/favicon.png">
     <link rel="stylesheet" href="assets/style/temp.css">
+    <link rel="stylesheet" href="assets/style/service.css">
 
     <meta name="keywords" content="html, css, javascript, portfolio, web development, software engineering, computer science">
     <meta name="author" content="Thenuri">
@@ -999,6 +1000,59 @@
 
     </section>
 
+    <section id="service-section">
+
+        <header class="section-headers">
+            <div class="titles">
+                <div>
+                    <h5 class="section-title">Services</h5>
+                    <img src="assets/image/every-page-title-underline.png" alt="underline image">
+                </div>
+                <h2 class="title-desc">What  Services I Provide</h2>
+            </div>
+
+            <div>
+                <img src="assets/image/hero-section-image/Menu.png" alt="menu icon" width="105px" id="about-us-section-menu">
+            </div>
+        </header>
+
+
+        <div id="service-section-content-container">
+            <div class="service-box">
+                <div class="top-box">
+                    <img src="assets/image/service-section-image/services-1.png" alt="The services I provide are represented by icon." width="45px">
+                    <h4>UI/UX Design</h4>
+                </div>
+                <div class="bot-box">
+                    <p>Expertly designed interfaces and seamless user experiences crafted to elevate our clients digital platforms and engage your audience effectively
+                        and amazingly.</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="top-box">
+                    <img src="assets/image/service-section-image/services-1.png" alt="The services I provide are represented by icon." width="45px">
+                    <h4>Game Development</h4>
+                </div>
+                <div class="bot-box">
+                    <p>End-to-end game creation with stunning visuals, smooth mechanics, and engaging gameplay to captivate players and bring ideas to life. We satisfy
+                        clients.</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="top-box">
+                    <img src="assets/image/service-section-image/services-1.png" alt="The services I provide are represented by icon." width="45px">
+                    <h4>Web Development</h4>
+                </div>
+                <div class="bot-box">
+                    <p>I develop modern, responsive, and user-friendly websites that combine functionality and creative, helping you establish a powerful online presence and customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 </section>
 
 <section id="hey"></section>
@@ -1071,6 +1125,35 @@
 
         observer.observe(aboutSection);
     });
+
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     // Function to check if element is in viewport
+    //     function isInViewport(element) {
+    //         const rect = element.getBoundingClientRect();
+    //         return (
+    //             rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+    //             rect.bottom >= 0
+    //         );
+    //     }
+    //
+    //     // Function to add 'visible' class to elements in viewport
+    //     function handleScroll() {
+    //         const serviceBoxes = document.querySelectorAll('.service-box');
+    //
+    //         serviceBoxes.forEach(box => {
+    //             if (isInViewport(box)) {
+    //                 box.classList.add('visible');
+    //             }
+    //         });
+    //     }
+    //
+    //     // Run once on load
+    //     handleScroll();
+    //
+    //     // Add scroll event listener
+    //     window.addEventListener('scroll', handleScroll);
+    // });
 
 </script>
 

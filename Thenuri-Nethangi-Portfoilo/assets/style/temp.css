@@ -81,7 +81,7 @@
     position: relative;
     background-color: #25202F;
     transition: background-color 1s ease;
-    padding-bottom: 3rem;
+    padding-bottom: 7rem;
 }
 
 .dark-text{
@@ -103,7 +103,7 @@
 
 .section-headers{
     width: 100%;
-    padding: 3rem 8rem 2rem 8rem;
+    padding: 2rem 1rem 2rem 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
