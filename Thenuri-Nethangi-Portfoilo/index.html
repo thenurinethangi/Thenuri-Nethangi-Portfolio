@@ -1166,165 +1166,165 @@
 
 
 
-<script>
-    // Add this script at the end of your body tag
-    window.addEventListener('scroll', () => {
-        // Calculate how far down the page the user has scrolled
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
+<!--<script>-->
+<!--    // Add this script at the end of your body tag-->
+<!--    window.addEventListener('scroll', () => {-->
+<!--        // Calculate how far down the page the user has scrolled-->
+<!--        const scrollY = window.scrollY;-->
+<!--        const windowHeight = window.innerHeight;-->
 
-        // Calculate scroll progress (0 to 1)
-        // This determines how fast the hero section fades out
-        let scrollProgress = Math.min(scrollY / windowHeight, 1);
+<!--        // Calculate scroll progress (0 to 1)-->
+<!--        // This determines how fast the hero section fades out-->
+<!--        let scrollProgress = Math.min(scrollY / windowHeight, 1);-->
 
-        // Update CSS variable
-        document.documentElement.style.setProperty('--scroll', scrollProgress);
-    });
+<!--        // Update CSS variable-->
+<!--        document.documentElement.style.setProperty('&#45;&#45;scroll', scrollProgress);-->
+<!--    });-->
 
-    window.addEventListener('scroll', () => {
-        // Calculate scroll progress more smoothly
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.body.scrollHeight;
+<!--    window.addEventListener('scroll', () => {-->
+<!--        // Calculate scroll progress more smoothly-->
+<!--        const scrollY = window.scrollY;-->
+<!--        const windowHeight = window.innerHeight;-->
+<!--        const documentHeight = document.body.scrollHeight;-->
 
-        // Calculate scroll progress (0 to 1) with better precision
-        let scrollProgress = Math.min(scrollY / (windowHeight * 0.8), 1);
+<!--        // Calculate scroll progress (0 to 1) with better precision-->
+<!--        let scrollProgress = Math.min(scrollY / (windowHeight * 0.8), 1);-->
 
-        // Clamp value between 0 and 1
-        scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+<!--        // Clamp value between 0 and 1-->
+<!--        scrollProgress = Math.max(0, Math.min(1, scrollProgress));-->
 
-        // Update CSS variable
-        document.documentElement.style.setProperty('--scroll', scrollProgress);
-    });
+<!--        // Update CSS variable-->
+<!--        document.documentElement.style.setProperty('&#45;&#45;scroll', scrollProgress);-->
+<!--    });-->
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const aboutSection = document.getElementById('about-section');
-        const sectionTitle = document.querySelector('.section-title');
-        const titleDesc = document.querySelector('.title-desc');
-        const aboutParagraph = document.getElementById('about-paragraph');
+<!--    document.addEventListener('DOMContentLoaded', () => {-->
+<!--        const aboutSection = document.getElementById('about-section');-->
+<!--        const sectionTitle = document.querySelector('.section-title');-->
+<!--        const titleDesc = document.querySelector('.title-desc');-->
+<!--        const aboutParagraph = document.getElementById('about-paragraph');-->
 
-        // Observer for the about section
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                // Only change colors when the section becomes visible
-                // Don't change back when scrolling past it
-                if (entry.isIntersecting) {
-                    // Change to dark background
-                    aboutSection.classList.add('dark-bg');
+<!--        // Observer for the about section-->
+<!--        const observer = new IntersectionObserver(entries => {-->
+<!--            entries.forEach(entry => {-->
+<!--                // Only change colors when the section becomes visible-->
+<!--                // Don't change back when scrolling past it-->
+<!--                if (entry.isIntersecting) {-->
+<!--                    // Change to dark background-->
+<!--                    aboutSection.classList.add('dark-bg');-->
 
-                    // Change text colors to light
-                    if (sectionTitle) sectionTitle.classList.remove('dark-text');
-                    if (sectionTitle) sectionTitle.classList.add('light-text');
+<!--                    // Change text colors to light-->
+<!--                    if (sectionTitle) sectionTitle.classList.remove('dark-text');-->
+<!--                    if (sectionTitle) sectionTitle.classList.add('light-text');-->
 
-                    if (titleDesc) titleDesc.classList.remove('dark-text');
-                    if (titleDesc) titleDesc.classList.add('light-text');
+<!--                    if (titleDesc) titleDesc.classList.remove('dark-text');-->
+<!--                    if (titleDesc) titleDesc.classList.add('light-text');-->
 
-                    // The paragraph already has white color in CSS
-                    if (aboutParagraph) aboutParagraph.style.color = 'rgba(255, 255, 255, 0.77)';
+<!--                    // The paragraph already has white color in CSS-->
+<!--                    if (aboutParagraph) aboutParagraph.style.color = 'rgba(255, 255, 255, 0.77)';-->
 
-                    // Disconnect the observer after making the change
-                    // This prevents it from changing back when scrolling more
-                    observer.disconnect();
-                }
-            });
-        }, {
-            threshold: 0.5 // Trigger when 50% of section is visible
-        });
+<!--                    // Disconnect the observer after making the change-->
+<!--                    // This prevents it from changing back when scrolling more-->
+<!--                    observer.disconnect();-->
+<!--                }-->
+<!--            });-->
+<!--        }, {-->
+<!--            threshold: 0.5 // Trigger when 50% of section is visible-->
+<!--        });-->
 
-        observer.observe(aboutSection);
-    });
-
-
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     // Function to check if element is in viewport
-    //     function isInViewport(element) {
-    //         const rect = element.getBoundingClientRect();
-    //         return (
-    //             rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-    //             rect.bottom >= 0
-    //         );
-    //     }
-    //
-    //     // Function to add 'visible' class to elements in viewport
-    //     function handleScroll() {
-    //         const serviceBoxes = document.querySelectorAll('.service-box');
-    //
-    //         serviceBoxes.forEach(box => {
-    //             if (isInViewport(box)) {
-    //                 box.classList.add('visible');
-    //             }
-    //         });
-    //     }
-    //
-    //     // Run once on load
-    //     handleScroll();
-    //
-    //     // Add scroll event listener
-    //     window.addEventListener('scroll', handleScroll);
-    // });
+<!--        observer.observe(aboutSection);-->
+<!--    });-->
 
 
-    document.addEventListener('DOMContentLoaded', () => {
-        // Create the Intersection Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // If the element is in the viewport
-                if (entry.isIntersecting) {
-                    // Add the visible class to trigger animation
-                    entry.target.classList.add('visible');
+<!--    // document.addEventListener('DOMContentLoaded', function() {-->
+<!--    //     // Function to check if element is in viewport-->
+<!--    //     function isInViewport(element) {-->
+<!--    //         const rect = element.getBoundingClientRect();-->
+<!--    //         return (-->
+<!--    //             rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&-->
+<!--    //             rect.bottom >= 0-->
+<!--    //         );-->
+<!--    //     }-->
+<!--    //-->
+<!--    //     // Function to add 'visible' class to elements in viewport-->
+<!--    //     function handleScroll() {-->
+<!--    //         const serviceBoxes = document.querySelectorAll('.service-box');-->
+<!--    //-->
+<!--    //         serviceBoxes.forEach(box => {-->
+<!--    //             if (isInViewport(box)) {-->
+<!--    //                 box.classList.add('visible');-->
+<!--    //             }-->
+<!--    //         });-->
+<!--    //     }-->
+<!--    //-->
+<!--    //     // Run once on load-->
+<!--    //     handleScroll();-->
+<!--    //-->
+<!--    //     // Add scroll event listener-->
+<!--    //     window.addEventListener('scroll', handleScroll);-->
+<!--    // });-->
 
-                    // Unobserve after animation has been triggered once
-                    observer.unobserve(entry.target);
 
-                    // Re-observe after animation completes (after 5 seconds)
-                    setTimeout(() => {
-                        // Reset animation state
-                        entry.target.classList.remove('visible');
+<!--    document.addEventListener('DOMContentLoaded', () => {-->
+<!--        // Create the Intersection Observer-->
+<!--        const observer = new IntersectionObserver((entries) => {-->
+<!--            entries.forEach(entry => {-->
+<!--                // If the element is in the viewport-->
+<!--                if (entry.isIntersecting) {-->
+<!--                    // Add the visible class to trigger animation-->
+<!--                    entry.target.classList.add('visible');-->
 
-                        // Start observing again after reset
-                        setTimeout(() => {
-                            observer.observe(entry.target);
-                        }, 100);
-                    }, 5500); // 5.5 seconds = duration of our animations
-                }
-            });
-        }, {
-            root: null, // viewport
-            threshold: 0.5, // trigger when 50% of element is visible
-            rootMargin: '0px'
-        });
+<!--                    // Unobserve after animation has been triggered once-->
+<!--                    observer.unobserve(entry.target);-->
 
-        // Start observing the animation container
-        const animationContainer = document.getElementById('animation');
-        observer.observe(animationContainer);
-    });
+<!--                    // Re-observe after animation completes (after 5 seconds)-->
+<!--                    setTimeout(() => {-->
+<!--                        // Reset animation state-->
+<!--                        entry.target.classList.remove('visible');-->
 
-    // Function to simulate different device views
-    function simulateDevice(device) {
-        const container = document.querySelector('.container');
-        const label = document.querySelector('.device-label');
+<!--                        // Start observing again after reset-->
+<!--                        setTimeout(() => {-->
+<!--                            observer.observe(entry.target);-->
+<!--                        }, 100);-->
+<!--                    }, 5500); // 5.5 seconds = duration of our animations-->
+<!--                }-->
+<!--            });-->
+<!--        }, {-->
+<!--            root: null, // viewport-->
+<!--            threshold: 0.5, // trigger when 50% of element is visible-->
+<!--            rootMargin: '0px'-->
+<!--        });-->
 
-        switch(device) {
-            case 'desktop':
-                container.style.width = '100%';
-                label.textContent = 'Desktop View';
-                break;
-            case 'tablet':
-                container.style.width = '768px';
-                label.textContent = 'Tablet View (768px)';
-                break;
-            case 'mobile':
-                container.style.width = '576px';
-                label.textContent = 'Mobile View (576px)';
-                break;
-            case 'small-mobile':
-                container.style.width = '375px';
-                label.textContent = 'Small Mobile View (375px)';
-                break;
-        }
-    }
+<!--        // Start observing the animation container-->
+<!--        const animationContainer = document.getElementById('animation');-->
+<!--        observer.observe(animationContainer);-->
+<!--    });-->
 
-</script>
+<!--    // Function to simulate different device views-->
+<!--    function simulateDevice(device) {-->
+<!--        const container = document.querySelector('.container');-->
+<!--        const label = document.querySelector('.device-label');-->
+
+<!--        switch(device) {-->
+<!--            case 'desktop':-->
+<!--                container.style.width = '100%';-->
+<!--                label.textContent = 'Desktop View';-->
+<!--                break;-->
+<!--            case 'tablet':-->
+<!--                container.style.width = '768px';-->
+<!--                label.textContent = 'Tablet View (768px)';-->
+<!--                break;-->
+<!--            case 'mobile':-->
+<!--                container.style.width = '576px';-->
+<!--                label.textContent = 'Mobile View (576px)';-->
+<!--                break;-->
+<!--            case 'small-mobile':-->
+<!--                container.style.width = '375px';-->
+<!--                label.textContent = 'Small Mobile View (375px)';-->
+<!--                break;-->
+<!--        }-->
+<!--    }-->
+
+<!--</script>-->
 
 </body>
 </html>
