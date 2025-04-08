@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Infinite Text Animation</title>
+    <style>
+        /* Base Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Monument Extended", serif;
+            background-color: #D3E97A;
+            color: #161616;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container for the animation */
+        .container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Wrapper holds text elements */
+        .text-wrapper {
+            position: relative;
+            height: 100px; /* Adjust based on font size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Base style for each text */
+        .text {
+            font-size: 54px;
+            font-weight: lighter;
+            position: absolute;
+            opacity: 0;
+            animation: fade-in-out 11s linear infinite;
+        }
+
+        /* Staggered animation delays */
+        .text-1 { animation-delay: 0s; }
+        .text-2 { animation-delay: 1s; }
+        .text-3 { animation-delay: 2s; }
+        .text-4 { animation-delay: 3s; }
+        .text-5 { animation-delay: 4s; }
+        .text-6 { animation-delay: 5s; }
+        .text-7 { animation-delay: 6s; }
+        .text-8 { animation-delay: 7s; }
+        .text-9 { animation-delay: 8s; }
+        .text-10 { animation-delay: 9s; }
+        .text-11 { animation-delay: 10s; }
+
+        /* Stroke text */
+        .text-1,
+        .text-3,
+        .text-4,
+        .text-8,
+        .text-9,
+        .text-11 {
+            color: white;
+            -webkit-text-stroke: 1px black;
+        }
+
+        /* Animation keyframes */
+        @keyframes fade-in-out {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            20% { opacity: 1; }
+            30% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Responsive fonts */
+        @media screen and (max-width: 1200px) {
+            .text { font-size: 48px; }
+        }
+
+        @media screen and (max-width: 992px) {
+            .text { font-size: 42px; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .text { font-size: 36px; }
+        }
+
+        @media screen and (max-width: 576px) {
+            .text { font-size: 28px; }
+            .text-1,
+            .text-3,
+            .text-4,
+            .text-8,
+            .text-9 {
+                -webkit-text-stroke: 0.5px black;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            .text { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="text-wrapper">
+        <div class="text text-1">Creative</div>
+        <div class="text text-2">Innovative</div>
+        <div class="text text-3">Reliable</div>
+        <div class="text text-4">Passionate</div>
+        <div class="text text-5">Modern</div>
+        <div class="text text-6">Visionary</div>
+        <div class="text text-7">Elegant</div>
+        <div class="text text-8">Bold</div>
+        <div class="text text-9">Versatile</div>
+        <div class="text text-10">Smart</div>
+        <div class="text text-11">Focused</div>
+    </div>
+</div>
+</body>
+</html>
