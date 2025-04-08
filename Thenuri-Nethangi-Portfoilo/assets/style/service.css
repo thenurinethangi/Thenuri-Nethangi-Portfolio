@@ -12,7 +12,7 @@
     position: relative;
     overflow: hidden;
     /* Remove fixed height and use padding instead */
-    padding: 0 0 180px; /* Adjust top padding to accommodate header */
+    padding: 0 0 110px; /* Adjust top padding to accommodate header */
 }
 
 /*!* Move header styling from HTML to CSS for better control *!*/

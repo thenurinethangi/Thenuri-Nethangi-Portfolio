@@ -82,6 +82,7 @@
     background-color: #25202F;
     transition: background-color 1s ease;
     padding-bottom: 7rem;
+    padding-top: 2.5em;
 }
 
 .dark-text{
