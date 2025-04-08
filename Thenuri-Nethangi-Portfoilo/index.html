@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/style/education.css">
     <link rel="stylesheet" href="assets/style/text-animation.css">
     <link rel="stylesheet" href="assets/style/education.css">
+    <link rel="stylesheet" href="assets/style/skill-line.css">
+    <link rel="stylesheet" href="assets/style/experience.css">
 
     <meta name="keywords" content="html, css, javascript, portfolio, web development, software engineering, computer science">
     <meta name="author" content="Thenuri">
@@ -1326,5 +1328,90 @@
 
 <!--</script>-->
 
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Landing page animation
+        setTimeout(function() {
+            document.getElementById('landing').style.display = 'none';
+        }, 3000);
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Elements to observe
+        const elementsToObserve = [
+            '.titles',
+            '#my-image-box',
+            '#description-box',
+            '.service-box',
+            '#first-education',
+            '#second-education',
+            '#third-education'
+        ];
+
+        // Observe each element
+        elementsToObserve.forEach(selector => {
+            document.querySelectorAll(selector).forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Add visible class to service boxes with delay
+        const serviceBoxes = document.querySelectorAll('.service-box');
+        serviceBoxes.forEach((box, index) => {
+            setTimeout(() => {
+                box.classList.add('fade-in');
+            }, index * 200);
+        });
+
+        // Menu button click event
+        const menuButton = document.getElementById('menu');
+        if (menuButton) {
+            menuButton.addEventListener('click', function() {
+                // Add your menu functionality here
+                console.log('Menu clicked');
+            });
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            const heroBackground = document.getElementById('hero-section-bg');
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+            }
+
+            const glowCircle = document.getElementById('glow-circle');
+            if (glowCircle) {
+                glowCircle.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+            }
+
+            const glowCircleTwo = document.getElementById('glow-circle-two');
+            if (glowCircleTwo) {
+                glowCircleTwo.style.transform = `translateY(${scrollPosition * -0.1}px)`;
+            }
+        });
+    });
+</script>
 </body>
 </html>

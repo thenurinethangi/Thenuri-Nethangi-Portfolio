@@ -21,49 +21,49 @@
     }
 }
 
-#line-section {
-    background-color: white;
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+/*#line-section {*/
+/*    background-color: white;*/
+/*    width: 100%;*/
+/*    height: 70vh;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    overflow: hidden;*/
+/*}*/
 
-/* Skills line */
-#line {
-    background-color: #EEEEEE;
-    color: var(--main-color);
-    width: 200vw;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-inline: 1em;
-    overflow: hidden;
-    animation-name: round;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-}
+/*!* Skills line *!*/
+/*#line {*/
+/*    background-color: #EEEEEE;*/
+/*    color: var(--main-color);*/
+/*    width: 200vw;*/
+/*    height: 60px;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-evenly;*/
+/*    align-items: center;*/
+/*    padding-inline: 1em;*/
+/*    overflow: hidden;*/
+/*    animation-name: round;*/
+/*    animation-duration: 15s;*/
+/*    animation-iteration-count: infinite;*/
+/*    animation-timing-function: linear;*/
+/*    animation-fill-mode: both;*/
+/*}*/
 
-#line > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.2em;
-    flex-shrink: 0;
-}
+/*#line > div {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    gap: 1.2em;*/
+/*    flex-shrink: 0;*/
+/*}*/
 
-#line > div > p {
-    font-size: 1rem;
-    font-weight: 500;
-    white-space: nowrap;
-}
+/*#line > div > p {*/
+/*    font-size: 1rem;*/
+/*    font-weight: 500;*/
+/*    white-space: nowrap;*/
+/*}*/
 
 @keyframes round {
     from {
