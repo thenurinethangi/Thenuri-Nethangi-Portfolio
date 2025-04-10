@@ -16,6 +16,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.5em;
+    margin-right: 2em;
 }
 
 .side-link>a{
@@ -125,7 +126,136 @@
 }
 
 
+@media all and (max-width: 1046px) {
 
+    #skill-container{
+
+        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 2.7em;
+        margin-top: 4em;
+        padding-bottom: 5em;
+
+    }
+
+    .side-link{
+
+        margin-right: 0.4em;
+    }
+}
+
+
+@media all and (max-width: 877px) {
+
+    #skill-container{
+
+        width: 470px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 2.7em;
+        margin-top: 4em;
+        padding-bottom: 6em;
+
+    }
+
+    .side-link{
+
+        margin-right: -1em;
+    }
+}
+
+
+
+@media all and (max-width: 658px) {
+
+    #skill-container{
+
+        /*background-color: #333333;*/
+        width: 55%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap: 2.7em;
+        margin-top: 4em;
+
+    }
+
+    .side-link{
+
+        width: 140px;
+        /*background-color: rebeccapurple;*/
+        margin-right: -2em;
+    }
+
+    .side-link>a{
+
+        font-size: 0.85rem;
+    }
+
+    .side-link>img{
+
+        width: 14.5px;
+    }
+}
+
+
+@media all and (max-width: 489px) {
+
+    #skill-container{
+
+        width: 280px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap: 2.7em;
+        margin-top: 4em;
+
+    }
+
+    .side-link{
+
+        margin-right: -1.5em;
+    }
+
+    .side-link>a{
+
+        font-size: 0.7rem;
+    }
+
+    .side-link>img{
+
+        width: 14px;
+    }
+}
+
+
+@media all and (max-width: 399px) {
+
+    #skill-container{
+
+        /*background-color: #D3E97A;*/
+        width: 120px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(10,1fr);
+        gap: 2.7em;
+        margin-top: 4em;
+
+    }
+
+    .side-link{
+
+        margin-right: -1.5em;
+    }
+
+    .side-link>img{
+
+        width: 12px;
+    }
+}
 
 
 
