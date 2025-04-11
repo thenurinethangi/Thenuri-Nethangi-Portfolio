@@ -1,0 +1,8 @@
+#blog-section{
+
+    width: 100%;
+    height: 100vh;
+    background-color: #9747FF;
+    position: relative;
+    z-index: 80;
+}
