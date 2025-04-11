@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/style/experience.css">
     <link rel="stylesheet" href="assets/style/skill.css">
     <link rel="stylesheet" href="assets/style/project.css">
+    <link rel="stylesheet" href="assets/style/assignment.css">
 
     <meta name="keywords" content="html, css, javascript, portfolio, web development, software engineering, computer science">
     <meta name="author" content="Thenuri">
@@ -1369,6 +1370,68 @@
 
 </section>
 
+<!--assignment section-->
+<!-- Assignment section -->
+<section id="assignment-section">
+    <div id="assignment-section-content-container">
+        <div class="assignment-cards-stack">
+            <div class="assignment">
+                <img class="assignment-img" src="assets/image/assignment-section/ux_ui_design_322afd6292.webp" alt="assignment image">
+                <div class="assignment-content">
+                    <h3>Assignment-01</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img class="github-icon" src="assets/image/assignment-section/visit-github-02.png" alt="visit github" width="45px">
+                </div>
+            </div>
+
+            <div class="assignment">
+                <img class="assignment-img" src="assets/image/assignment-section/HTML_Blog-scaled.jpeg" alt="assignment image">
+                <div class="assignment-content">
+                    <h3>Assignment-02</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img class="github-icon" src="assets/image/assignment-section/visit-github-02.png" alt="visit github" width="45px">
+                </div>
+            </div>
+
+            <div class="assignment">
+                <img class="assignment-img" src="assets/image/assignment-section/hero-css.png" alt="assignment image">
+                <div class="assignment-content">
+                    <h3>Assignment-03</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img class="github-icon" src="assets/image/assignment-section/visit-github-02.png" alt="visit github" width="45px">
+                </div>
+            </div>
+
+            <div class="assignment">
+                <img class="assignment-img" src="assets/image/assignment-section/animation-02.webp" alt="assignment image">
+                <div class="assignment-content">
+                    <h3>Assignment-04</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img class="github-icon" src="assets/image/assignment-section/visit-github-02.png" alt="visit github" width="45px">
+                </div>
+            </div>
+
+            <div class="assignment">
+                <img class="assignment-img" src="assets/image/assignment-section/portfolio-01.png" alt="assignment image">
+                <div class="assignment-content">
+                    <h3>Assignment-05</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img class="github-icon" src="assets/image/assignment-section/visit-github-02.png" alt="visit github" width="45px">
+                </div>
+            </div>
+
+            <div class="assignment">
+                <img class="assignment-img" src="assets/image/assignment-section/pos-01.gif" alt="assignment image">
+                <div class="assignment-content">
+                    <h3>Assignment-06</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img class="github-icon" src="assets/image/assignment-section/visit-github-02.png" alt="visit github" width="45px">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!--<script>-->
 <!--    // Add this script at the end of your body tag-->
@@ -1614,6 +1677,179 @@
             }
         });
     });
+
 </script>
+
+<!--&lt;!&ndash;card effect&ndash;&gt;-->
+<!--<script>-->
+<!--    document.addEventListener('DOMContentLoaded', function() {-->
+<!--        const container = document.getElementById('assignment-section');-->
+<!--        const contentContainer = document.getElementById('assignment-section-content-container');-->
+<!--        const cards = document.querySelectorAll('.assignment');-->
+<!--        const totalCards = cards.length;-->
+
+<!--        // Calculate total scroll range-->
+<!--        const scrollRange = container.offsetHeight - window.innerHeight;-->
+
+<!--        window.addEventListener('scroll', function() {-->
+<!--            // Get scroll position relative to the assignment section-->
+<!--            const rect = container.getBoundingClientRect();-->
+<!--            const scrollPosition = -rect.top;-->
+
+<!--            // Calculate the end portion of scrolling (last 20% of the section)-->
+<!--            const exitThreshold = scrollRange * 0.8;-->
+<!--            const exitProgress = Math.max(0, (scrollPosition - exitThreshold) / (scrollRange - exitThreshold));-->
+
+<!--            // Only apply effect when section is in view-->
+<!--            if (scrollPosition >= 0 && scrollPosition <= scrollRange) {-->
+<!--                // Calculate progress through section (0 to 1)-->
+<!--                const scrollProgress = scrollPosition / scrollRange;-->
+
+<!--                // Calculate which card should be active (accounting for transition out)-->
+<!--                const activeCardsCount = totalCards * Math.min(1, 1.25 - exitProgress);-->
+<!--                const currentCardIndex = Math.min(-->
+<!--                    Math.floor(scrollProgress * (totalCards + 1)),-->
+<!--                    Math.floor(activeCardsCount)-->
+<!--                );-->
+
+<!--                // Apply transformations to each card-->
+<!--                cards.forEach((card, index) => {-->
+<!--                    if (index < currentCardIndex) {-->
+<!--                        // Cards that should move out of view-->
+<!--                        card.style.transform = `translateY(${-100 * (index - currentCardIndex)}%) scale(${1 - (currentCardIndex - index) * 0.03})`;-->
+<!--                        card.style.opacity = "0";-->
+<!--                        card.style.zIndex = totalCards - index;-->
+<!--                    } else {-->
+<!--                        // Default stacked position with slight offset-->
+<!--                        const offset = index - currentCardIndex;-->
+<!--                        card.style.transform = `translateY(${-15 * offset}px) scale(${1 - offset * 0.03})`;-->
+
+<!--                        // Gradually fade out all cards at the end of the section-->
+<!--                        if (exitProgress > 0) {-->
+<!--                            card.style.opacity = (1 - exitProgress).toString();-->
+
+<!--                            // Move cards down and away as section exits-->
+<!--                            const exitOffset = 50 * exitProgress;-->
+<!--                            card.style.transform = `translateY(${(-15 * offset) + exitOffset}px) scale(${(1 - offset * 0.03) * (1 - exitProgress * 0.5)})`;-->
+<!--                        } else {-->
+<!--                            card.style.opacity = "1";-->
+<!--                        }-->
+
+<!--                        card.style.zIndex = totalCards - index;-->
+<!--                    }-->
+<!--                });-->
+
+<!--                // Fade out the entire container at the end of the section-->
+<!--                if (exitProgress > 0) {-->
+<!--                    contentContainer.style.opacity = (1 - exitProgress).toString();-->
+<!--                } else {-->
+<!--                    contentContainer.style.opacity = "1";-->
+<!--                }-->
+<!--            }-->
+<!--        });-->
+
+<!--        // Initial call to set up the cards-->
+<!--        window.dispatchEvent(new Event('scroll'));-->
+<!--    });-->
+<!--</script>-->
+
+
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const assignmentSection = document.getElementById('assignment-section');
+    const contentContainer = document.getElementById('assignment-section-content-container');
+    const cards = document.querySelectorAll('.assignment');
+    const totalCards = cards.length;
+
+    // Function to handle scroll events
+    function handleScroll() {
+        // Get scroll position and element positions
+        const scrollY = window.scrollY;
+        const assignmentSectionTop = assignmentSection.offsetTop;
+        const assignmentSectionBottom = assignmentSectionTop + assignmentSection.offsetHeight;
+        const assignmentSectionHeight = assignmentSection.offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate our position within the assignment section
+        const scrollRange = assignmentSectionHeight - viewportHeight;
+        const relativeScrollPosition = scrollY - assignmentSectionTop;
+
+        // Determine if we're inside the assignment section
+        const isInAssignmentSection = scrollY >= assignmentSectionTop && scrollY < assignmentSectionBottom - viewportHeight;
+        const isExitingAssignmentSection = scrollY >= assignmentSectionBottom - viewportHeight && scrollY < assignmentSectionBottom;
+
+        // Fixed position when inside assignment section
+        if (isInAssignmentSection) {
+            contentContainer.style.position = 'fixed';
+            contentContainer.style.top = '10vh';
+            contentContainer.style.bottom = 'auto';
+
+            // Calculate which card should be visible based on scroll
+            const scrollProgress = relativeScrollPosition / scrollRange;
+
+            // Calculate active card index
+            const currentCardIndex = Math.min(
+                Math.floor(scrollProgress * (totalCards + 1)),
+                totalCards - 1
+            );
+
+            // Apply transformations to cards
+            cards.forEach((card, index) => {
+                if (index < currentCardIndex) {
+                    // Cards that should be fully out of view
+                    card.style.transform = `translateY(${-100 * (index - currentCardIndex)}%) scale(${1 - (currentCardIndex - index) * 0.03})`;
+                    card.style.opacity = "0";
+                    card.style.zIndex = totalCards - index;
+                } else {
+                    // Default stacked position with slight offset
+                    const offset = index - currentCardIndex;
+                    card.style.transform = `translateY(${-15 * offset}px) scale(${1 - offset * 0.03})`;
+                    card.style.opacity = "1";
+                    card.style.zIndex = totalCards - index;
+                }
+            });
+        }
+        // Transition to sticky or relative as we exit the section
+        else if (isExitingAssignmentSection) {
+            // Calculate exit progress (0 = just starting to exit, 1 = fully exited)
+            const exitProgress = (scrollY - (assignmentSectionBottom - viewportHeight)) / viewportHeight;
+
+            // Keep fixed but start fading out
+            contentContainer.style.position = 'fixed';
+            contentContainer.style.top = '10vh';
+            contentContainer.style.opacity = (1 - exitProgress).toString();
+
+            // Move cards down and away
+            cards.forEach((card, index) => {
+                const baseOffset = -15 * (index);
+                const exitOffset = 50 * exitProgress;
+                card.style.transform = `translateY(${baseOffset + exitOffset}px) scale(${(1 - index * 0.03) * (1 - exitProgress * 0.5)})`;
+                card.style.opacity = (1 - exitProgress).toString();
+            });
+        }
+        // Before or after assignment section
+        else {
+            // If we're past the assignment section
+            if (scrollY >= assignmentSectionBottom) {
+                contentContainer.style.position = 'relative';
+                contentContainer.style.top = (assignmentSectionHeight - viewportHeight) + 'px';
+                contentContainer.style.opacity = "0";
+            }
+            // If we're before the assignment section
+            else {
+                contentContainer.style.position = 'relative';
+                contentContainer.style.top = '0';
+                contentContainer.style.opacity = "1";
+            }
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial call to set positions
+    handleScroll();
+});
+</script>
+
 </body>
 </html>

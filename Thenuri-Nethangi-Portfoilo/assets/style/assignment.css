@@ -1,0 +1,543 @@
+#assignment-section {
+    position: relative;
+    min-height: 400vh; /* Enough space to scroll through all cards */
+    padding-top: 20vh; /* Space at the top */
+    z-index: 70;
+    background-color: #25202F;
+    border: 3px solid crimson;
+}
+
+#assignment-section-content-container {
+    width: 82%;
+    height: 80vh;
+    position: fixed;
+    margin: 0 auto;
+    left: 10%;
+    top: 10vh; /* Position from top of viewport */
+    perspective: 1000px;
+    /* Set explicit z-index to ensure it doesn't overlap next section */
+    z-index: 10;
+    /* Add this to hide content when out of bounds */
+    overflow: hidden;
+    /*background-color: #D3E97A;*/
+}
+
+.assignment-cards-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.assignment {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 2rem;
+    transform-origin: center center;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    overflow: hidden;
+}
+
+/* Default stack arrangement */
+.assignment:nth-child(1) {
+    transform: translateY(0) scale(1);
+    z-index: 4;
+}
+
+.assignment:nth-child(2) {
+    transform: translateY(-15px) scale(0.97);
+    z-index: 3;
+}
+
+.assignment:nth-child(3) {
+    transform: translateY(-30px) scale(0.94);
+    z-index: 2;
+}
+
+.assignment:nth-child(4) {
+    transform: translateY(-45px) scale(0.91);
+    z-index: 1;
+}
+
+.assignment-img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.assignment-content {
+    width: 50%;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.assignment h3 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    color: #333;
+}
+
+.assignment p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.github-icon {
+    width: 45px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.github-icon:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/* Next section styling */
+#next-section {
+    position: relative;
+    height: 100vh;
+    background: #4a6bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 5; /* Lower than the assignment section */
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #c15627;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+
+/*!* Additional styles for more realistic look *!*/
+/*body::-webkit-scrollbar {*/
+/*    width: 10px;*/
+/*}*/
+
+/*body::-webkit-scrollbar-track {*/
+/*    background: #4a0d28;*/
+/*}*/
+
+/*body::-webkit-scrollbar-thumb {*/
+/*    background-color: #fff;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+
+@media all and (max-width: 1100px) {
+
+
+    #assignment-section-content-container {
+        width: 87%;
+        height: 80vh;
+        position: fixed;
+        margin: 0 auto;
+        left: 10%;
+        top: 10vh; /* Position from top of viewport */
+        perspective: 1000px;
+        /* Set explicit z-index to ensure it doesn't overlap next section */
+        z-index: 10;
+        /* Add this to hide content when out of bounds */
+        overflow: hidden;
+        /*background-color: #D3E97A;*/
+    }
+
+    .assignment-cards-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    .assignment {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        padding: 2rem;
+        transform-origin: center center;
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        overflow: hidden;
+    }
+
+
+    .assignment h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+    }
+
+    .assignment p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #666;
+        font-size: 1.12rem;
+    }
+}
+
+
+
+@media all and (max-width: 915px) {
+
+
+    #assignment-section-content-container {
+        width: 87%;
+        height: 80vh;
+        position: fixed;
+        margin: 0 auto;
+        left: 10%;
+        top: 10vh; /* Position from top of viewport */
+        perspective: 1000px;
+        /* Set explicit z-index to ensure it doesn't overlap next section */
+        z-index: 10;
+        /* Add this to hide content when out of bounds */
+        overflow: hidden;
+        /*background-color: #D3E97A;*/
+    }
+
+    .assignment-cards-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    .assignment {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        padding: 2rem;
+        transform-origin: center center;
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        overflow: hidden;
+    }
+
+
+    .assignment h3 {
+        font-size: 2.1rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+    }
+
+    .assignment p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #666;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+@media all and (max-width: 790px) {
+
+
+    #assignment-section-content-container {
+        width: 92%;
+        height: 80vh;
+        position: fixed;
+        margin: 0 auto;
+        left: 10%;
+        top: 10vh; /* Position from top of viewport */
+        perspective: 1000px;
+        /* Set explicit z-index to ensure it doesn't overlap next section */
+        z-index: 10;
+        /* Add this to hide content when out of bounds */
+        overflow: hidden;
+        /*background-color: #D3E97A;*/
+    }
+
+    .assignment-cards-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    .assignment {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        padding: 2rem;
+        transform-origin: center center;
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        overflow: hidden;
+    }
+
+
+    .assignment h3 {
+        font-size: 1.9rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+    }
+
+    .assignment p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #666;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+@media all and (max-width: 671px) {
+
+
+    #assignment-section-content-container {
+        width: 95%;
+        height: 80vh;
+        position: fixed;
+        margin: 0 auto;
+        left: 10%;
+        top: 10vh; /* Position from top of viewport */
+        perspective: 1000px;
+        /* Set explicit z-index to ensure it doesn't overlap next section */
+        z-index: 10;
+        /* Add this to hide content when out of bounds */
+        overflow: hidden;
+        /*background-color: #D3E97A;*/
+    }
+
+    .assignment-cards-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    .assignment {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        padding-block: 1.5rem;
+        padding-inline: 1rem;
+        transform-origin: center center;
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        overflow: hidden;
+    }
+
+
+    .assignment h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+    }
+
+    .assignment p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+
+    .assignment-content {
+        width: 50%;
+        padding-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+@media all and (max-width: 588px) {
+
+
+    #assignment-section-content-container {
+        width: 95%;
+        height: 80vh;
+        position: fixed;
+        margin: 0 auto;
+        left: 10%;
+        top: 10vh; /* Position from top of viewport */
+        perspective: 1000px;
+        /* Set explicit z-index to ensure it doesn't overlap next section */
+        z-index: 10;
+        /* Add this to hide content when out of bounds */
+        overflow: hidden;
+        /*background-color: #D3E97A;*/
+    }
+
+    .assignment-cards-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    .assignment {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        padding-block: 1rem;
+        padding-inline: 1rem;
+        transform-origin: center center;
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        overflow: hidden;
+    }
+
+
+    .assignment h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+    }
+
+    .assignment p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #666;
+        font-size: 0.8rem;
+    }
+
+
+    .assignment-content {
+        width: 50%;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+@media all and (max-width: 458px) {
+
+
+    #assignment-section-content-container {
+        width: 95%;
+        height: 80vh;
+        position: fixed;
+        margin: 0 auto;
+        left: 10%;
+        top: 10vh; /* Position from top of viewport */
+        perspective: 1000px;
+        /* Set explicit z-index to ensure it doesn't overlap next section */
+        z-index: 10;
+        /* Add this to hide content when out of bounds */
+        overflow: hidden;
+        /*background-color: #D3E97A;*/
+    }
+
+    .assignment-cards-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+
+    .assignment {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        padding-block: 0.7rem;
+        padding-inline: 0.7rem;
+        transform-origin: center center;
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        overflow: hidden;
+    }
+
+
+    .assignment h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+        color: #333;
+    }
+
+    .assignment p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #666;
+        font-size: 0.7rem;
+    }
+
+
+    .assignment-content {
+        width: 50%;
+        padding-left: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+
+
