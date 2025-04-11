@@ -5,14 +5,16 @@
     position: relative;
     z-index: 50;
     border: 3px solid crimson;
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
 
 
 #blog-section-content-container{
 
-    width: 83%;
+    width: 85%;
     height: fit-content;
-    background-color: #9747FF;
+    /*background-color: #9747FF;*/
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -25,15 +27,90 @@
 
     padding: 0;
     margin: 0;
-    background-color: #D3E97A;
+    /*background-color: #D3E97A;*/
     width: 240px;
 }
 
 
 #blog-section-content{
 
+    /*background-color: #B8B8B8;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+
+.blog{
+
+    position: relative;
+}
+
+
+.blog:first-child{
+
+    width: 40%;
 
 }
+
+.blog:nth-child(2), .blog:nth-child(3){
+
+    width: 30%;
+
+}
+
+
+.blog>img{
+
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+
+.text-in-blog-post{
+
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.3em;
+    padding: 0.5em;
+}
+
+.change-position-of-text{
+
+    position: absolute;
+    top: 60%;
+    left: 0;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+
+.text-in-blog-post>p:first-child{
+
+    color: #9747FF;
+    font-weight: 600;
+    font-size: 0.8rem;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+
+.text-in-blog-post>p:nth-child(2){
+
+    color: #FFFFFF;
+    font-weight: 650;
+    font-size: 0.89rem;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+
+
 
 
 
