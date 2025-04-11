@@ -1,8 +1,43 @@
 #blog-section{
 
     width: 100%;
-    height: 100vh;
-    background-color: #9747FF;
+    background-color: var(--main-color);
     position: relative;
-    z-index: 80;
+    z-index: 50;
+    border: 3px solid crimson;
 }
+
+
+#blog-section-content-container{
+
+    width: 83%;
+    height: fit-content;
+    background-color: #9747FF;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.blog-header{
+
+    padding: 0;
+    margin: 0;
+    background-color: #D3E97A;
+    width: 240px;
+}
+
+
+#blog-section-content{
+
+
+}
+
+
+
+
+
+
+
