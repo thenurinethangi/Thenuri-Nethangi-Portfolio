@@ -5,7 +5,7 @@
     z-index: 100;
     background-color: var(--main-color);
     /*border: 2px solid cadetblue;*/
-    padding-top: 7em;
+    padding-top: 6em;
     padding-bottom: 1.7em;
     display: flex;
     flex-direction: column;
