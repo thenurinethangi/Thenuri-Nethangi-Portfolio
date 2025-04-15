@@ -1,0 +1,39 @@
+#connect-section{
+
+    width: 100%;
+    position: relative;
+    background-color: var(--main-color);
+    z-index: 90;
+    padding-block: 5em;
+}
+
+
+#connect-section-content-container{
+
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    padding: 1.5em 13em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#connect-section-content-container>p{
+
+    font-size: 1.7rem;
+    width: 290px;
+    font-weight: 400;
+}
+
+#connect-section-content-container>button{
+
+    background-color: #8643DC;
+    border: none;
+    border-radius: 35px;
+    color: #FFFFFF;
+    padding: 15px;
+    width: 120px;
+    height: 50px;
+    font-size: 1rem;
+}
