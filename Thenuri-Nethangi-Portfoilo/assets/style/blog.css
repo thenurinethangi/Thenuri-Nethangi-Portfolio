@@ -4,7 +4,7 @@
     background-color: var(--main-color);
     position: relative;
     z-index: 50;
-    border: 3px solid crimson;
+    /*border: 3px solid crimson;*/
     padding-top: 10em;
     padding-bottom: 10em;
 }
@@ -55,10 +55,22 @@
 
 }
 
+
 .blog:nth-child(2), .blog:nth-child(3){
 
     width: 30%;
 
+}
+
+
+.blog:nth-child(3){
+
+    animation-name: blog-post-rotate;
+    /*animation-duration: 5s;*/
+    /*animation-iteration-count: infinite;*/
+    /*animation-play-state: running;*/
+    /*animation-fill-mode: both;*/
+    /*animation-timing-function: linear;*/
 }
 
 
@@ -110,11 +122,184 @@
 }
 
 
+@keyframes blog-post-rotate {
+
+    0%{
+        order: 0;
+    }
+
+    30%{
+        order: 1;
+    }
+
+    60%{
+        order: 2;
+    }
+
+    100%{
+        order: 0;
+    }
+}
 
 
+@media all and (max-width: 1085px) {
+    #blog-section-content-container {
+        width: 93%;
+    }
+}
 
 
+@media all and (max-width: 972px) and (min-width: 769px) {
+    #blog-section-content-container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .blog-header {
+        width: 100%;
+        margin-bottom: 4.5em;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #blog-section-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+
+    .blog:first-child {
+        width: 100%;
+        grid-column: 1 / -1; /* Make the first blog post span full width */
+    }
+
+    .blog:nth-child(2),
+    .blog:nth-child(3) {
+        width: 100%;
+    }
+
+    /* Make all blog post images the same size */
+    .blog > img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Ensure text doesn't overflow */
+    .text-in-blog-post {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .text-in-blog-post > p:nth-child(2) {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
 
 
+@media all and (max-width: 768px) {
+    #blog-section-content-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .blog-header {
+        width: 100%;
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+        /*align-items: center;*/
+    }
+
+    #blog-section-content {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .blog:first-child,
+    .blog:nth-child(2),
+    .blog:nth-child(3) {
+        width: 90%;
+        max-width: 400px;
+    }
 
 
+    .blog > img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .change-position-of-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+@media all and (max-width: 480px) {
+    #blog-section {
+        padding: 5em 0;
+    }
+
+    #blog-section-content-container {
+        width: 95%;
+    }
+
+    .blog:first-child,
+    .blog:nth-child(2),
+    .blog:nth-child(3) {
+        width: 100%;
+    }
+
+    /* Adjust image height for smaller screens */
+    .blog > img {
+        height: 200px;
+    }
+
+
+    .text-in-blog-post{
+
+        position: absolute;
+        top: 60%;
+        left: 0;
+        padding: 1em;
+        background-color: rgba(0, 0, 0, 0.22);
+    }
+
+
+    .text-in-blog-post>p:first-child{
+
+        color: #9747FF;
+        font-weight: 600;
+        font-size: 0.7rem;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+
+    .text-in-blog-post>p:nth-child(2){
+
+        color: #FFFFFF;
+        font-weight: 650;
+        font-size: 0.79rem;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+}
