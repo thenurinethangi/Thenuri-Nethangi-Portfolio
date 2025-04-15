@@ -1,5 +1,4 @@
 #footer-section{
-
     width: 100%;
     position: relative;
     z-index: 100;
@@ -11,47 +10,220 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    overflow: hidden;
 }
 
+/* Background effects for footer */
+#footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+    rgba(134, 67, 220, 0) 0%,
+    rgba(134, 67, 220, 0.5) 50%,
+    rgba(134, 67, 220, 0) 100%);
+    z-index: 1;
+    animation: slideGlow 4s ease-in-out infinite;
+}
+
+@keyframes slideGlow {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
 
 #footer-main-text{
-
     font-size: 1.5rem;
     color: #FFFFFF;
     font-weight: 400;
     font-family: "Red Hat Display", sans-serif;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
+#footer-main-text::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+    rgba(134, 67, 220, 0) 0%,
+    rgba(134, 67, 220, 1) 50%,
+    rgba(134, 67, 220, 0) 100%);
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+}
+
+#footer-main-text:hover::after {
+    width: 80%;
+}
 
 #social-link{
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 1.7em;
-    margin-bottom: 8em;
+    margin-bottom: 6.2em;
+    animation: fadeIn 1s ease-out 0.3s forwards;
 }
 
-
-#copyright-text>span{
-
-    font-weight: 500;
+#social-link a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
+#social-link a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(134, 67, 220, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+}
 
-@media all and (max-width: 739px) {
+#social-link a:hover {
+    transform: translateY(-5px);
+}
 
-    #social-link>a>img{
+#social-link a:hover::before {
+    width: 60px;
+    height: 60px;
+}
 
-        width: 35px;
+#social-link a img {
+    transition: all 0.3s ease;
+}
+
+#social-link a:hover img {
+    filter: drop-shadow(0 0 8px rgba(134, 67, 220, 0.7));
+}
+
+/* Individual animations for each social icon */
+#social-link a:nth-child(1) {
+    animation: bounceIn 0.5s ease 0.5s forwards;
+    opacity: 0;
+}
+
+#social-link a:nth-child(2) {
+    animation: bounceIn 0.5s ease 0.7s forwards;
+    opacity: 0;
+}
+
+#social-link a:nth-child(3) {
+    animation: bounceIn 0.5s ease 0.9s forwards;
+    opacity: 0;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
+#copyright-text{
+    color: #A8A0B0;
+    font-size: 0.9rem;
+    animation: fadeInUp 0.8s ease 1.1s forwards;
+    opacity: 0;
+    transition: color 0.3s ease;
+}
 
+#copyright-text:hover {
+    color: #FFFFFF;
+}
 
+#copyright-text>span{
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
 
+#copyright-text>span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: #8643DC;
+    transition: width 0.3s ease;
+}
 
+#copyright-text:hover>span::after {
+    width: 100%;
+}
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing dot animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+@media all and (max-width: 739px) {
+    #social-link>a>img{
+        width: 35px;
+    }
+
+    #social-link a:hover::before {
+        width: 50px;
+        height: 50px;
+    }
+}
