@@ -437,7 +437,7 @@ body {
     height: 200px;
     background-color: rgba(20, 17, 26);
     position: absolute;
-    top: 32%;
+    top: 27%;
     left: 79%;
     z-index: 20;
 }
@@ -575,6 +575,21 @@ body {
         margin-left: 2em;
         margin-top: 2em;
     }
+
+    #landing {
+        font-size: 8.5rem;
+    }
+
+
+    #landing > div:nth-child(2) {
+        top: 60%;
+        left: 75%;
+    }
+
+    #landing > div:first-child {
+        top: 27%;
+        left: 74%;
+    }
 }
 
 
@@ -636,6 +651,21 @@ body {
         font-size: 0.95rem;
         width: 130px;
     }
+
+    #landing {
+        font-size: 8.2rem;
+    }
+
+
+    #landing > div:nth-child(2) {
+        top: 60%;
+        left: 70%;
+    }
+
+    #landing > div:first-child {
+        top: 27%;
+        left: 69%;
+    }
 }
 
 
@@ -667,6 +697,21 @@ body {
 
     #menu {
         width: 100px;
+    }
+
+    #landing {
+        font-size: 7.8rem;
+    }
+
+
+    #landing > div:nth-child(2) {
+        top: 60%;
+        left: 65%;
+    }
+
+    #landing > div:first-child {
+        top: 27%;
+        left: 64%;
     }
 }
 
@@ -738,6 +783,21 @@ body {
         margin-bottom: 2.5em;
 
     }
+
+    #landing {
+        font-size: 6.9rem;
+    }
+
+
+    #landing > div:nth-child(2) {
+        top: 60%;
+        left: 63%;
+    }
+
+    #landing > div:first-child {
+        top: 27%;
+        left: 62%;
+    }
 }
 
 
@@ -795,6 +855,21 @@ body {
 
     #scroll-icon {
         margin-left: 1.7em;
+    }
+
+    #landing {
+        font-size: 6.7rem;
+    }
+
+
+    #landing > div:nth-child(2) {
+        top: 60%;
+        left: 55%;
+    }
+
+    #landing > div:first-child {
+        top: 25%;
+        left: 54%;
     }
 }
 
