@@ -286,6 +286,15 @@ body {
     animation: slideUp 0.8s forwards 4.5s;
 }
 
+#hero-section-btn>div{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
 #hero-section-btn > button {
     position: relative;
     background-color: #8643DC;
@@ -336,16 +345,17 @@ body {
     background-color: #7438c0;
 }
 
-#hero-section-btn > a {
+#hero-section-btn > div > a {
     position: relative;
     color: #ffffff;
+    font-family: "Red Hat Display", sans-serif;
     font-size: 17px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-#hero-section-btn > a::after {
+#hero-section-btn > div > a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -356,7 +366,7 @@ body {
     transition: width var(--transition-medium);
 }
 
-#hero-section-btn > a:hover::after {
+#hero-section-btn > div > a:hover::after {
     width: 100%;
 }
 
@@ -616,9 +626,9 @@ body {
         margin-left: 2em;
     }
 
-    #hero-section-btn>a{
+    #hero-section-btn>div>a{
 
-        font-size: 0.95rem;
+        font-size: 16px;
     }
 
     #hero-section-btn>button{
@@ -640,7 +650,7 @@ body {
     #main-content > h1 {
         width: 100%;
         font-size: 2.7rem;
-        margin-bottom: -7px;
+        /*margin-bottom: -7px;*/
         padding-right: 0;
         margin-right: 0;
     }
@@ -685,16 +695,29 @@ body {
     #main-content > h1 {
         font-size: 2.5rem;
         /*margin-left: 0.5em;*/
-        margin-bottom: -7px;
+        /*margin-bottom: -7px;*/
     }
 
     #main-content > h2 {
-        font-size: 17px;
-        margin-bottom: 20px;
+        font-size: 17.5px;
+        margin-bottom: 22px;
     }
 
-    #hero-section-btn > a {
-        font-size: 14px;
+    #hero-section-btn > div{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hero-section-btn > div > a {
+        font-size: 15.5px;
+    }
+
+    #hero-section-btn > button {
+        font-size: 15px;
+        width: 75vw;
     }
 
     #page-header > img {
@@ -711,8 +734,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1.8em;
-        margin-bottom: 1em;
+        gap: 1.9em;
+        margin-bottom: 2.5em;
 
     }
 }
@@ -739,7 +762,7 @@ body {
         align-items: center;
     }
 
-    #hero-section-btn > a {
+    #hero-section-btn > div > a {
         font-size: 14px;
     }
 
