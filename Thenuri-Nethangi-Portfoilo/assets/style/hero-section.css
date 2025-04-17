@@ -37,7 +37,7 @@ body {
     position: relative;
 }
 
-/* Main container for all sections */
+
 .main-container {
     width: 100%;
     position: relative;
@@ -71,7 +71,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
-/* Header styling */
+/* Header */
 #page-header {
     width: 100%;
     height: 80px;
@@ -131,6 +131,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    /*border: 2px solid crimson;*/
 }
 
 #hero-section-bg {
@@ -144,7 +145,7 @@ body {
     opacity: 0.6;
 }
 
-/* Glow effects */
+/* Glow circles */
 #glow-circle {
     position: absolute;
     right: 0;
@@ -214,10 +215,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.65em;
+    gap: 0.8em;
 }
 
 #side-navigation > nav > ul > li {
+    padding: 5px;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
     transition-property: transform;
@@ -225,6 +227,8 @@ body {
 
 #side-navigation > nav > ul > li:hover {
     transform: rotateY(360deg);
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
 }
 
 /* Main content */
@@ -235,7 +239,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 2em;
-    padding-top: 5em;
+    padding-top: 5.5em;
+    /*background-color: #9747FF;*/
 }
 
 #main-content > p {
@@ -263,13 +268,13 @@ body {
     font-size: 19px;
     color: #D0D0D0;
     font-weight: 300;
-    margin-bottom: 27px;
+    margin-bottom: 29px;
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards 4.3s;
 }
 
-/* Button styling */
+
 #hero-section-btn {
     display: flex;
     flex-direction: row;
@@ -355,7 +360,7 @@ body {
     width: 100%;
 }
 
-/* Scroll icon */
+
 #scroll-icon {
     animation: bounce 2s infinite;
 }
@@ -448,7 +453,7 @@ body {
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(-1000px);
+        transform: translateY(-800px);
     }
 }
 
@@ -461,102 +466,16 @@ body {
     }
 }
 
-/*!* Skills line *!*/
-/*#line {*/
-/*    background-color: #EEEEEE;*/
-/*    color: var(--main-color);*/
-/*    !*min-width: 100%;*!*/
-/*    !*white-space: nowrap;*!*/
-/*    width: 200vw;*/
-/*    height: 60px;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-evenly;*/
-/*    align-items: center;*/
-/*    padding-inline: 1em;*/
-/*    position: absolute;*/
-/*    top: 100vh;*/
-/*    z-index: 1;*/
-/*    overflow: hidden;*/
-/*    animation-name: round;*/
-/*    animation-duration: 15s;*/
-/*    animation-iteration-count: infinite;*/
-/*    animation-timing-function: linear;*/
-/*    animation-fill-mode: both;*/
-/*}*/
-
-/*#line > div {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*    gap: 1.2em;*/
-/*}*/
-
-/*#line > div > p {*/
-/*    font-size: 1rem;*/
-/*    font-weight: 500;*/
-/*}*/
-
-/*@keyframes round {*/
-/*    from {*/
-/*        transform: translateX(0);*/
-/*    }*/
-/*    to {*/
-/*        transform: translateX(-100vw);*/
-/*    }*/
-/*}*/
-
-/*!* About section *!*/
-/*#about-section {*/
-/*    width: 100%;*/
-/*    min-height: 150vh;*/
-/*    background-color: var(--main-color);*/
-/*    position: relative;*/
-/*    z-index: 0;*/
-/*    padding-top: 150px;*/
-/*    opacity: 0;*/
-/*    transition: opacity 1s ease;*/
-/*}*/
-
-/*#about-section.visible {*/
-/*    opacity: 1;*/
-/*}*/
-
-/*#about-section > .content {*/
-/*    max-width: 1200px;*/
-/*    margin: 0 auto;*/
-/*    padding: 2em;*/
-/*}*/
-
-/*#about-section > h2 {*/
-/*    font-size: 3rem;*/
-/*    margin-bottom: 1em;*/
-/*    color: var(--text-light);*/
-/*    text-align: center;*/
-/*}*/
-
-/*#about-section > p {*/
-/*    font-size: 1.2rem;*/
-/*    line-height: 1.6;*/
-/*    color: var(--text-secondary);*/
-/*    max-width: 800px;*/
-/*    margin: 0 auto;*/
-/*}*/
 
 
-
-
-
-
-/* Responsive styles */
+/* media query */
 @media all and (max-width: 1130px) {
     #hero-section-content-container {
         width: 87%;
         height: 625px;
         max-width: 100%;
         /*background-color: #7438c0;*/
-        padding-top: 10em;
+        padding-top: 5.5em;
     }
 
     #main-content {
@@ -591,18 +510,19 @@ body {
 
 
 
-@media all and (max-width: 870px) {
+@media all and (max-width: 958px) {
     #hero-section-content-container {
         width: 90%;
         height: 625px;
-        padding-top: 13em;
+        padding-top: 5.5em;
     }
 
     #main-content {
         width: 100%;
-        gap: 1.5em;
+        gap: 2em;
         /*padding-top: 5em;*/
         padding-right: 2.5em;
+        /*background-color: #9747FF;*/
     }
 
 
@@ -612,12 +532,12 @@ body {
     }
 
     #main-content > p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     #main-content > h1 {
         font-size: 3rem;
-        margin-left: 0.5em;
+        /*margin-left: 0.5em;*/
         margin-bottom: -7px;
     }
 
@@ -656,17 +576,19 @@ body {
 @media all and (max-width: 780px) {
 
     #hero-section-content-container {
-        padding-top: 10em;
+        padding-top: 5.5em;
         width: 100%;
         height: 625px;
         gap: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        /*background-color: #9747FF;*/
     }
 
     #main-content {
         width: 670px;
+        padding-right: 0em;
         /*background-color: red;*/
     }
 
@@ -676,7 +598,7 @@ body {
 
     #main-content > h1 {
         width: 100%;
-        font-size: 2.7rem;
+        font-size: 2.85rem;
         /*margin-right: 0.5em;*/
         margin-bottom: -7px;
     }
@@ -692,6 +614,17 @@ body {
 
     #page-header > img {
         margin-left: 2em;
+    }
+
+    #hero-section-btn>a{
+
+        font-size: 0.95rem;
+    }
+
+    #hero-section-btn>button{
+
+        font-size: 0.95rem;
+        width: 130px;
     }
 }
 
@@ -714,7 +647,7 @@ body {
 
     #main-content > h2 {
         font-size: 18px;
-        margin-bottom: 27px;
+        margin-bottom: 20px;
     }
 
     #page-header > img {
@@ -751,12 +684,12 @@ body {
 
     #main-content > h1 {
         font-size: 2.5rem;
-        margin-left: 0.5em;
+        /*margin-left: 0.5em;*/
         margin-bottom: -7px;
     }
 
     #main-content > h2 {
-        font-size: 18px;
+        font-size: 17px;
         margin-bottom: 20px;
     }
 
@@ -811,13 +744,13 @@ body {
     }
 
     #main-content > p {
-        font-size: 15px;
+        font-size: 14px;
         text-align: center;
     }
 
     #main-content > h1 {
         font-size: 2.2rem;
-        margin-left: 0.5em;
+        /*margin-left: 0.5em;*/
         margin-bottom: -7px;
         text-align: center;
     }
