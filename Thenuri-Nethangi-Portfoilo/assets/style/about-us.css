@@ -1,77 +1,18 @@
 :root{
     --scroll: 0;
+    --primary-color: #9747FF;
+    --secondary-color: rgba(236, 79, 221, 0.8);
+    --accent-color: #D3E97A;
+    --bg-color: #1a1325;
+    --text-color: rgba(255, 255, 255, 0.77);
 }
 
 #about-us-container {
     position: relative;
-    z-index: 10; /* Higher than hero section */
-    margin-top: 100vh; /* This pushes it below the viewport initially */
+    z-index: 10;
+    margin-top: 100vh;
     background-color: transparent;
     width: 100%;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(-500px);
-    }
-}
-
-/*#line-section {*/
-/*    background-color: white;*/
-/*    width: 100%;*/
-/*    height: 70vh;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*!* Skills line *!*/
-/*#line {*/
-/*    background-color: #EEEEEE;*/
-/*    color: var(--main-color);*/
-/*    width: 200vw;*/
-/*    height: 60px;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-evenly;*/
-/*    align-items: center;*/
-/*    padding-inline: 1em;*/
-/*    overflow: hidden;*/
-/*    animation-name: round;*/
-/*    animation-duration: 15s;*/
-/*    animation-iteration-count: infinite;*/
-/*    animation-timing-function: linear;*/
-/*    animation-fill-mode: both;*/
-/*}*/
-
-/*#line > div {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*    gap: 1.2em;*/
-/*    flex-shrink: 0;*/
-/*}*/
-
-/*#line > div > p {*/
-/*    font-size: 1rem;*/
-/*    font-weight: 500;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-@keyframes round {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100vw);
-    }
 }
 
 /* About section */
@@ -79,10 +20,10 @@
     width: 100%;
     min-height: 100vh;
     position: relative;
-    background-color: #25202F;
-    transition: background-color 1s ease;
-    padding-bottom: 7rem;
-    padding-top: 2.5em;
+    background-color: var(--bg-color);
+    transition: background-color 1.5s ease;
+    padding-top: 2em;
+    overflow: hidden;
 }
 
 .dark-text{
@@ -93,15 +34,7 @@
     color: #FFFFFF;
 }
 
-@keyframes down {
-    from {
-        background-color: #FFFFFF;
-    }
-    to {
-        background-color: #25202F;
-    }
-}
-
+/* Section Headers */
 .section-headers{
     width: 100%;
     padding: 2rem 1rem 2rem 7rem;
@@ -109,6 +42,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    animation: fadeInDown 1s ease-out forwards;
 }
 
 .titles{
@@ -130,34 +64,52 @@
 }
 
 .titles>div>h5{
+    font-family: "Red Hat Display", sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.titles>div>img {
+    opacity: 0;
+    animation: fadeIn 0.5s 1.2s ease forwards;
 }
 
 .titles>h2{
+    font-family: "Red Hat Display", sans-serif;
     font-size: 1.7rem;
     font-weight: 700;
     color: #FFFFFF;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s 0.8s ease forwards;
 }
-
 
 #about-us-section-menu{
-
     position: fixed;
     z-index: 30;
+    transition: transform 0.3s ease;
 }
 
+#about-us-section-menu:hover {
+    transform: scale(1.05);
+}
 
 #about-me-section-content{
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding-top: 3em;
+    padding-inline: 4.3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: fadeIn 1.5s 0.5s ease forwards;
 }
 
 #my-image-box{
@@ -173,22 +125,37 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 2.3em;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideInRight 1s 1.2s ease forwards;
 }
 
 #about-paragraph{
     font-family: "Red Hat Display", sans-serif;
-    color: rgba(255, 255, 255, 0.77);
-    font-size: 1rem;
+    color: var(--text-color);
+    font-size: 1.05rem;
     line-height: 1.8;
+    font-weight: 300;
+    position: relative;
+}
+
+#about-paragraph::first-letter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9747FF;
+    float: left;
+    margin-right: 8px;
+    line-height: 1;
 }
 
 #about-me-section-learn-more-link{
-    color: #D3E97A;
+    color: var(--accent-color);
     font-weight: 600;
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
     padding-bottom: 5px;
+    letter-spacing: 1px;
 }
 
 #about-me-section-learn-more-link::after {
@@ -198,15 +165,19 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #D3E97A;
-    transition: width 0.3s ease;
+    background-color: var(--accent-color);
+    transition: width 0.5s ease;
+}
+
+#about-me-section-learn-more-link:hover {
+    letter-spacing: 2px;
 }
 
 #about-me-section-learn-more-link:hover::after {
     width: 100%;
 }
 
-/* Scroll Animation */
+/*Scroll Animation */
 .scroll-animation {
     opacity: 0;
     transform: translateY(40px);
@@ -218,15 +189,17 @@
     transform: translateY(0);
 }
 
-/* New styling for the rectangular animation */
 .image-container {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 470px;
+    height: 470px;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 1.2s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .rectangle-bg {
@@ -241,6 +214,11 @@
     box-shadow: 0 0 40px 5px rgba(151, 71, 255, 0.3);
 }
 
+.image-container:hover .rectangle-bg {
+    filter: blur(1px);
+    box-shadow: 0 0 40px 5px rgba(151, 71, 255, 0.3);
+}
+
 .image-wrapper {
     position: relative;
     width: 78%;
@@ -248,6 +226,12 @@
     border-radius: 50%;
     overflow: hidden;
     z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover .image-wrapper {
+    transform: scale(1.05);
 }
 
 .profile-image {
@@ -255,7 +239,19 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    transition: transform 0.7s ease;
 }
+
+.image-container:hover .profile-image {
+    transform: scale(1.1);
+}
+
+#about-us-section-curve {
+    background-color: #25202F;
+    transform: translateY(5px);
+    animation: wavyAnimation 8s ease-in-out infinite alternate;
+}
+
 
 @keyframes morph {
     0% {
@@ -278,7 +274,126 @@
     }
 }
 
-/* Media queries for responsiveness */
+@keyframes wavyAnimation {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-101%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scroll Trigger Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal-left.active,
+.reveal-right.active {
+    transform: translateX(0);
+}
+
+/* Add this to your JS to activate scroll animations */
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+    function checkReveal() {
+        const triggerBottom = window.innerHeight * 0.8;
+
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if(elementTop < triggerBottom) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkReveal);
+    checkReveal(); // Check on load
+});
+*/
+
+/* Media queries*/
 @media all and (max-width: 1200px) {
     .section-headers {
         padding: 3rem 4rem 2rem 4rem;
@@ -311,6 +426,10 @@
 
     #my-image-box {
         order: -1;
+    }
+
+    #about-paragraph {
+        text-align: left;
     }
 }
 
@@ -374,12 +493,4 @@
     #about-paragraph {
         font-size: 0.9rem;
     }
-}
-
-#hey {
-    width: 100vw;
-    height: 100vh;
-    background-color: #7438c0;
-    z-index: 15;
-    position: relative;
 }

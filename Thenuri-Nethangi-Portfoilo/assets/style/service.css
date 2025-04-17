@@ -11,32 +11,21 @@
     color: #FFFFFF;
     position: relative;
     overflow: hidden;
-    /* Remove fixed height and use padding instead */
-    padding: 0 0 110px; /* Adjust top padding to accommodate header */
+    padding-top: 1em;
 }
-
-/*!* Move header styling from HTML to CSS for better control *!*/
-/*#service-section-header {*/
-/*    width: 100%;*/
-/*    padding: 2rem 1rem 2rem 7rem;*/
-/*    margin: 0 auto 100px;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*}*/
 
 
 #service-section-content-container{
     width: 82%;
     /*background-color: #D3E97A;*/
     padding-top: 6em;
-    /* Remove absolute positioning to prevent overlap */
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start; /* Changed to flex-start for better alignment */
+    align-items: flex-start;
     gap: 2.5em;
+    margin-bottom: 110px;
 }
 
 .service-box{
@@ -140,6 +129,13 @@
         transform: translateY(0);
     }
 }
+
+
+#service-section-curve{
+
+    background-color: #1a1325;
+}
+
 
 /* Responsive adjustments */
 @media all and (max-width: 1050px) {

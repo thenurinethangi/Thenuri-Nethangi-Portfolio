@@ -1,8 +1,8 @@
-/* Skills Line */
 #line-section {
-    padding: 40px 0;
+    padding-top: 40px;
     overflow: hidden;
     position: relative;
+
 }
 
 #line-section::before,
@@ -30,6 +30,7 @@
     gap: 50px;
     animation: marquee 30s linear infinite;
     width: fit-content;
+    margin-bottom: 40px;
 }
 
 #line div {
@@ -65,4 +66,10 @@
 @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+
+#skill-line-curve{
+
+    background-color: transparent;
 }
