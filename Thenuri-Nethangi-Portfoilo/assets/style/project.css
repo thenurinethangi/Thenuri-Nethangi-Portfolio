@@ -1,6 +1,6 @@
 #project-section {
     width: 100%;
-    background-color: var(--main-color);
+    background-color: #FFFFFF;
     position: relative;
     z-index: 60;
     padding-top: 3.5em;
@@ -306,6 +306,12 @@
 .project .project-text-box a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+
+#project-section-curve{
+
+    background-color: #25202F;
 }
 
 /* Media Queries */

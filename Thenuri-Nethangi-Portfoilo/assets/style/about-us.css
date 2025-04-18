@@ -1,8 +1,5 @@
 :root{
     --scroll: 0;
-    --primary-color: #9747FF;
-    --secondary-color: rgba(236, 79, 221, 0.8);
-    --accent-color: #D3E97A;
     --bg-color: #1a1325;
     --text-color: rgba(255, 255, 255, 0.77);
 }
@@ -20,7 +17,7 @@
     width: 100%;
     min-height: 100vh;
     position: relative;
-    background-color: var(--bg-color);
+    background-color: #1c1527;
     transition: background-color 1.5s ease;
     padding-top: 2em;
     overflow: hidden;
@@ -142,14 +139,14 @@
 #about-paragraph::first-letter {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #9747FF;
+    color: #D3E97A;
     float: left;
     margin-right: 8px;
     line-height: 1;
 }
 
 #about-me-section-learn-more-link{
-    color: var(--accent-color);
+    color: #D3E97A;
     font-weight: 600;
     text-decoration: none;
     position: relative;
@@ -165,7 +162,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--accent-color);
+    background-color: #D3E97A;
     transition: width 0.5s ease;
 }
 

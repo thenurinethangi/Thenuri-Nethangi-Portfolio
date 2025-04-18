@@ -4,8 +4,9 @@
     min-height: 100vh;
     position: relative;
     padding-block: 3em;
-    padding-bottom: 5em;
     padding-top: 2.7em;
+    background-color: #FFFFFF;
+    padding-bottom: 0;
 }
 
 #experience-section-content-container{
@@ -16,6 +17,7 @@
     margin: 0 auto;
     padding-top: 1.7em;
     position: relative;
+    margin-bottom: 5em;
 }
 
 
@@ -25,6 +27,7 @@
     width: 350px;
     transform: translateX(-70px);
     padding-bottom: 12em;
+    opacity: 2;
 
     /*view-timeline: --section-scroll block;*/
     /*animation-timeline: --section-scroll;*/
@@ -87,6 +90,17 @@
         scale: 1;
         opacity: 1;
     }
+}
+
+
+.dark-title{
+
+    color: #000000;
+}
+
+.dark-title-desc{
+
+    color: #000000;
 }
 
 
@@ -418,6 +432,12 @@
     }
 }
 
+
+#experience-section-curve{
+
+
+    background-color: #25202F;
+}
 
 
 @media all and (max-width: 1170px) {

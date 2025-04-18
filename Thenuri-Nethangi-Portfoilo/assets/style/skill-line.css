@@ -72,4 +72,5 @@
 #skill-line-curve{
 
     background-color: transparent;
+    transform: rotate(180deg);
 }
