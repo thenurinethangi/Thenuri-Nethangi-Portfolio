@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     z-index: 100;
-    background-color: var(--main-color);
+    background-color: #1B1723;
     /*border: 2px solid cadetblue;*/
     padding-top: 6em;
     padding-bottom: 1.7em;
@@ -39,7 +39,7 @@
 }
 
 #footer-main-text{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #FFFFFF;
     font-weight: 400;
     font-family: "Red Hat Display", sans-serif;
@@ -234,6 +234,10 @@
     #footer-section{
         padding-top: 5em;
     }
+
+    #footer-main-text{
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -253,5 +257,9 @@
 
     #footer-section{
         padding-top: 3em;
+    }
+
+    #footer-main-text{
+        font-size: 1.2rem;
     }
 }
