@@ -4,6 +4,7 @@
     background-color: var(--main-color);
     z-index: 80;
     padding-bottom: 5em;
+    padding-top: 1em;
 }
 
 #gallery-section-content-container {
