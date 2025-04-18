@@ -36,8 +36,40 @@
     width: 120px;
     height: 50px;
     font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(134, 67, 220, 0.3);
+    transition: all 0.3s ease;
 }
 
+
+#connect-section-content-container > button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    transition: all 0.6s ease;
+}
+
+#connect-section-content-container > button:hover::before {
+    left: 100%;
+}
+
+#connect-section-content-container > button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(134, 67, 220, 0.4);
+    background-color: #7438c0;
+}
 
 @media all and (max-width: 1123px) {
 
@@ -80,6 +112,12 @@
 
 @media all and (max-width: 798px) {
 
+    #connect-section{
+
+        padding-block: 8.5em;
+    }
+
+
     #connect-section-content-container{
 
         padding: 1.5em 4em;
@@ -101,6 +139,11 @@
 
 
 @media all and (max-width: 556px) {
+
+    #connect-section{
+
+        padding-block: 7em;
+    }
 
     #connect-section-content-container{
 

@@ -20,39 +20,6 @@
     z-index: -1;
 }
 
-/*.section-headers {*/
-/*    width: 85%;*/
-/*    max-width: 1025px;*/
-/*    margin: 0 auto;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    margin-bottom: 1em;*/
-/*}*/
-
-/*.section-title {*/
-/*    color: #9747FF;*/
-/*    font-family: "Red Hat Display", sans-serif;*/
-/*    font-size: 1.1rem;*/
-/*    font-weight: 600;*/
-/*    letter-spacing: 1.5px;*/
-/*    margin-bottom: 0.3em;*/
-/*    transform: translateY(20px);*/
-/*    opacity: 0;*/
-/*    animation: fadeInUp 0.8s ease forwards;*/
-/*}*/
-
-/*.title-desc {*/
-/*    color: #ffffff;*/
-/*    font-family: "Playfair Display", serif;*/
-/*    font-size: 2.2rem;*/
-/*    font-weight: 700;*/
-/*    margin-top: 0.5em;*/
-/*    transform: translateY(20px);*/
-/*    opacity: 0;*/
-/*    animation: fadeInUp 0.8s ease forwards 0.2s;*/
-/*}*/
-
 
 .side-link {
     display: flex;
@@ -234,15 +201,20 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
-.project-text-box > img {
+.project-text-box > a {
     align-self: flex-end;
+}
+
+.project-text-box > a > img{
+
     transform: rotate(210deg);
     transition: all 0.4s ease;
     cursor: pointer;
+
 }
 
-.project-text-box > img:hover {
-    transform: rotate(180deg) scale(1.15);
+.project-text-box > a > img:hover {
+    transform: rotate(180deg) ;
 }
 
 @keyframes fadeInUp {

@@ -133,7 +133,7 @@
 
 #service-section-curve{
 
-    background-color: #1a1325;
+    background-color: #1c1527;
 }
 
 
@@ -148,7 +148,7 @@
 @media all and (max-width: 950px) {
 
     #service-section{
-        padding-bottom: 60px;
+        /*padding-bottom: 60px;*/
     }
 
     #service-section-content-container{
@@ -156,6 +156,7 @@
         flex-direction: column;
         gap: 3em;
         padding-top: 2.5em;
+        margin-bottom: 60px;
         /*background-color: #D3E97A;*/
     }
 
@@ -168,11 +169,12 @@
 @media all and (max-width: 578px) {
 
     #service-section{
-        padding-bottom: 40px;
+        /*padding-bottom: 40px;*/
     }
 
     #service-section-content-container{
         width: 90%;
         gap: 2.5em;
+        margin-bottom: 40px;
     }
 }

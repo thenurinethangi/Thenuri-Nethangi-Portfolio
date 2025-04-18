@@ -484,6 +484,14 @@
 
 @media all and (max-width: 458px) {
 
+    #assignment-section {
+        position: relative;
+        min-height: 400vh; /* Enough space to scroll through all cards */
+        padding-top: 15vh; /* Space at the top */
+        z-index: 70;
+        background-color: #25202F;
+        /*border: 3px solid crimson;*/
+    }
 
     #assignment-section-content-container {
         width: 100%;

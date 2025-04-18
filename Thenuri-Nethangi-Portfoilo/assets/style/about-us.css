@@ -368,27 +368,6 @@
     transform: translateX(0);
 }
 
-/* Add this to your JS to activate scroll animations */
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    const revealElements = document.querySelectorAll('.reveal-on-scroll');
-
-    function checkReveal() {
-        const triggerBottom = window.innerHeight * 0.8;
-
-        revealElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-
-            if(elementTop < triggerBottom) {
-                element.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkReveal);
-    checkReveal(); // Check on load
-});
-*/
 
 /* Media queries*/
 @media all and (max-width: 1200px) {
@@ -397,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     #about-me-section-content {
-        padding: 0 2rem;
+        padding: 2em 2rem;
     }
 }
 
@@ -453,6 +432,14 @@ document.addEventListener('DOMContentLoaded', function() {
     #about-paragraph {
         font-size: 0.95rem;
     }
+
+    #about-section {
+        padding-top: 1em;
+    }
+
+    #about-me-section-content{
+        margin-bottom: 3.5rem;
+    }
 }
 
 @media all and (max-width: 480px) {
@@ -466,11 +453,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     #about-me-section-content {
-        padding: 0 1rem;
+        padding: 2em 1rem;
     }
 
     .titles>h2 {
         font-size: 1.3rem;
+    }
+
+    #about-section {
+        padding-top: 1em;
+    }
+
+    #about-me-section-content{
+        margin-bottom: 3rem;
     }
 }
 
@@ -489,5 +484,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     #about-paragraph {
         font-size: 0.9rem;
+    }
+
+    #about-section {
+        padding-top: 1em;
+    }
+
+    #about-me-section-content{
+        margin-bottom: 3rem;
     }
 }
