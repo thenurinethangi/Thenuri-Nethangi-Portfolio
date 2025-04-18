@@ -868,7 +868,7 @@
 
 </script>
 
-
+<!--assignment-->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
     const assignmentSection = document.getElementById('assignment-section');
@@ -949,12 +949,16 @@
                 contentContainer.style.position = 'relative';
                 contentContainer.style.top = (assignmentSectionHeight - viewportHeight) + 'px';
                 contentContainer.style.opacity = "0";
+                contentContainer.style.left = '10vw';
+                // contentContainer.style.transform = 'translate(0px,0px)'
             }
             // If we're before the assignment section
             else {
                 contentContainer.style.position = 'relative';
                 contentContainer.style.top = '0';
                 contentContainer.style.opacity = "1";
+                contentContainer.style.left = '10vw';
+                // contentContainer.style.transform = 'translate(-70px,50px)'
             }
         }
     }
