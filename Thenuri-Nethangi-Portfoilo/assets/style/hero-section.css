@@ -276,6 +276,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards 3.9s;
+    transition-duration: 3s;
 }
 
 #main-content > h1 {
@@ -285,11 +286,22 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards 4.1s;
+    transition-duration: 3s;
 }
 
 #main-content > p:hover {
     transform: skew(-10deg, 0deg);
+    background: linear-gradient(to right, #FFFFFF, #9747FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+/*#main-content > h1:hover{*/
+
+/*    background: linear-gradient(to right, #FFFFFF, #9747FF);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*}*/
 
 #main-content > h2 {
     font-size: 19px;
@@ -299,6 +311,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards 4.3s;
+    transition-duration: 3s;
 }
 
 
