@@ -12,7 +12,7 @@ body {
     width: 100%;
     background-color: #25202F;
     padding-top: 8em;
-    padding-bottom: 10em;
+    /*padding-bottom: 10em;*/
     /*background-color: red;*/
 }
 
@@ -21,6 +21,7 @@ body {
     justify-content: space-between;
     gap: 2em;
     position: relative;
+    /*background-color: #4a6bff;*/
 }
 
 #skill-text-side {
@@ -32,7 +33,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1em 1em 1em 5em;
+    padding: 1em 1em 10em 5em;
     gap: 7.5em;
 }
 
@@ -482,38 +483,193 @@ body {
 }
 
 
-/*@keyframes bouncing-ball-animation {*/
-/*    0% {*/
-/*        transform: translate(0, 0) scale(1, 1);*/
-/*    }*/
-/*    10% {*/
-/*        transform: translate(0, -200px) scale(1.05, 0.95);*/
-/*    }*/
-/*    20% {*/
-/*        transform: translate(100px, 0) scale(0.95, 1.05);*/
-/*    }*/
-/*    30% {*/
-/*        transform: translate(100px, -150px) scale(1.04, 0.96);*/
-/*    }*/
-/*    40% {*/
-/*        transform: translate(200px, 0) scale(0.96, 1.04);*/
-/*    }*/
-/*    50% {*/
-/*        transform: translate(200px, -100px) scale(1.03, 0.97);*/
-/*    }*/
-/*    60% {*/
-/*        transform: translate(100px, 50px) scale(0.97, 1.03);*/
-/*    }*/
-/*    70% {*/
-/*        transform: translate(0px, 0px) scale(1.02, 0.98);*/
-/*    }*/
-/*    80% {*/
-/*        transform: translate(-100px, -120px) scale(0.98, 1.02);*/
-/*    }*/
-/*    90% {*/
-/*        transform: translate(-150px, 0px) scale(1.01, 0.99);*/
-/*    }*/
-/*    100% {*/
-/*        transform: translate(0, 0) scale(1, 1);*/
-/*    }*/
-/*}*/
+@media all and (max-width:1115px ) {
+
+    #skill-section-content-container {
+        gap: 1em;
+    }
+
+    #skill-text-side {
+        width: 50%;
+        padding: 1em 1em 10em 2.5em;
+        gap: 7.5em;
+    }
+}
+
+
+@media all and (max-width:1027px ) {
+
+    #skill-section-content-container {
+        gap: 1em;
+    }
+
+    #skill-text-side {
+        width: 40%;
+        padding: 1em 1em 10em 3em;
+        gap: 7.5em;
+    }
+
+    .skills-box{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3em;
+    }
+
+    #skill-bouncing-side {
+        width: 60%;
+        height: 500px;
+        left: 40vw;
+        top: 8em;
+    }
+
+    .ball {
+        width: 65px;
+        height: 65px;
+
+    }
+}
+
+
+
+@media all and (max-width:809px ) {
+
+    #skill-section-content-container {
+        gap: 1em;
+    }
+
+    #skill-text-side {
+        width: 30%;
+        padding: 1em 1em 10em 3em;
+        gap: 7.5em;
+    }
+
+    .skills-box{
+
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 3em;
+    }
+
+    #skill-bouncing-side {
+        width: 70%;
+        height: 500px;
+        left: 30vw;
+        top: 8em;
+    }
+
+    .ball {
+        width: 55px;
+        height: 55px;
+
+    }
+}
+
+
+
+
+@media all and (max-width:620px ) {
+
+    #skill-section-content-container {
+        gap: 1em;
+    }
+
+    #skill-text-side {
+        width: 29%;
+        padding: 1em 1em 10em 2em;
+        gap: 7.5em;
+    }
+
+    .skills-box{
+
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 3em;
+    }
+
+    #skill-bouncing-side {
+        width: 71%;
+        height: 500px;
+        left: 29vw;
+    }
+
+    .ball {
+        width: 50px;
+        height: 50px;
+
+    }
+}
+
+
+
+@media all and (max-width:542px ) {
+
+    #skill-section-content-container {
+        gap: 1em;
+    }
+
+    #skill-text-side {
+        width: 35%;
+        padding: 1em 1em 10em 1.5em;
+        gap: 7.5em;
+    }
+
+    .skills-box{
+        grid-template-columns: repeat(1,1fr);
+        gap: 3em;
+    }
+
+    #skill-bouncing-side {
+        width: 75%;
+        left: 25vw;
+    }
+
+    .ball {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .ball>img{
+
+        width: 23px;
+    }
+}
+
+
+
+
+
+@media all and (max-width:451px ) {
+
+    #skill-section-content-container {
+        gap: 1em;
+    }
+
+    #skill-text-side {
+        width: 35%;
+        padding: 1em 1em 10em 1.5em;
+        gap: 7.5em;
+    }
+
+    .skills-box{
+        grid-template-columns: repeat(1,1fr);
+        gap: 3em;
+    }
+
+    #skill-bouncing-side {
+        width: 100%;
+        left: 0vw;
+    }
+
+    .ball {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .ball>img{
+
+        width: 20px;
+    }
+}
