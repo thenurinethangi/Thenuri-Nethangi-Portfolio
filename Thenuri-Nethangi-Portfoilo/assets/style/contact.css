@@ -115,6 +115,11 @@
     transition: all 0.3s ease;
     transform-origin: left;
     position: relative;
+    font-size: 1rem;
+}
+
+#form-in-contact-section>input::placeholder {
+    font-size: 0.81rem;
 }
 
 #form-in-contact-section>input:hover {
