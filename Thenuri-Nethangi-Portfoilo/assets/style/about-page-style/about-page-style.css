@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+}
+
+
+#about-me-page-main-section{
+
+    width: 100%;
+    background-color: #25202F;
+    padding-top: 10em;
+    padding-bottom: 5em;
+
+}
+
+.skill-page-header>p{
+
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 4em;
+    /*color: rgba(255, 255, 255, 0.9);*/
+    background: linear-gradient(to right, #FFFFFF, #9747FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dot{
+
+    font-size: 2rem;
+}
+
+
+#about-me-page-content-container{
+
+    width: 82%;
+    /*border: 2px solid crimson;*/
+    /*background-color: #4a6bff;*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*gap: 8em;*/
+    /*padding-bottom: 2em;*/
+}
+
+
+#text-content-side{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3em;
+    width: 82%;
+    /*background-color: #9747FF;*/
+}
+
+#text-content-side>div{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.main-titles{
+
+    font-size: 1.1rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    color: rgba(128, 128, 128, 0.89);
+}
+
+.sub-titles{
+
+    font-size: 0.9rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 600;
+    color: rgba(128, 128, 128, 0.89);
+}
+
+.description{
+
+    font-size: 0.9rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+
+#image-side>img{
+
+    transform: translate(20px,-40px) rotate(3deg);
+    width: 150px;
+    /*height: 201px;*/
+    border-radius: 50%;
+    transition: transform 0.7s ease;
+}
+
+#image-side{
+
+    /*position: absolute;*/
+    width: 20%;
+    height: 40%;
+    background: linear-gradient(145deg, #9747FF, rgba(236, 79, 221, 0.8));
+    border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
+    transform: rotate(-15deg);
+    animation: morph 12s linear infinite alternate;
+    z-index: 1;
+    box-shadow: 0 0 40px 5px rgba(151, 71, 255, 0.3);
+}
+
+
+@keyframes morph {
+    0% {
+        border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
+        transform: rotate(-15deg);
+    }
+    25% {
+        border-radius: 50% 50% 70% 30% / 30% 50% 50% 70%;
+    }
+    50% {
+        border-radius: 65% 35% 35% 65% / 65% 65% 35% 35%;
+        transform: rotate(15deg);
+    }
+    75% {
+        border-radius: 30% 70% 50% 50% / 50% 30% 70% 50%;
+    }
+    100% {
+        border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
+        transform: rotate(-15deg);
+    }
+}
+
+#image-side>img:hover{
+
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
