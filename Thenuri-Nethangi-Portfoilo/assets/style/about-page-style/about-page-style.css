@@ -91,8 +91,9 @@ body {
     font-size: 0.9rem;
     font-family: "Red Hat Display", sans-serif;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.87);
     line-height: 1.8;
+    letter-spacing: 0.5px;
 }
 
 
