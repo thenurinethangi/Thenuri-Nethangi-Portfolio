@@ -8,6 +8,22 @@ body {
     font-family: "Red Hat Display", sans-serif;
 }
 
+.skill-page-header>p{
+
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 4em;
+    /*color: rgba(255, 255, 255, 0.9);*/
+    background: linear-gradient(to right, #FFFFFF, #9747FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dot{
+
+    font-size: 2rem;
+}
+
 #skill-page-section {
     width: 100%;
     background-color: #25202F;
