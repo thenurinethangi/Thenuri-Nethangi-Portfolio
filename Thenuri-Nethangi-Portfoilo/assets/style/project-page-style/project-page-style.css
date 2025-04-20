@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+}
+
+/* Header */
+#page-header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(37, 32, 47, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all var(--transition-medium);
+}
+
+#page-header > img {
+    margin-left: 8em;
+    animation-name: logo-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo-animation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+#menu {
+    cursor: pointer;
+    transition: transform var(--transition-medium);
+}
+
+#menu:hover {
+    transform: scale(1.1);
+}
+
+#page-header > a {
+    margin-top: 2.3em;
+}
+
+
+#project-page-main-section{
+
+    width: 100%;
+    background-color: #9747FF;
+    padding-top: 10em;
+    padding-bottom: 5em;
+    /*position: relative;*/
+
+}
+
+.skill-page-header>p{
+
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 4em;
+    /*color: rgba(255, 255, 255, 0.9);*/
+    background: linear-gradient(to right, #FFFFFF, #9747FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dot{
+
+    font-size: 2rem;
+}
+
+
+/*.project{*/
+
+/*    width: 100%;*/
+/*    border: 2px solid crimson;*/
+/*    position: sticky;*/
+/*    top: 0;*/
+/*    padding-top: 5em;*/
+/*}*/
+
+
+body {
+    background-color: #25202F;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --cards: 4;
+    --cardHeight: 87vh;
+    --cardTopPadding: 1.5em;
+    --cardMargin: 4vw;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 4em;
+}
+
+#cards {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards), var(--cardHeight));
+    gap: var(--cardMargin);
+    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+    margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+    --index: 1;
+}
+#card2 {
+    --index: 2;
+}
+#card3 {
+    --index: 3;
+}
+#card4 {
+    --index: 4;
+}
+
+.card {
+    position: sticky;
+    top: 4em;
+    padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body {
+    background-color: #E6E6FA;
+}
+#card2 .card-body {
+    /* background-color: #FAF0E6; */
+    background-color: #FAF0E6;
+}
+#card3 .card-body {
+    background-color: #F0FFF0;
+}
+#card4 .card-body {
+    background-color: #FFE4E1;
+}
+
+.card-body {
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 70px;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+    height: var(--cardHeight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+
