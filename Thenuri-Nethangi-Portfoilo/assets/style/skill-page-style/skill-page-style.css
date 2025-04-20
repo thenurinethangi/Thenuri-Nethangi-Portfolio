@@ -611,6 +611,11 @@ body {
         padding: 1em 1em 10em 2.5em;
         gap: 7.5em;
     }
+
+    .skill-page-header>p{
+
+        margin-left: 2em;
+    }
 }
 
 
@@ -644,6 +649,11 @@ body {
         width: 65px;
         height: 65px;
 
+    }
+
+    .skill-page-header>p{
+
+        margin-left: 2.7em;
     }
 }
 
@@ -680,6 +690,11 @@ body {
         height: 55px;
 
     }
+
+    .skill-page-header>p{
+
+        margin-left: 2.5em;
+    }
 }
 
 
@@ -714,6 +729,11 @@ body {
         width: 50px;
         height: 50px;
 
+    }
+
+    .skill-page-header>p{
+
+        margin-left: 1.5em;
     }
 }
 
@@ -750,6 +770,11 @@ body {
     .ball>img{
 
         width: 23px;
+    }
+
+    .skill-page-header>p{
+
+        margin-left: 1.2em;
     }
 }
 
@@ -788,5 +813,10 @@ body {
     .ball>img{
 
         width: 20px;
+    }
+
+    .skill-page-header>p{
+
+        margin-left: 1em;
     }
 }
