@@ -55,16 +55,6 @@ body {
 }
 
 
-#project-page-main-section{
-
-    width: 100%;
-    background-color: #9747FF;
-    padding-top: 10em;
-    padding-bottom: 5em;
-    /*position: relative;*/
-
-}
-
 .skill-page-header>p{
 
     font-size: 1rem;
@@ -82,32 +72,23 @@ body {
 }
 
 
-/*.project{*/
-
-/*    width: 100%;*/
-/*    border: 2px solid crimson;*/
-/*    position: sticky;*/
-/*    top: 0;*/
-/*    padding-top: 5em;*/
-/*}*/
-
-
 body {
     background-color: #25202F;
     font-family: 'Arial', sans-serif;
 }
 
 :root {
-    --cards: 4;
+    --cards: 5;
     --cardHeight: 87vh;
     --cardTopPadding: 1.5em;
     --cardMargin: 4vw;
 }
 
 .container {
-    width: 90%;
+    width: 87%;
     margin: 0 auto;
     padding-top: 4em;
+    /*background-color: #9747FF;*/
 }
 
 #cards {
@@ -133,8 +114,12 @@ body {
 #card4 {
     --index: 4;
 }
+#card5 {
+    --index: 5;
+}
 
 .card {
+    width: 100%;
     position: sticky;
     top: 4em;
     padding-top: calc(var(--index) * var(--cardTopPadding));
@@ -153,21 +138,380 @@ body {
 #card4 .card-body {
     background-color: #FFE4E1;
 }
+#card5 .card-body {
+    background-color: #FAFAD2;
+}
 
 .card-body {
+    width: 100%;
     box-sizing: border-box;
-    padding: 30px;
-    border-radius: 70px;
+    padding-inline: 4.5em;
+    border-radius: 80px;
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
     height: var(--cardHeight);
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 4em;
     transition: all 0.5s;
 }
 
-h2 {
-    font-size: 2.5em;
+
+.project-preview-image{
+
+    width: 450px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    position: relative;
+}
+
+
+.project-image{
+
+    width: 94%;
+    height: 94%;
+    object-fit: cover;
+    object-position: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 7px;
+}
+
+
+.check-project-arrow{
+
+    position: absolute;
+    right: 16px;
+    top: 11px;
+    opacity: 0.8;
+}
+
+
+.project-description{
+
+    width: 50%;
+    /*background-color: #333333;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*gap: 0.5em;*/
+}
+
+
+.project-description>h2{
+
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-family: "Red Hat Display", sans-serif;
+    margin-bottom: 2px;
+}
+
+.project-description h3{
+
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.15rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+}
+
+
+.sub-title-box{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 24px;
+}
+
+
+.project-description>p{
+
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+.technology-stack{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.technology-stack>p{
+
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+
+/* Media Queries for Responsive Design */
+
+/* Large laptops and desktops */
+@media screen and (max-width: 1440px) {
+    .card-body {
+        padding-inline: 3em;
+        gap: 3em;
+    }
+
+    .project-preview-image {
+        width: 400px;
+        height: 270px;
+    }
+}
+
+/* Small laptops */
+@media screen and (max-width: 1200px) {
+    :root {
+        --cardHeight: 80vh;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .card-body {
+        padding-inline: 2.5em;
+        gap: 2.5em;
+        border-radius: 60px;
+    }
+
+    .project-preview-image {
+        width: 350px;
+        height: 240px;
+    }
+
+    .project-description {
+        width: 55%;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+    :root {
+        --cardHeight: 75vh;
+        --cardMargin: 6vw;
+    }
+
+    .container {
+        width: 94%;
+        padding-top: 3em;
+    }
+
+    .card-body {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        padding-inline: 2em;
+        border-radius: 40px;
+        overflow: auto;
+    }
+
+    .project-preview-image {
+        width: 80%;
+        height: 230px;
+    }
+
+    .project-description {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-description > h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-description h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Adjust the order for alternating cards */
+    #card2 .card-body, #card4 .card-body {
+        flex-direction: column;
+    }
+
+    .sub-title-box {
+        justify-content: center;
+    }
+
+    .technology-stack {
+        justify-content: center;
+    }
+}
+
+/* Mobile landscape */
+@media screen and (max-width: 768px) {
+    :root {
+        --cardHeight: 70vh;
+        --cardMargin: 8vw;
+    }
+
+    .container {
+        width: 96%;
+        padding-top: 2.5em;
+    }
+
+    .skill-page-header > p {
+        margin-left: 2em;
+    }
+
+    #page-header > a {
+        margin-top: 2em;
+    }
+
+    .card-body {
+        padding-inline: 1.5em;
+        border-radius: 30px;
+    }
+
+    .project-preview-image {
+        width: 90%;
+        height: 200px;
+    }
+
+    .project-description > h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-description h3 {
+        font-size: 1rem;
+    }
+
+    .project-description > p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile portrait */
+@media screen and (max-width: 576px) {
+    :root {
+        --cardHeight: 80vh;
+        --cardMargin: 10vw;
+    }
+
+    .card {
+        top: 3em;
+    }
+
+    .container {
+        width: 98%;
+        padding-top: 2em;
+    }
+
+    .skill-page-header > p {
+        margin-left: 1.5em;
+        font-size: 0.9rem;
+    }
+
+    #page-header {
+        height: 70px;
+    }
+
+    #menu {
+        transform: scale(0.9);
+    }
+
+    .card-body {
+        padding-inline: 1em;
+        border-radius: 25px;
+        gap: 1.5em;
+    }
+
+    .project-preview-image {
+        width: 95%;
+        height: 180px;
+    }
+
+    .project-description {
+        width: 95%;
+    }
+
+    .project-description > h2 {
+        font-size: 1.3rem;
+    }
+
+    .project-description h3 {
+        font-size: 0.95rem;
+    }
+
+    .project-description > p {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .technology-stack > p {
+        font-size: 0.75rem;
+    }
+
+    .sub-title-box {
+        margin-bottom: 15px;
+    }
+
+    #footer-main-text {
+        font-size: 1.5rem;
+    }
+
+    #copyright-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 375px) {
+    :root {
+        --cardHeight: 85vh;
+    }
+
+    .card-body {
+        padding: 1em 0.8em;
+        border-radius: 20px;
+    }
+
+    .project-preview-image {
+        height: 160px;
+    }
+
+    .project-description > h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-description h3 {
+        font-size: 0.9rem;
+    }
+
+    .project-description > p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .check-project-arrow {
+        width: 25px !important;
+    }
+
+    #social-link a img {
+        width: 35px;
+    }
 }
 
 
