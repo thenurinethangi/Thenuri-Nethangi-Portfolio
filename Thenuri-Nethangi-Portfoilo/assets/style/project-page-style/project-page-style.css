@@ -395,6 +395,11 @@ body {
         /*gap: 0.5em;*/
     }
 
+    .skill-page-header>p{
+
+        margin-left: 2em;
+    }
+
 }
 
 
@@ -520,9 +525,9 @@ body {
         flex-direction: column;
         justify-content: center;
         gap: 2em;
-        padding-inline: 1em;
         border-radius: 80px;
         overflow: auto;
+        padding-top: 1em;
     }
 
     /*.project-preview-image {*/
@@ -707,6 +712,11 @@ body {
 
     .technology-stack {
         justify-content: center;
+    }
+
+    .skill-page-header>p{
+
+        margin-left: 1.5em;
     }
 }
 
