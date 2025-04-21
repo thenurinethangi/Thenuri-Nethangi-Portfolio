@@ -307,7 +307,7 @@ body {
     font-size: 19px;
     color: #D0D0D0;
     font-weight: 300;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards 4.3s;
