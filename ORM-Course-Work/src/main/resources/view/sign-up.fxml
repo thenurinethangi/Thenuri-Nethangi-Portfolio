@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bodyPane" prefHeight="625.0" prefWidth="1035.0" style="-fx-background-color: ffffff;" stylesheets="@../assets/style/comboBox.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormcoursework.controller.SignUpController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="627.0" prefWidth="1036.0" stylesheets="@../assets/style/comboBox.css">
+         <children>
+            <AnchorPane layoutX="613.0" prefHeight="628.0" prefWidth="459.0" style="-fx-background-color: E0B0FF; -fx-background-radius: 0 20 20 0; -fx-border-radius: 0 20 20 0;">
+               <children>
+                  <ImageView fitHeight="340.0" fitWidth="477.0" layoutX="-18.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/3d-purple-plus-sign-icon-600nw-2437410253-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="exitbtn" layoutX="422.0" layoutY="15.0" mnemonicParsing="false" onAction="#exitOnAction" prefHeight="17.0" prefWidth="24.0" rotate="-48.4" style="-fx-background-radius: 50; -fx-background-color: #9B59B6;" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label fx:id="logoTitle" layoutX="249.0" layoutY="35.0" prefHeight="28.0" prefWidth="167.0" text="Serenity +">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="95.0" style="-fx-font-weight: 700;" text="Welcome to">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="328.0" layoutY="95.0" text="Serenity +" textFill="#9b59b6">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="128.0" prefHeight="35.0" prefWidth="351.0" style="-fx-font-weight: 500;" text="Effortless Management, Exceptional Care – All in One Place. Simplify Operations, Enhance Care , Everything You Need in One System." textAlignment="CENTER" textFill="#00000094" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="262.0" style="-fx-font-weight: 600;" text="User Name" textFill="#000000ba" />
+            <Label layoutX="224.0" layoutY="602.0" text="Don't have an account?" textFill="#00000098" />
+            <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="182.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/istockphoto-1431615746-612x612.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="signUpBtn" layoutX="139.0" layoutY="549.0" mnemonicParsing="false" onAction="#signUpBtnOnAction" prefHeight="34.0" prefWidth="340.0" style="-fx-background-color: #9B59B6; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #9B59B6;" text="Sign up" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextField fx:id="userNameField" layoutX="140.0" layoutY="286.0" prefHeight="34.0" prefWidth="340.0" promptText="tnethangi" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #E0E0E0;" />
+            <Label layoutX="140.0" layoutY="392.0" style="-fx-font-weight: 600;" text="Password" textFill="#000000ba" />
+            <Label fx:id="logInBtn" layoutX="355.0" layoutY="602.0" onMouseClicked="#logInBtnOnAction" text="Log in" textFill="#9b59b6">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="140.0" layoutY="415.0" prefHeight="34.0" prefWidth="340.0" promptText="thenuri123" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #E0E0E0;" />
+            <Label layoutX="140.0" layoutY="197.0" style="-fx-font-weight: 600;" text="Full Name" textFill="#000000ba" />
+            <TextField fx:id="fullNameField" layoutX="140.0" layoutY="221.0" prefHeight="34.0" prefWidth="340.0" promptText="Thenuri Nanayakkara" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #E0E0E0;" />
+            <Label layoutX="140.0" layoutY="328.0" style="-fx-font-weight: 600;" text="Email" textFill="#000000ba" />
+            <TextField fx:id="emailField" layoutX="140.0" layoutY="351.0" prefHeight="34.0" prefWidth="340.0" promptText="tnethangi@gmail.com" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #E0E0E0;" />
+            <ComboBox fx:id="roleCmb" layoutX="140.0" layoutY="481.0" opacity="0.67" prefHeight="34.0" prefWidth="340.0" promptText="Select" style="-fx-background-radius: 5; -fx-border-radius: 5;" stylesheets="@../assets/style/comboBox.css" />
+            <Label layoutX="140.0" layoutY="459.0" style="-fx-font-weight: 600;" text="Choose Role" textFill="#000000ba" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

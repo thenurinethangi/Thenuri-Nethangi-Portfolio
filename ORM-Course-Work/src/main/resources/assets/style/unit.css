@@ -1,0 +1,350 @@
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #DDDDDD;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-placeholder-text-fill: #AAAAAA;
+}
+
+.text-field:focused {
+    -fx-background-color: #ADD8E6;
+    -fx-border-color: #2196F3;
+}
+
+.text-field:hover {
+    -fx-background-color: #F2F2F2;
+}
+
+
+#editbtn{
+
+    -fx-background-color: #CFD8DC;
+    -fx-border-color:  #CFD8DC;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 0;
+}
+
+#deletebtn{
+
+    -fx-background-color: #CFD8DC;
+    -fx-border-color:  #CFD8DC;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 0;
+}
+
+#addNewUnitbtn{
+
+    -fx-background-color: #007AFF;
+    -fx-border-color:  #007AFF;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 8;
+
+}
+
+#addNewHouseTypebtn{
+
+    -fx-background-color: #007AFF;
+    -fx-border-color:  #007AFF;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 8;
+
+}
+
+#addNewFloorbtn{
+
+    -fx-background-color: #007AFF;
+    -fx-border-color:  #007AFF;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 8;
+
+}
+
+#searchbtn{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color:  #007AFF;
+    -fx-border-width: 1.5 1.5 1.5 1.5;
+    -fx-border-radius: 6;
+
+}
+
+
+#refreshbtn{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color:  #007AFF;
+    -fx-border-width: 1.5 1.5 1.5 1.5;
+    -fx-border-radius: 6;
+}
+
+
+.combo-box {
+    -fx-background-color: #f1f2f6; /* Light gray background */
+    -fx-border-color: #f1f2f6; /* Gray border */
+    -fx-border-radius: 12; /* Rounded corners */
+    -fx-padding: 2; /* Padding around content */
+    -fx-font-size: 12; /* Larger font size */
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* No background for the arrow */
+    -fx-border-color: transparent; /* No border for the arrow */
+    -fx-padding: 0; /* No padding for the arrow */
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #a4b0be; /* Gray color for the arrow */
+}
+
+.combo-box .list-view {
+    -fx-background-color: #ffffff; /* White background for the list */
+    -fx-border-color: #ccc; /* Gray border for the list */
+    -fx-border-radius: 5; /* Rounded corners for the list */
+    -fx-padding: 5; /* Padding around list items */
+}
+
+.combo-box .list-view .list-cell {
+    -fx-background-color: #fff; /* White background for list items */
+    -fx-text-fill: #333; /* Dark gray text color */
+    -fx-padding: 5; /* Padding around list item text */
+}
+
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: #ced6e0; /* Light gray background on hover */
+}
+
+.combo-box .list-view .list-cell:selected {
+    -fx-background-color: #a4b0be; /* Gray background when selected */
+    -fx-text-fill: #ffffff; /* White text color when selected */
+}
+
+
+#h1 {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 0;
+    -fx-text-fill: #57606f;
+}
+
+#h1:focused{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1.5;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 6;
+
+}
+
+
+#h2{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 0;
+    -fx-text-fill: #57606f;
+}
+
+
+#h2:focused{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1.5;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 6;
+
+}
+
+
+#h3{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 0;
+    -fx-text-fill: #57606f;
+}
+
+#h3:focused{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1.5;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 6;
+
+}
+
+
+#h4{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 0;
+    -fx-text-fill: #57606f;
+}
+
+#h4:focused{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1.5;
+    -fx-padding: 0px;
+    -fx-font-size: 12px;
+    -fx-border-radius: 6;
+
+}
+
+
+#floorNotxt{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px 0px 0px 7px;
+    -fx-font-size: 12px;
+// -fx-border-radius: 12;
+    -fx-text-fill: #57606f;
+
+}
+
+
+#floorNotxt:focused{
+
+    -fx-border-color: linear-gradient(to right, #007AFF, #E1F5FE);
+    -fx-border-width: 0 0 2 0;
+
+
+}
+
+
+#noOfHousestxt{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px 0px 0px 7px;
+    -fx-font-size: 12px;
+// -fx-border-radius: 12;
+    -fx-text-fill: #57606f;
+
+}
+
+
+#noOfHousestxt:focused{
+
+    -fx-border-color: linear-gradient(to right, #007AFF, #E1F5FE);
+    -fx-border-width: 0 0 2 0;
+
+
+}
+
+
+#clearbtn{
+
+    -fx-background-color: #007AFF;
+    -fx-border-color:  #007AFF;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 8;
+
+}
+
+
+#addbtn{
+
+    -fx-background-color: #007AFF;
+    -fx-border-color:  #007AFF;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 8;
+
+}
+
+
+#searchbtn{
+
+    -fx-background-color: #CFD8DC;
+    -fx-border-color:  #CFD8DC;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 0;
+
+}
+
+
+#refreshbtn{
+
+    -fx-background-color: #CFD8DC;
+    -fx-border-color:  #CFD8DC;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 0;
+
+}
+
+
+#houseTypetxt{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px 0px 0px 7px;
+    -fx-font-size: 12px;
+// -fx-border-radius: 12;
+    -fx-text-fill: #57606f;
+
+}
+
+
+#houseTypetxt:focused{
+
+    -fx-border-color: linear-gradient(to right, #007AFF, #E1F5FE);
+    -fx-border-width: 0 0 2 0;
+
+
+}
+
+
+#descriptiontxt{
+
+    -fx-background-color: #ffffff;
+    -fx-border-color: #57606f;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0px 0px 0px 7px;
+    -fx-font-size: 12px;
+// -fx-border-radius: 12;
+    -fx-text-fill: #57606f;
+
+}
+
+
+#descriptiontxt:focused{
+
+    -fx-border-color: linear-gradient(to right, #007AFF, #E1F5FE);
+    -fx-border-width: 0 0 2 0;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

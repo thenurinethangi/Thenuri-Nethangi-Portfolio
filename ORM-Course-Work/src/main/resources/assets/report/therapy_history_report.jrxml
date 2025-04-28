@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created for JasperReports 7.0.0 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="TherapyHistoryReport"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="535"
+              leftMargin="30"
+              rightMargin="30"
+              topMargin="30"
+              bottomMargin="30">
+
+    <!-- Parameters -->
+    <parameter name="patientId" class="java.lang.String"/>
+    <parameter name="reportDate" class="java.lang.String"/>
+
+    <!-- Fields from RegisterTM bean -->
+    <field name="therapy" class="java.lang.String"/>
+    <field name="startDate" class="java.util.Date"/>
+    <field name="endDate" class="java.util.Date"/>
+    <field name="sessionsTaken" class="java.lang.Integer"/>
+    <field name="status" class="java.lang.String"/>
+
+    <!-- Styles -->
+    <style name="Title" fontName="Arial" fontSize="16" isBold="true"/>
+    <style name="SubTitle" fontName="Arial" fontSize="12" isBold="true"/>
+    <style name="ColumnHeader" fontName="Arial" fontSize="11" isBold="true"/>
+    <style name="DetailData" fontName="Arial" fontSize="10"/>
+    <style name="Total" fontName="Arial" fontSize="11" isBold="true"/>
+
+    <title>
+        <band height="100" splitType="Stretch">
+            <textField>
+                <reportElement style="Title" x="0" y="10" width="535" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["Patient Therapy History Report"]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="SubTitle" x="0" y="50" width="80" height="20"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                <text><![CDATA[Patient ID:]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="DetailData" x="90" y="50" width="150" height="20"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{patientId}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="SubTitle" x="250" y="50" width="120" height="20"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                <text><![CDATA[Report Date:]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="DetailData" x="380" y="50" width="155" height="20"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{reportDate}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="30" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="535" height="30" forecolor="#CCCCCC" backcolor="#EEEEEE"/>
+            </rectangle>
+            <staticText>
+                <reportElement style="ColumnHeader" x="0" y="0" width="130" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Therapy Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="ColumnHeader" x="130" y="0" width="110" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Start Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="ColumnHeader" x="240" y="0" width="110" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[End Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="ColumnHeader" x="350" y="0" width="95" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Sessions Taken]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="ColumnHeader" x="445" y="0" width="90" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Status]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="30" splitType="Stretch">
+            <rectangle>
+                <reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="535" height="30" forecolor="#FFFFFF" backcolor="#FFFFFF">
+                    <printWhenExpression><![CDATA[($V{REPORT_COUNT} % 2) == 0]]></printWhenExpression>
+                </reportElement>
+            </rectangle>
+            <rectangle>
+                <reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="535" height="30" forecolor="#FFFFFF" backcolor="#F8F8F8">
+                    <printWhenExpression><![CDATA[($V{REPORT_COUNT} % 2) != 0]]></printWhenExpression>
+                </reportElement>
+            </rectangle>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="DetailData" x="0" y="0" width="130" height="30" stretchType="RelativeToTallestObject"/>
+                <box leftPadding="5"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{therapy}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" pattern="MMM dd, yyyy">
+                <reportElement style="DetailData" x="130" y="0" width="110" height="30" stretchType="RelativeToTallestObject"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{startDate}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true" pattern="MMM dd, yyyy" isBlankWhenNull="true">
+                <reportElement style="DetailData" x="240" y="0" width="110" height="30" stretchType="RelativeToTallestObject"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{endDate}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="DetailData" x="350" y="0" width="95" height="30" stretchType="RelativeToTallestObject"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{sessionsTaken}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="DetailData" x="445" y="0" width="90" height="30" stretchType="RelativeToTallestObject"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <summary>
+        <band height="50" splitType="Stretch">
+            <line>
+                <reportElement x="0" y="5" width="535" height="1"/>
+            </line>
+            <staticText>
+                <reportElement style="Total" x="0" y="10" width="330" height="20"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                <text><![CDATA[Total Therapies:]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="Total" x="350" y="10" width="95" height="20"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>

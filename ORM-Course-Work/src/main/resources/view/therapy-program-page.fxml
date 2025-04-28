@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="1006.0" style="-fx-background-color: #EDE7F6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormcoursework.controller.TherapyProgramController">
+   <children>
+      <Pane layoutX="15.0" prefHeight="633.0" prefWidth="981.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <children>
+            <TableView fx:id="table" layoutX="333.0" layoutY="205.0" prefHeight="417.0" prefWidth="641.0" stylesheets="@../assets/style/test.css">
+               <columns>
+                  <TableColumn fx:id="therapyIdCol" prefWidth="113.5555419921875" text="Therapy ID" />
+                  <TableColumn fx:id="nameCol" prefWidth="153.11114501953125" text="Name" />
+                  <TableColumn fx:id="durationCol" prefWidth="114.888916015625" text="Duration" />
+                  <TableColumn fx:id="feeCol" prefWidth="119.111083984375" text="fee" />
+                  <TableColumn fx:id="actionCol" prefWidth="144.66668701171875" text="..." />
+               </columns>
+            </TableView>
+            <Label layoutX="20.0" layoutY="148.0" text="Program ID*" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="308.0" text="Duration" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="381.0" text="Fee" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="feeField" layoutX="21.0" layoutY="399.0" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-border-radius: 3; -fx-border-color: CFD8DC;" />
+            <Label fx:id="programIdLabel" layoutX="20.0" layoutY="166.0" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-padding: 0 0 0 7; -fx-border-radius: 3; -fx-border-color: CFD8DC;" text="P-001" textFill="#2f3440e1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="194.11111450195312" layoutX="103.0" layoutY="214.0" startX="-90.33334350585938" stroke="#a6b1bd4d" />
+            <Label layoutX="20.0" layoutY="235.0" text="Name" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField" layoutX="21.0" layoutY="253.0" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-border-radius: 3; -fx-border-color: CFD8DC;" />
+            <TextField fx:id="durationField" layoutX="21.0" layoutY="326.0" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-border-radius: 3; -fx-border-color: CFD8DC;" />
+            <TextField fx:id="searchBar" layoutX="389.0" layoutY="165.0" prefHeight="30.0" prefWidth="318.0" promptText="Search here" style="-fx-background-color: #f1f2f6; -fx-padding: 1 1 1 28; -fx-border-color: #f1f2f6;" styleClass="text-field" stylesheets="@../../../../../Semester_final/src/main/resources/assets/style/BlueTextField.css" />
+            <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="395.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/search%20(3).png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="tableRowsCmb" layoutX="332.0" layoutY="164.0" onAction="#tableRowsCmbOnAction" prefHeight="30.0" prefWidth="11.0" stylesheets="@../assets/style/unit.css" />
+            <Button fx:id="addBtn" alignment="CENTER" layoutX="21.0" layoutY="496.0" mnemonicParsing="false" onAction="#addBtnOnAction" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #9B59B6; -fx-background-radius: 3;" text="Add" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="updateBtn" alignment="CENTER" layoutX="21.0" layoutY="541.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-border-radius: 3; -fx-border-color: #9B59B6; -fx-background-radius: 3;" text="Update" textAlignment="JUSTIFY" textFill="#9b59b6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="717.0" layoutY="170.0" onMouseClicked="#refreshOnMouseClick" opacity="0.49" pickOnBounds="true" preserveRatio="true" rotate="-102.2">
+               <image>
+                  <Image url="@../assets/image/refresh%20(5).png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.06852788478136063" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Label layoutX="35.0" layoutY="20.0" prefHeight="29.0" prefWidth="592.0" style="-fx-padding: 2 0 2 0;" text="Therapy Program" textFill="#9b59b6">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

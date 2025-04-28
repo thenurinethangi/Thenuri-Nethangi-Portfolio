@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bodyPane" prefHeight="625.0" prefWidth="1035.0" style="-fx-background-color: ffffff; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@../assets/style/comboBox.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormcoursework.controller.SignInController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="627.0" prefWidth="1036.0" stylesheets="@../assets/style/comboBox.css">
+         <children>
+            <AnchorPane layoutX="613.0" prefHeight="628.0" prefWidth="459.0" style="-fx-background-color: E0B0FF; -fx-background-radius: 0 20 20 0; -fx-border-radius: 0 20 20 0;">
+               <children>
+                  <ImageView fitHeight="340.0" fitWidth="477.0" layoutX="-18.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/3d-purple-plus-sign-icon-600nw-2437410253-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="exitbtn" layoutX="423.0" layoutY="18.0" mnemonicParsing="false" onAction="#exitOnAction" prefHeight="17.0" prefWidth="24.0" rotate="38.7" style="-fx-background-radius: 50; -fx-background-color: #9B59B6;" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label fx:id="logoTitle" layoutX="249.0" layoutY="57.0" prefHeight="28.0" prefWidth="167.0" text="Serenity +">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="175.0" layoutY="123.0" style="-fx-font-weight: 700;" text="Welcome back to">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="353.0" layoutY="123.0" text="Serenity +" textFill="#9b59b6">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="157.0" prefHeight="35.0" prefWidth="351.0" style="-fx-font-weight: 500;" text="Effortless Management, Exceptional Care – All in One Place. Simplify Operations, Enhance Care , Everything You Need in One System." textAlignment="CENTER" textFill="#00000094" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="256.0" style="-fx-font-weight: 600;" text="User Name" textFill="#000000ba" />
+            <Label layoutX="225.0" layoutY="483.0" text="Don't have an account?" textFill="#00000098" />
+            <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="182.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/istockphoto-1431615746-612x612.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="logInBtn" layoutX="141.0" layoutY="425.0" mnemonicParsing="false" onAction="#logInBtnOnAction" prefHeight="34.0" prefWidth="340.0" style="-fx-background-color: #9B59B6; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #9B59B6;" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextField fx:id="userNameField" layoutX="140.0" layoutY="280.0" prefHeight="34.0" prefWidth="340.0" promptText="tnethangi" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #E0E0E0;" />
+            <Label fx:id="signUpBtn" layoutX="356.0" layoutY="484.0" onMouseClicked="#signUpBtnOnAction" text="Sign up" textFill="#9b59b6">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="140.0" layoutY="332.0" style="-fx-font-weight: 600;" text="Password" textFill="#000000ba" />
+            <TextField fx:id="showPasswordField" layoutX="141.0" layoutY="356.0" onKeyReleased="#showPasswordFieldOnKeyReleased" prefHeight="34.0" prefWidth="340.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #E0E0E0;" />
+            <PasswordField fx:id="passwordField" layoutX="140.0" layoutY="356.0" prefHeight="34.0" prefWidth="340.0" promptText="thenuri789" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #E0E0E0;" />
+            <ImageView fx:id="eyeImageView" fitHeight="24.0" fitWidth="20.0" layoutX="448.0" layoutY="364.0" onMouseClicked="#eyeImageViewOnMouseClick" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/invisible.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

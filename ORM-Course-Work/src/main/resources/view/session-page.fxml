@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="1006.0" style="-fx-background-color: #EDE7F6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormcoursework.controller.SessionController">
+   <children>
+      <Pane layoutX="15.0" prefHeight="633.0" prefWidth="981.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <children>
+            <TableView fx:id="table" layoutX="333.0" layoutY="215.0" prefHeight="407.0" prefWidth="641.0" stylesheets="@../assets/style/test.css">
+               <columns>
+                  <TableColumn fx:id="sessionIdCol" prefWidth="100.0" text="Session ID" />
+                  <TableColumn fx:id="patientIdCol" prefWidth="100.0" text="Patient ID" />
+                  <TableColumn fx:id="therapyCol" prefWidth="140.0" text="Therapy" />
+                  <TableColumn fx:id="therapistCol" prefWidth="87.111083984375" text="Therapist ID" />
+                  <TableColumn fx:id="dateCol" prefWidth="110.0" text="Date" />
+                  <TableColumn fx:id="timeCol" prefWidth="90.0" text="Time" />
+                  <TableColumn fx:id="paymentCol" text="Payment ID" />
+                  <TableColumn fx:id="statusCol" text="Status" />
+                  <TableColumn fx:id="actionCol" prefWidth="120.0" text="..." />
+               </columns>
+            </TableView>
+            <Label layoutX="20.0" layoutY="197.0" text="Session ID*" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="sessionIdLabel" layoutX="20.0" layoutY="215.0" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-padding: 0 0 0 7; -fx-border-radius: 3; -fx-border-color: CFD8DC;" text="S-0000001" textFill="#2f3440e1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="194.11111450195312" layoutX="103.0" layoutY="260.0" startX="-90.33334350585938" stroke="#a6b1bd4d" />
+            <TextField fx:id="searchBar" layoutX="389.0" layoutY="176.0" prefHeight="30.0" prefWidth="318.0" promptText="Search here" style="-fx-background-color: #f1f2f6; -fx-padding: 1 1 1 28; -fx-border-color: #f1f2f6;" styleClass="text-field" stylesheets="@../../../../../Semester_final/src/main/resources/assets/style/BlueTextField.css" />
+            <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="395.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/search%20(3).png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="tableRowsCmb" layoutX="332.0" layoutY="176.0" onAction="#tableRowsCmbOnAction" prefHeight="30.0" prefWidth="11.0" stylesheets="@../assets/style/unit.css" />
+            <Button fx:id="payLaterAndAddBtn" alignment="CENTER" layoutX="21.0" layoutY="531.0" mnemonicParsing="false" onAction="#payLaterAndAddBtnOnAction" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #9B59B6; -fx-background-radius: 3;" text="Pay Later &amp; Book" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="updateBtn" alignment="CENTER" layoutX="21.0" layoutY="574.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #ffffff; -fx-border-radius: 3; -fx-border-color: #9B59B6; -fx-background-radius: 3;" text="Update" textAlignment="JUSTIFY" textFill="#9b59b6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ComboBox fx:id="dateCmb" layoutX="20.0" layoutY="289.0" onAction="#dateCmbOnAction" prefHeight="30.0" prefWidth="275.0" promptText="Select Appointment Date" stylesheets="@../assets/style/comboBox.css" />
+            <Label layoutX="20.0" layoutY="271.0" text="Date" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="335.0" text="Doctor" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="399.0" text="Time" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="59.0" text="Patient ID/Phone NO" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="patientDetailsLabel" layoutX="333.0" layoutY="65.0" prefHeight="32.0" prefWidth="375.0" style="-fx-background-color: #ffffff; -fx-border-width: 0 0 1 0; -fx-padding: 0 0 0 7; -fx-border-radius: 0; -fx-border-color: CFD8DC;" textFill="#303540c9" />
+            <TextField fx:id="patientIdField" layoutX="20.0" layoutY="77.0" prefHeight="30.0" prefWidth="275.0" promptText="Enter patient id or phone number" style="-fx-background-color: #ffffff; -fx-border-radius: 3; -fx-border-color: CFD8DC;" />
+            <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="269.0" layoutY="82.0" onMouseClicked="#searchPatientOnMouseClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/search%20(3).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="20.0" layoutY="119.0" text="Choose Registered Therapy" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="therapyProgramDetailsLabel" layoutX="333.0" layoutY="120.0" prefHeight="32.0" prefWidth="375.0" style="-fx-background-color: #ffffff; -fx-border-width: 0 0 1 0; -fx-padding: 0 0 0 7; -fx-border-radius: 0; -fx-border-color: CFD8DC;" textFill="#303540c9" />
+            <Line endX="194.11111450195312" layoutX="107.0" layoutY="183.0" startX="-90.33334350585938" stroke="#a6b1bd4d" />
+            <ComboBox fx:id="therapyCmb" layoutX="20.0" layoutY="137.0" onAction="#therapyProgramCmbOnAction" prefHeight="30.0" prefWidth="275.0" promptText="Select Therapy Program" stylesheets="@../assets/style/comboBox.css" />
+            <ComboBox fx:id="doctorCmb" layoutX="20.0" layoutY="353.0" onAction="#doctorCmbOnAction" prefHeight="30.0" prefWidth="275.0" promptText="Select Available Doctor" stylesheets="@../assets/style/comboBox.css" />
+            <ComboBox fx:id="timeCmb" layoutX="20.0" layoutY="417.0" prefHeight="30.0" prefWidth="275.0" promptText="Select Time Slot" stylesheets="@../assets/style/comboBox.css" />
+            <Button fx:id="payAndAddBtn" alignment="CENTER" layoutX="21.0" layoutY="487.0" mnemonicParsing="false" onAction="#payAndAddBtnOnAction" prefHeight="30.0" prefWidth="275.0" style="-fx-background-color: #9B59B6; -fx-background-radius: 3;" text="Pay &amp; Book" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.06852788478136063" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Label layoutX="35.0" layoutY="17.0" prefHeight="29.0" prefWidth="592.0" style="-fx-padding: 2 0 2 0;" text="Sessions Scheduling" textFill="#9b59b6">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="728.0" layoutY="181.0" onMouseClicked="#refreshOnMouseClick" opacity="0.49" pickOnBounds="true" preserveRatio="true" rotate="-102.2">
+         <image>
+            <Image url="@../assets/image/refresh%20(5).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

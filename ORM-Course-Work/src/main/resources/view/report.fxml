@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="1006.0" style="-fx-background-color: #EDE7F6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormcoursework.controller.ReportController">
+   <children>
+      <Pane layoutX="15.0" prefHeight="633.0" prefWidth="981.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="20.0" layoutY="147.0" text="Patient ID*" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="429.0" text="Gender" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Line endX="194.11111450195312" layoutX="103.0" layoutY="213.0" startX="-90.33334350585938" stroke="#a6b1bd4d" />
+            <Label layoutX="20.0" layoutY="234.0" text="Name" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="300.0" text="Phone Number" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="361.0" text="Age" textFill="#747d8c">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.06852788478136063" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Label layoutX="35.0" layoutY="20.0" prefHeight="29.0" prefWidth="592.0" style="-fx-padding: 2 0 2 0;" text="Report" textFill="#9b59b6">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id" layoutX="132.0" layoutY="116.0" />
+      <Button fx:id="btn" layoutX="330.0" layoutY="116.0" mnemonicParsing="false" onAction="#btnOnAction" text="Button" />
+   </children>
+</AnchorPane>

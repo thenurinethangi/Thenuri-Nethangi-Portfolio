@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bodyPane" prefHeight="632.0" prefWidth="1006.0" style="-fx-background-color: #EDE7F6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormcoursework.controller.DashboardController">
+   <children>
+      <Pane layoutX="724.0" layoutY="1.0" prefHeight="636.0" prefWidth="267.0" style="-fx-background-color: #EDE7F6;">
+         <children>
+            <Pane layoutX="12.0" layoutY="522.0" prefHeight="91.0" prefWidth="243.0" style="-fx-background-color: #9575CD; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.10928937792778015" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="67.0" layoutY="30.0" text="income" textFill="#ffffffc3">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="incomeLabel" layoutX="66.0" layoutY="46.0" text="1000$" textFill="#ffffffc3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="19.0" layoutY="31.0" onMouseClicked="#userProfileOnMouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/growth.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="12.0" layoutY="22.0" prefHeight="228.0" prefWidth="243.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fitHeight="137.0" fitWidth="276.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" style="-fx-boader-radius: 10;">
+                     <image>
+                        <Image url="@../assets/image/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMThiYXRjaDktYXVtLTA2XzEuanBn.png" />
+                     </image>
+                  </ImageView>
+                  <Circle fill="WHITE" layoutX="119.0" layoutY="122.0" radius="55.0" stroke="WHITE" strokeType="INSIDE" />
+                  <ImageView fitHeight="91.0" fitWidth="91.0" layoutX="74.0" layoutY="75.0" onMouseClicked="#userProfileOnMouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/7915522-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="10.0" layoutY="6.0" text="My Profile" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userNameLabel" alignment="CENTER" layoutY="176.0" onMouseClicked="#userNameOnMouseClick" prefHeight="19.0" prefWidth="243.0" text="Miss. Thenuri" textFill="#9c9c9cf1">
+                     <font>
+                        <Font name="Candara" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="roleLabel" alignment="CENTER" layoutY="196.0" prefHeight="16.0" prefWidth="243.0" text="Receptionist" textAlignment="CENTER" textFill="#00000081">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.05583760142326355" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Pane layoutX="12.0" layoutY="265.0" prefHeight="246.0" prefWidth="243.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.05583760142326355" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="12.0" layoutY="13.0" text="Doctor list" textFill="#00000099">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="181.0" layoutY="257.0" prefHeight="91.0" prefWidth="62.0" style="-fx-background-color: #673AB7; -fx-background-radius: 0 10 10 0;">
+                     <children>
+                        <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="-36.0" layoutY="9.0" onMouseClicked="#userProfileOnMouseClick" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/chart.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="13.0" layoutY="45.0" onMouseClicked="#userProfileOnMouseClick" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/user-profile.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="doctor1Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="46.0" onMouseClicked="#userNameOnMouseClick" prefHeight="19.0" prefWidth="190.0" text="Dr. Thenuri Nethangi" textFill="#6e6d6de4">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="specialization1Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="64.0" prefHeight="16.0" prefWidth="190.0" text="Homology" textAlignment="CENTER" textFill="#00000081">
+                     <font>
+                        <Font size="10.5" />
+                     </font>
+                  </Label>
+                  <Label fx:id="roleLabel2" alignment="TOP_LEFT" layoutX="203.0" layoutY="12.0" prefHeight="16.0" prefWidth="32.0" text="Today" textAlignment="CENTER" textFill="#00000072">
+                     <font>
+                        <Font size="10.5" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="13.0" layoutY="93.0" onMouseClicked="#userProfileOnMouseClick" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/user-profile.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="doctor2Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="94.0" onMouseClicked="#userNameOnMouseClick" prefHeight="19.0" prefWidth="190.0" text="Dr. Thenuri Nethangi" textFill="#6e6d6de3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="specialization2Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="112.0" prefHeight="16.0" prefWidth="190.0" text="Homology" textAlignment="CENTER" textFill="#00000081">
+                     <font>
+                        <Font size="10.5" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="13.0" layoutY="145.0" onMouseClicked="#userProfileOnMouseClick" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/user-profile.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="doctor4Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="146.0" onMouseClicked="#userNameOnMouseClick" prefHeight="19.0" prefWidth="190.0" text="Dr. Thenuri Nethangi" textFill="#6e6d6de3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="specialization3Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="164.0" prefHeight="16.0" prefWidth="190.0" text="Homology" textAlignment="CENTER" textFill="#00000081">
+                     <font>
+                        <Font size="10.5" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="13.0" layoutY="194.0" onMouseClicked="#userProfileOnMouseClick" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/user-profile.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="doctor5Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="195.0" onMouseClicked="#userNameOnMouseClick" prefHeight="19.0" prefWidth="190.0" text="Dr. Thenuri Nethangi" textFill="#6e6d6de3">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="specialization4Label" alignment="TOP_LEFT" layoutX="55.0" layoutY="213.0" prefHeight="16.0" prefWidth="190.0" text="Homology" textAlignment="CENTER" textFill="#00000081">
+                     <font>
+                        <Font size="10.5" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="108.0" prefHeight="190.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <children>
+            <Pane layoutX="26.0" layoutY="37.0" prefHeight="68.0" prefWidth="75.0" style="-fx-background-color: FFFDE7; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/medical-mask.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <Glow level="0.0" />
+               </effect>
+            </Pane>
+            <Label layoutX="31.0" layoutY="113.0" text="Total Patient" textFill="#00000080">
+               <font>
+                  <Font name="Candara" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalPatientLabel" alignment="CENTER" layoutX="-3.0" layoutY="132.0" prefHeight="21.0" prefWidth="134.0" text="3000" textFill="#00000099">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="32.0" layoutX="100.0" layoutY="166.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/menu%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.06852786988019943" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Label layoutX="33.0" layoutY="34.0" text="Hello, Thenuri" textFill="#000000a1">
+         <font>
+            <Font name="Candara Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="64.0" text="Have a nice day at work and stay healthy!" textFill="#00000067">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchBar" layoutX="435.0" layoutY="32.0" onMouseEntered="#searchTxtOnMouseEntered" prefHeight="32.0" prefWidth="232.0" promptText="s e a r c h" style="-fx-background-color: #ffffff; -fx-padding: 0 0 0 35; -fx-background-radius: 5; -fx-border-radius: 10; -fx-border-color: #ffffff;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.030456852167844772" />
+               </color>
+            </DropShadow>
+         </effect></TextField>
+      <Pane layoutX="179.0" layoutY="108.0" prefHeight="190.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <children>
+            <Pane layoutX="28.0" layoutY="37.0" prefHeight="68.0" prefWidth="75.0" style="-fx-background-color: FFEBEE; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/chemotherapy.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="33.0" layoutY="113.0" text="Total Therapy" textFill="#00000080">
+               <font>
+                  <Font name="Candara" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalTherapyLabel" alignment="CENTER" layoutY="132.0" prefHeight="21.0" prefWidth="130.0" text="7" textFill="#00000099">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="32.0" layoutX="102.0" layoutY="166.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/menu%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.06852786988019943" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Pane layoutX="325.0" layoutY="108.0" prefHeight="190.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.06852786988019943" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Pane layoutX="28.0" layoutY="37.0" prefHeight="68.0" prefWidth="75.0" style="-fx-background-color: E8F5E9; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/doctor%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="33.0" layoutY="113.0" text="Total Therapist" textFill="#00000080">
+               <font>
+                  <Font name="Candara" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalTherapistLabel" alignment="CENTER" layoutY="132.0" prefHeight="21.0" prefWidth="130.0" text="23" textFill="#00000099">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="32.0" layoutX="102.0" layoutY="166.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/menu%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="471.0" layoutY="108.0" prefHeight="190.0" prefWidth="130.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.06852786988019943" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Pane layoutX="28.0" layoutY="37.0" prefHeight="68.0" prefWidth="75.0" style="-fx-background-color: E3F2FD; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/doctors-office.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="33.0" layoutY="113.0" text="Today Session" textFill="#00000080">
+               <font>
+                  <Font name="Candara" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalSessionLabel" alignment="CENTER" layoutY="132.0" prefHeight="21.0" prefWidth="130.0" text="32" textFill="#00000099">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="32.0" layoutX="102.0" layoutY="166.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/menu%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="316.0" prefHeight="299.0" prefWidth="685.0" style="-fx-background-color: #ffffff; -fx-background-radius: 7;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.05329953134059906" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <LineChart fx:id="lineChart" layoutY="7.0" legendSide="RIGHT" prefHeight="292.0" prefWidth="679.0" styleClass="chart-series-line" stylesheets="@../assets/style/user.css" title="This Month Sessions" titleSide="BOTTOM">
+              <xAxis>
+                <NumberAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </Pane>
+      <Pane layoutX="679.0" layoutY="31.0" prefHeight="35.0" prefWidth="41.0" style="-fx-background-color: #ffffff; -fx-background-radius: 9;">
+         <children>
+            <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="11.0" layoutY="9.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/notification.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.030456852167844772" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <ImageView fitHeight="21.0" fitWidth="32.0" layoutX="443.0" layoutY="38.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/image/search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
