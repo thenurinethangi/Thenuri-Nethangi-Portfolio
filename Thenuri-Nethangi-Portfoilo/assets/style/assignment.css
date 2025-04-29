@@ -465,7 +465,7 @@
 
     #assignment-section-content-container {
         width: 100vw;
-        height: 82vh;
+        height: 400px;
         position: fixed;
         margin: 0 auto;
         /*right: 10vw;*/
@@ -478,7 +478,7 @@
         overflow: hidden;
         /*background-color: #D3E97A;*/
         margin: 0;
-        padding-right: 5em;
+        /*padding-right: 5em;*/
     }
 
     .assignment-cards-stack {
