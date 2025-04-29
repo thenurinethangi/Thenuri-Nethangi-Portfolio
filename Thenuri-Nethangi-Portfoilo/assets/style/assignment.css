@@ -58,7 +58,7 @@
     overflow: hidden;
 }
 
-/* Default stack arrangement */
+
 .assignment:nth-child(1) {
     transform: translateY(0) scale(1);
     z-index: 4;
@@ -121,46 +121,6 @@
 
 
 
-/* Next section styling */
-#next-section {
-    position: relative;
-    height: 100vh;
-    background: #4a6bff;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    z-index: 5; /* Lower than the assignment section */
-}
-
-.read-more {
-    display: inline-block;
-    background-color: #c15627;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-
-/*!* Additional styles for more realistic look *!*/
-/*body::-webkit-scrollbar {*/
-/*    width: 10px;*/
-/*}*/
-
-/*body::-webkit-scrollbar-track {*/
-/*    background: #4a0d28;*/
-/*}*/
-
-/*body::-webkit-scrollbar-thumb {*/
-/*    background-color: #fff;*/
-/*    border-radius: 10px;*/
-/*}*/
-
-
 @media all and (max-width: 1100px) {
 
 
@@ -168,13 +128,11 @@
         width: 87%;
         height: 80vh;
         position: fixed;
-        margin: 0 auto;
         left: 7vw;
-        top: 10vh; /* Position from top of viewport */
+        top: 10vh;
+        margin: 0 auto;
         perspective: 1000px;
-        /* Set explicit z-index to ensure it doesn't overlap next section */
         z-index: 10;
-        /* Add this to hide content when out of bounds */
         overflow: hidden;
         /*background-color: #D3E97A;*/
     }
@@ -192,7 +150,7 @@
         height: 90%;
         margin: 0 auto;
         left: 0;
-        right: 0;
+        right: 7vw;
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -251,7 +209,7 @@
         height: 90%;
         margin: 0 auto;
         left: 0;
-        right: 0;
+        right: 6vw;
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -273,7 +231,7 @@
         margin-bottom: 2rem;
         line-height: 1.6;
         color: #666;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -288,7 +246,7 @@
         height: 80vh;
         position: fixed;
         margin: 0 auto;
-        left: 5vw;
+        left: 0vw;
         top: 10vh; /* Position from top of viewport */
         perspective: 1000px;
         /* Set explicit z-index to ensure it doesn't overlap next section */
@@ -311,7 +269,7 @@
         height: 90%;
         margin: 0 auto;
         left: 0;
-        right: 0;
+        right: 14vw;
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -333,7 +291,7 @@
         margin-bottom: 2rem;
         line-height: 1.6;
         color: #666;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -349,7 +307,7 @@
         height: 80vh;
         position: fixed;
         margin: 0 auto;
-        left: 3vw;
+        left: 0vw;
         top: 10vh; /* Position from top of viewport */
         perspective: 1000px;
         /* Set explicit z-index to ensure it doesn't overlap next section */
@@ -357,6 +315,7 @@
         /* Add this to hide content when out of bounds */
         overflow: hidden;
         /*background-color: #D3E97A;*/
+        padding-right: 2em;
     }
 
     .assignment-cards-stack {
@@ -372,7 +331,7 @@
         height: 90%;
         margin: 0 auto;
         left: 0;
-        right: 0;
+        right: 30vw;
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -395,7 +354,7 @@
         margin-bottom: 2rem;
         line-height: 1.6;
         color: #666;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
 
@@ -417,7 +376,7 @@
 
     #assignment-section-content-container {
         width: 95%;
-        height: 80vh;
+        height: 82vh;
         position: fixed;
         margin: 0 auto;
         /*left: 10%;*/
@@ -428,6 +387,7 @@
         /* Add this to hide content when out of bounds */
         overflow: hidden;
         /*background-color: #D3E97A;*/
+        padding-right: 4em;
     }
 
     .assignment-cards-stack {
@@ -439,7 +399,7 @@
 
     .assignment {
         position: absolute;
-        width: 90%;
+        width: 100%;
         height: 90%;
         margin: 0 auto;
         left: 0;
@@ -466,7 +426,7 @@
         margin-bottom: 2rem;
         line-height: 1.6;
         color: #666;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
 
@@ -492,14 +452,16 @@
         z-index: 70;
         background-color: #25202F;
         /*border: 3px solid crimson;*/
+        padding-inline: 0;
     }
 
     #assignment-section-content-container {
-        width: 100%;
-        height: 80vh;
+        width: 100vw;
+        height: 82vh;
         position: fixed;
         margin: 0 auto;
-        left: 1vw;
+        /*right: 10vw;*/
+        /*left: 1vw;*/
         top: 10vh; /* Position from top of viewport */
         perspective: 1000px;
         /* Set explicit z-index to ensure it doesn't overlap next section */
@@ -507,6 +469,8 @@
         /* Add this to hide content when out of bounds */
         overflow: hidden;
         /*background-color: #D3E97A;*/
+        margin: 0;
+        padding-right: 5em;
     }
 
     .assignment-cards-stack {
@@ -518,8 +482,8 @@
 
     .assignment {
         position: absolute;
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -545,7 +509,7 @@
         margin-bottom: 2rem;
         line-height: 1.6;
         color: #666;
-        font-size: 0.7rem;
+        font-size: 0.85rem;
     }
 
 
