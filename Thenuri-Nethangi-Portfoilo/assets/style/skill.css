@@ -323,12 +323,15 @@
     }
 
     .side-link{
-        width: 140px;
-        margin-right: -2em;
+        width: 130px;
+        margin-left: 2em;
+        gap: 0;
     }
 
     .side-link>a{
+        width: 70px;
         font-size: 0.85rem;
+        /*background-color: #9747FF;*/
     }
 
     .side-link>img{
