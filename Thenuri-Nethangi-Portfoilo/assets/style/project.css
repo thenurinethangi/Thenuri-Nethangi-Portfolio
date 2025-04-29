@@ -1,4 +1,4 @@
-#project-section {
+ #project-section {
     width: 100%;
     background-color: #FFFFFF;
     position: relative;
@@ -370,3 +370,30 @@
         font-size: 1.6rem;
     }
 }
+
+
+ @media all and (max-width: 445px) {
+     .project-text-box {
+         width: 95%;
+         padding: 0.7em 1em;
+         gap: 0.5em;
+     }
+
+     .project-text-box > h3 {
+         font-size: 1rem;
+     }
+
+     .project-text-box > p {
+         font-size: 0.85rem;
+     }
+
+     .project-text-box > a > img{
+
+         width: 25px;
+
+     }
+
+     .title-desc {
+         font-size: 1.6rem;
+     }
+ }
