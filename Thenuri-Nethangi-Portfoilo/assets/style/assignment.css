@@ -395,7 +395,7 @@
         /* Add this to hide content when out of bounds */
         overflow: hidden;
         /*background-color: #D3E97A;*/
-        padding-right: 4em;
+        padding-right: 6em;
     }
 
     .assignment-cards-stack {
@@ -478,7 +478,7 @@
         overflow: hidden;
         /*background-color: #D3E97A;*/
         margin: 0;
-        /*padding-right: 2.5em;*/
+        transform: translateX(-17px);
     }
 
     .assignment-cards-stack {
@@ -494,7 +494,7 @@
         height: 100%;
         margin: 0 auto;
         left: 0;
-        right: 2vw;
+        right: 0;
         background-color: #fff;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
