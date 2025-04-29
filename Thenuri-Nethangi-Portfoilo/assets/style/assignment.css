@@ -499,6 +499,7 @@
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         display: flex;
+        flex-direction: column;
         padding-block: 0.7rem;
         padding-inline: 0.7rem;
         transform-origin: center center;
