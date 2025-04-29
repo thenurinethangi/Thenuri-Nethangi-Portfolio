@@ -76,6 +76,12 @@ body {
     font-family: "Red Hat Display", sans-serif;
     font-weight: 500;
     color: rgb(128, 128, 128);
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 .sub-titles{
@@ -84,6 +90,12 @@ body {
     font-family: "Red Hat Display", sans-serif;
     font-weight: 600;
     color: rgba(128, 128, 128, 0.89);
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 .description{
@@ -94,6 +106,12 @@ body {
     color: rgba(255, 255, 255, 0.87);
     line-height: 1.8;
     letter-spacing: 0.5px;
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-delay: 1.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 
@@ -104,6 +122,12 @@ body {
     /*height: 201px;*/
     border-radius: 50%;
     transition: transform 0.7s ease;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 #image-side{
@@ -126,6 +150,49 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 @keyframes morph {

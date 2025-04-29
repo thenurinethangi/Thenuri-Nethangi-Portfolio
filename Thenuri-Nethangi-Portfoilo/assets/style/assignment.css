@@ -84,6 +84,14 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+    opacity 0.5s ease;
+}
+
+.assignment-img:hover {
+
+    transform: scale(1.05);
+    opacity: 0.95;
 }
 
 .assignment-content {
