@@ -33,6 +33,33 @@
     transition: all var(--transition-medium);
 }
 
+#first-education {
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+#second-education {
+    animation-name: fadeInRight;
+    animation-duration: 0.5s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+#third-education {
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-delay: 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
 #education-section > div:hover {
     transform: translateX(10px);
     box-shadow: 0 4px 20px rgba(37, 32, 47, 0.67);
@@ -263,6 +290,61 @@
     }
 }
 
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 

@@ -165,6 +165,12 @@ body {
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 7px;
     position: relative;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 
@@ -190,6 +196,12 @@ body {
     right: 16px;
     top: 11px;
     opacity: 0.8;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 
@@ -213,6 +225,12 @@ body {
     letter-spacing: 0.5px;
     font-family: "Red Hat Display", sans-serif;
     margin-bottom: 2px;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 .project-description h3{
@@ -232,6 +250,12 @@ body {
     align-items: center;
     gap: 0.5em;
     margin-bottom: 24px;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 
@@ -243,6 +267,12 @@ body {
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.5;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 
@@ -254,6 +284,12 @@ body {
     align-items: center;
     gap: 0.5em;
     margin-bottom: 1.3em;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 .technology-stack>p{
@@ -261,8 +297,9 @@ body {
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.8);
     font-weight: 500;
-    padding: 2px;
+    padding: 3px;
     border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
 }
 
 
@@ -277,7 +314,58 @@ body {
     font-size: 0.75rem;
     color: #000000;
     display: none;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 
 @media screen and (max-width: 1138px) {

@@ -24,6 +24,12 @@
     font-size: 1.7rem;
     width: 290px;
     font-weight: 400;
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 #connect-section-content-container>button{
@@ -41,6 +47,12 @@
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(134, 67, 220, 0.3);
     transition: all 0.3s ease;
+    animation-name: fadeInRight;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 
@@ -70,6 +82,61 @@
     box-shadow: 0 2px 8px rgba(134, 67, 220, 0.4);
     background-color: #7438c0;
 }
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 @media all and (max-width: 1123px) {
 
