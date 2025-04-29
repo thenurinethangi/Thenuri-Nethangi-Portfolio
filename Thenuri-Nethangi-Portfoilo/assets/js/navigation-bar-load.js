@@ -11,11 +11,11 @@ function loadNavigationBar() {
     let anchors = [];
 
     let bar = document.createElement('div');
-    bar.style.width = '0%';
+    bar.style.width = '100vw';
     bar.style.height = '0vh';
     bar.style.backgroundColor = 'rgba(20, 17, 26)';
     bar.style.zIndex = '100000';
-    bar.style.position = 'absolute';
+    bar.style.position = 'fixed';
     bar.style.right = '0';
     bar.style.top = '0';
     bar.style.borderBottomLeftRadius = '1000%';
@@ -39,8 +39,8 @@ function loadNavigationBar() {
     function closeNavBar() {
         bar.animate(
             [
-                { width: "100%", height: '100vh', borderBottomLeftRadius: '0%', offset: 0 },
-                { width: "0%", height: '0vh', borderBottomLeftRadius: '1000%', offset: 1 },
+                { width: "100vw", height: '100vh', borderBottomLeftRadius: '0%', offset: 0 },
+                { width: "0vw", height: '0vh', borderBottomLeftRadius: '1000%', offset: 1 },
             ],
             {
                 duration: 800,
@@ -110,8 +110,8 @@ function loadNavigationBar() {
         function closeNavBarTwo() {
             bar.animate(
                 [
-                    { width: "100%", height: '100vh', borderBottomLeftRadius: '0%', offset: 0 },
-                    { width: "0%", height: '0vh', borderBottomLeftRadius: '1000%', offset: 1 },
+                    { width: "100vw", height: '100vh', borderBottomLeftRadius: '0%', offset: 0 },
+                    { width: "0vw", height: '0vh', borderBottomLeftRadius: '1000%', offset: 1 },
                 ],
                 {
                     duration: 100,
@@ -144,8 +144,8 @@ function loadNavigationBar() {
 
     bar.animate(
         [
-            { width: "0%", height: '0vh', borderBottomLeftRadius: '1000%', offset: 0 },
-            { width: "100%", height: '100vh', borderBottomLeftRadius: '0%', offset: 1 },
+            { width: "0vw", height: '0vh', borderBottomLeftRadius: '1000%', offset: 0 },
+            { width: "100vw", height: '100vh', borderBottomLeftRadius: '0%', offset: 1 },
         ],
         {
             duration: 800,
