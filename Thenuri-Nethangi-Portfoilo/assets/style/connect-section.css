@@ -50,7 +50,7 @@
     animation-name: fadeInRight;
     animation-duration: 0.5s;
     animation-delay: 0.5s;
-    animation-iteration-count: 2;
+    animation-iteration-count: 10;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
 }
