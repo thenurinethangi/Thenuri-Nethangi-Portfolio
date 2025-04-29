@@ -465,7 +465,7 @@
 
     #assignment-section-content-container {
         width: 100vw;
-        height: 85vh;
+        height: 70vh;
         position: fixed;
         margin: 0 auto;
         /*right: 10vw;*/
@@ -511,7 +511,7 @@
 
     .assignment-img {
         width: 93%;
-        height: 67%;
+        height: 50%;
         object-fit: cover;
         border-radius: 10px;
         transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
