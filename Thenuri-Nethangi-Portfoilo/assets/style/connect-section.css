@@ -52,8 +52,7 @@
     animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    0
+    animation-timing-function: ease;
 }
 
 
