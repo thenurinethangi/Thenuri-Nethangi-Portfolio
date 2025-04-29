@@ -507,6 +507,14 @@
         overflow: hidden;
     }
 
+    .assignment-img {
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+        opacity 0.5s ease;
+    }
 
     .assignment h3 {
         font-size: 1.3rem;
@@ -523,7 +531,7 @@
 
 
     .assignment-content {
-        width: 50%;
+        width: 90%;
         padding-left: 0.7rem;
         display: flex;
         flex-direction: column;
