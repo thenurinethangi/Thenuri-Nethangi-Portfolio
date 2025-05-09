@@ -204,7 +204,6 @@
         width: 95%;
         height: 65vh;
         top: 10vh;
-        /* Remove the negative transform that was causing alignment issues */
         transform: translateX(-50%);
     }
 
