@@ -751,15 +751,15 @@ body {
     }
 
     #skill-bouncing-side {
-        width: 70%;
+        width: 90%;
         height: 500px;
         left: 30vw;
         top: 8em;
     }
 
     .ball {
-        width: 55px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
 
     }
 
@@ -797,14 +797,14 @@ body {
     }
 
     #skill-bouncing-side {
-        width: 71%;
+        width: 100%;
         height: 500px;
         left: 29vw;
     }
 
     .ball {
-        width: 50px;
-        height: 50px;
+        width: 57px;
+        height: 57px;
 
     }
 
@@ -834,19 +834,19 @@ body {
     }
 
     #skill-bouncing-side {
-        width: 75%;
+        width: 100%;
         left: 25vw;
     }
 
     .ball {
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
 
     }
 
     .ball>img{
 
-        width: 22px;
+        width: 23px;
     }
 
     .skill-page-header>p{
@@ -882,14 +882,14 @@ body {
     }
 
     .ball {
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
 
     }
 
     .ball>img{
 
-        width: 21px;
+        width: 23px;
     }
 
     .skill-page-header>p{
