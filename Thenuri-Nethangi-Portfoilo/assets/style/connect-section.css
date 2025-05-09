@@ -32,6 +32,7 @@
     animation-timing-function: ease-out;
 }
 
+
 #connect-section-content-container>div>button{
 
     background-color: #8643DC;
@@ -257,6 +258,8 @@
 
     #connect-section-content-container>div>p{
 
+        /*background-color: #9747FF;*/
+        width: 200px;
         font-size: 1.2rem;
     }
 
@@ -269,6 +272,36 @@
     }
 }
 
+
+@media all and (max-width: 385px) {
+
+    #connect-section{
+
+        padding-block: 7em;
+    }
+
+    #connect-section-content-container{
+
+        padding: 1.5em 1.5em;
+        gap: 1em;
+    }
+
+    #connect-section-content-container>div>p{
+
+        /*background-color: #9747FF;*/
+        width: 200px;
+        font-size: 1rem;
+    }
+
+    #connect-section-content-container>div>button{
+
+        padding: 10px;
+        width: 85px;
+        height: 40px;
+        font-size: 0.8rem;
+        margin-right: 20px;
+    }
+}
 
 
 
