@@ -8,6 +8,7 @@
     <meta name="author" content="Thenuri">
     <meta name="description" content="I am Thenuri Nethangi, Welcome to my portfolio, a showcase of my journeys and achievements, I'm a passionate web developer dedicated to creating innovative web pages.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/hero-section.css">
     <link rel="stylesheet" href="assets/style/connect-section.css">
     <link rel="stylesheet" href="assets/style/footer.css">
@@ -72,25 +73,44 @@
     <section id="connect-section">
 
         <div id="connect-section-content-container">
-            <p>Got A Project In Mind ? Let’s Talk</p>
-            <button>Let's Talk</button>
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <p>Got A Project In Mind ? Let’s Talk</p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000">
+                <button>Let's Talk</button>
+            </div>
         </div>
 
     </section>
 
     <!--footer-->
     <section id="footer-section">
-
-        <p id="footer-main-text">Let’s be Friends</p>
-        <div id="social-link">
-            <a href="https://github.com/thenurinethangi" target="_blank"><img src="assets/image/footer-section-image/footer-1.png" alt="github icon" width="42px"></a>
-            <a href="https://www.linkedin.com/in/thenuri-nethangi-nanayakkara-aa6816297/" target="_blank"><img src="assets/image/footer-section-image/footer-2.png" alt="integrations icon" width="42px"></a>
-            <a href="https://www.linkedin.com/in/thenuri-nethangi-nanayakkara-aa6816297/" target="_blank"><img src="assets/image/footer-section-image/footer-3.png" alt="linkedin icon" width="42px"></a>
+        <p id="footer-main-text" data-aos="fade-up" data-aos-duration="800">Let's be Friends</p>
+        <div id="social-link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <a href="https://github.com/thenurinethangi" target="_blank" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+                <img src="assets/image/footer-section-image/footer-1.png" alt="github icon" width="42px">
+            </a>
+            <a href="https://www.linkedin.com/in/thenuri-nethangi-nanayakkara-aa6816297/" target="_blank" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+                <img src="assets/image/footer-section-image/footer-2.png" alt="integrations icon" width="42px">
+            </a>
+            <a href="https://www.linkedin.com/in/thenuri-nethangi-nanayakkara-aa6816297/" target="_blank" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
+                <img src="assets/image/footer-section-image/footer-3.png" alt="linkedin icon" width="42px">
+            </a>
         </div>
-        <p id="copyright-text"><span>&copy;2025 Thenuri Nethangi</span> All Rights Reserved.</p>
-
+        <p id="copyright-text" data-aos="fade" data-aos-duration="1000" data-aos-delay="600"><span>&copy;2025 Thenuri Nethangi</span> All Rights Reserved.</p>
     </section>
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        AOS.init({
+            offset: 20,
+            // easing: 'ease-in-out',
+            // mirror: true,
+            once: false
+        });
+    </script>
     <script src="assets/js/navigation-bar-load.js"></script>
 </body>
 </html>

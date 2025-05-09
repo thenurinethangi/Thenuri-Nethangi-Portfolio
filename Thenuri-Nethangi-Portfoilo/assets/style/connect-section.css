@@ -19,7 +19,7 @@
 }
 
 
-#connect-section-content-container>p{
+#connect-section-content-container>div>p{
 
     font-size: 1.7rem;
     width: 290px;
@@ -32,7 +32,7 @@
     animation-timing-function: ease-out;
 }
 
-#connect-section-content-container>button{
+#connect-section-content-container>div>button{
 
     background-color: #8643DC;
     border: none;
@@ -53,10 +53,47 @@
     animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
+    transform-origin: top center;
+    animation: swing 2s ease-out infinite;
 }
 
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(10deg);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(8deg);
+    }
+    40% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    60% {
+        transform: rotate(-5deg);
+    }
+    70% {
+        transform: rotate(3deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
-#connect-section-content-container > button::before {
+#connect-section-content-container > div > button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -73,11 +110,11 @@
     transition: all 0.6s ease;
 }
 
-#connect-section-content-container > button:hover::before {
+#connect-section-content-container > div > button:hover::before {
     left: 100%;
 }
 
-#connect-section-content-container > button:active {
+#connect-section-content-container > div > button:active {
     transform: translateY(1px);
     box-shadow: 0 2px 8px rgba(134, 67, 220, 0.4);
     background-color: #7438c0;
@@ -163,12 +200,12 @@
         padding: 1.5em 5em;
     }
 
-    #connect-section-content-container>p{
+    #connect-section-content-container>div>p{
 
         font-size: 1.5rem;
     }
 
-    #connect-section-content-container>button{
+    #connect-section-content-container>div>button{
 
         padding: 10px;
         width: 105px;
@@ -190,12 +227,12 @@
         padding: 1.5em 4em;
     }
 
-    #connect-section-content-container>p{
+    #connect-section-content-container>div>p{
 
         font-size: 1.4rem;
     }
 
-    #connect-section-content-container>button{
+    #connect-section-content-container>div>button{
 
         padding: 10px;
         width: 100px;
@@ -218,12 +255,12 @@
         gap: 1em;
     }
 
-    #connect-section-content-container>p{
+    #connect-section-content-container>div>p{
 
         font-size: 1.2rem;
     }
 
-    #connect-section-content-container>button{
+    #connect-section-content-container>div>button{
 
         padding: 10px;
         width: 90px;

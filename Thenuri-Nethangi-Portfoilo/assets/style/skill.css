@@ -99,13 +99,13 @@
     opacity: 0;
 }
 
-/* Hover animations for skill boxes - enhanced */
+
 .skill:hover {
     transform: scale(1.2) translateY(-15px) translateZ(30px);
     z-index: 200;
 }
 
-/* Enhanced shine effect */
+
 .skill:hover::before {
     opacity: 1;
     top: -50%;
@@ -117,9 +117,10 @@
     opacity: 0.6;
 }
 
-/* Floating animation on hover */
+
 .skill:hover {
-    animation: floatEffect 3s ease-in-out infinite;
+    /*animation: floatEffect 3s ease-in-out infinite;*/
+    animation: rubberBand 2s ease-in-out 1;
 }
 
 @keyframes floatEffect {
@@ -134,7 +135,7 @@
     }
 }
 
-/* Content animations */
+
 .skill:hover img:not(.skill-box-background) {
     transform: scale(1.25) translateZ(20px) rotateY(360deg);
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
@@ -175,7 +176,7 @@
     transition: all 0.4s ease;
 }
 
-/* Restored original shadow colors */
+
 .java {
     box-shadow: 0 10px 50px rgba(255, 204, 204, 0.5);
 }
@@ -239,7 +240,7 @@
     box-shadow: 0 15px 60px rgba(230, 230, 255, 0.8);
 }
 
-/* Initial entrance animations */
+
 #skill-container .skill {
     opacity: 0;
 }
@@ -266,7 +267,31 @@
     }
 }
 
-/* Enhanced active state */
+@keyframes rubberBand {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
 .skill:active {
     transform: scale(0.9) !important;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;

@@ -286,7 +286,12 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 0.8s forwards 4.1s;
-    transition-duration: 3s;
+    transition-duration: 0.7s;
+}
+
+#name-head-text:hover{
+
+    letter-spacing: 1.5px;
 }
 
 #main-content > p:hover {
@@ -351,6 +356,10 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(134, 67, 220, 0.3);
     transition: all 0.3s ease;
+    animation-name: tada;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 }
 
 #hero-section-btn > a > button:hover {
@@ -383,6 +392,24 @@ body {
     transform: translateY(1px);
     box-shadow: 0 2px 8px rgba(134, 67, 220, 0.4);
     background-color: #7438c0;
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
 }
 
 #hero-section-btn > div > a {
@@ -515,7 +542,6 @@ body {
         transform: translateY(-170px);
     }
 }
-
 
 
 /* media query */
