@@ -846,7 +846,6 @@
             document.getElementById('landing').style.display = 'none';
         }, 3000);
 
-        // Intersection Observer for scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -855,7 +854,6 @@
             });
         }, { threshold: 0.1 });
 
-        // Elements to observe
         const elementsToObserve = [
             '.titles',
             '#my-image-box',
@@ -866,14 +864,12 @@
             '#third-education'
         ];
 
-        // Observe each element
         elementsToObserve.forEach(selector => {
             document.querySelectorAll(selector).forEach(element => {
                 observer.observe(element);
             });
         });
 
-        // Add visible class to service boxes with delay
         const serviceBoxes = document.querySelectorAll('.service-box');
         serviceBoxes.forEach((box, index) => {
             setTimeout(() => {
@@ -881,16 +877,13 @@
             }, index * 200);
         });
 
-        // Menu button click event
         const menuButton = document.getElementById('menu');
         if (menuButton) {
             menuButton.addEventListener('click', function() {
-                // Add your menu functionality here
                 console.log('Menu clicked');
             });
         }
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -903,7 +896,6 @@
             });
         });
 
-        // Parallax effect for hero section
         window.addEventListener('scroll', function() {
             const scrollPosition = window.pageYOffset;
             const heroBackground = document.getElementById('hero-section-bg');
