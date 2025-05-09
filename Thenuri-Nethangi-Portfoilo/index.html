@@ -608,7 +608,7 @@
 
 <!-- Assignment section -->
 <section id="assignment-section">
-    <div id="assignment-section-content-container">
+    <div id="assignment-section-content-container" data-aos="fade-up">
         <div class="assignment-cards-stack">
             <div class="assignment">
                 <img class="assignment-img" src="assets/image/assignment-section-image/ux_ui_design_322afd6292.webp" alt="assignment image">
@@ -928,104 +928,112 @@
 <!--assignment-->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    const assignmentSection = document.getElementById('assignment-section');
-    const contentContainer = document.getElementById('assignment-section-content-container');
-    const cards = document.querySelectorAll('.assignment');
-    const totalCards = cards.length;
+        const assignmentSection = document.getElementById('assignment-section');
+        const contentContainer = document.getElementById('assignment-section-content-container');
+        const cards = document.querySelectorAll('.assignment');
+        const totalCards = cards.length;
 
-    // Function to handle scroll events
-    function handleScroll() {
-        // Get scroll position and element positions
-        const scrollY = window.scrollY;
-        const assignmentSectionTop = assignmentSection.offsetTop;
-        const assignmentSectionBottom = assignmentSectionTop + assignmentSection.offsetHeight;
-        const assignmentSectionHeight = assignmentSection.offsetHeight;
-        const viewportHeight = window.innerHeight;
+        // Function to handle scroll events
+        function handleScroll() {
+            // Get scroll position and element positions
+            const scrollY = window.scrollY;
+            const assignmentSectionTop = assignmentSection.offsetTop;
+            const assignmentSectionBottom = assignmentSectionTop + assignmentSection.offsetHeight;
+            const assignmentSectionHeight = assignmentSection.offsetHeight;
+            const viewportHeight = window.innerHeight;
 
-        // Calculate our position within the assignment section
-        const scrollRange = assignmentSectionHeight - viewportHeight;
-        const relativeScrollPosition = scrollY - assignmentSectionTop;
+            // Calculate our position within the assignment section
+            const scrollRange = assignmentSectionHeight - viewportHeight;
+            const relativeScrollPosition = scrollY - assignmentSectionTop;
 
-        // Determine if we're inside the assignment section
-        const isInAssignmentSection = scrollY >= assignmentSectionTop && scrollY < assignmentSectionBottom - viewportHeight;
-        const isExitingAssignmentSection = scrollY >= assignmentSectionBottom - viewportHeight && scrollY < assignmentSectionBottom;
+            // Determine if we're inside the assignment section
+            const isInAssignmentSection = scrollY >= assignmentSectionTop && scrollY < assignmentSectionBottom - viewportHeight;
+            const isExitingAssignmentSection = scrollY >= assignmentSectionBottom - viewportHeight && scrollY < assignmentSectionBottom;
 
-        // Fixed position when inside assignment section
-        if (isInAssignmentSection) {
-            contentContainer.style.position = 'fixed';
-            contentContainer.style.top = '10vh';
-            contentContainer.style.bottom = 'auto';
+            // Fixed position when inside assignment section
+            if (isInAssignmentSection) {
+                contentContainer.style.position = 'fixed';
+                contentContainer.style.top = '10vh';
+                contentContainer.style.bottom = 'auto';
+                // Always maintain center alignment
+                contentContainer.style.left = '50%';
+                contentContainer.style.transform = 'translateX(-50%)';
 
-            // Calculate which card should be visible based on scroll
-            const scrollProgress = relativeScrollPosition / scrollRange;
+                // Calculate which card should be visible based on scroll
+                const scrollProgress = relativeScrollPosition / scrollRange;
 
-            // Calculate active card index
-            const currentCardIndex = Math.min(
-                Math.floor(scrollProgress * (totalCards + 1)),
-                totalCards - 1
-            );
+                // Calculate active card index
+                const currentCardIndex = Math.min(
+                    Math.floor(scrollProgress * (totalCards + 1)),
+                    totalCards - 1
+                );
 
-            // Apply transformations to cards
-            cards.forEach((card, index) => {
-                if (index < currentCardIndex) {
-                    // Cards that should be fully out of view
-                    card.style.transform = `translateY(${-100 * (index - currentCardIndex)}%) scale(${1 - (currentCardIndex - index) * 0.03})`;
-                    card.style.opacity = "0";
-                    card.style.zIndex = totalCards - index;
-                } else {
-                    // Default stacked position with slight offset
-                    const offset = index - currentCardIndex;
-                    card.style.transform = `translateY(${-15 * offset}px) scale(${1 - offset * 0.03})`;
-                    card.style.opacity = "1";
-                    card.style.zIndex = totalCards - index;
-                }
-            });
-        }
-        // Transition to sticky or relative as we exit the section
-        else if (isExitingAssignmentSection) {
-            // Calculate exit progress (0 = just starting to exit, 1 = fully exited)
-            const exitProgress = (scrollY - (assignmentSectionBottom - viewportHeight)) / viewportHeight;
-
-            // Keep fixed but start fading out
-            contentContainer.style.position = 'fixed';
-            contentContainer.style.top = '10vh';
-            contentContainer.style.opacity = (1 - exitProgress).toString();
-
-            // Move cards down and away
-            cards.forEach((card, index) => {
-                const baseOffset = -15 * (index);
-                const exitOffset = 50 * exitProgress;
-                card.style.transform = `translateY(${baseOffset + exitOffset}px) scale(${(1 - index * 0.03) * (1 - exitProgress * 0.5)})`;
-                card.style.opacity = (1 - exitProgress).toString();
-            });
-        }
-        // Before or after assignment section
-        else {
-            // If we're past the assignment section
-            if (scrollY >= assignmentSectionBottom) {
-                contentContainer.style.position = 'relative';
-                contentContainer.style.top = (assignmentSectionHeight - viewportHeight) + 'px';
-                contentContainer.style.opacity = "0";
-                contentContainer.style.left = '10vw';
-                // contentContainer.style.transform = 'translate(0px,0px)'
+                // Apply transformations to cards
+                cards.forEach((card, index) => {
+                    if (index < currentCardIndex) {
+                        // Cards that should be fully out of view
+                        card.style.transform = `translateY(${-100 * (index - currentCardIndex)}%) scale(${1 - (currentCardIndex - index) * 0.03})`;
+                        card.style.opacity = "0";
+                        card.style.zIndex = totalCards - index;
+                    } else {
+                        // Default stacked position with slight offset
+                        const offset = index - currentCardIndex;
+                        card.style.transform = `translateY(${-15 * offset}px) scale(${1 - offset * 0.03})`;
+                        card.style.opacity = "1";
+                        card.style.zIndex = totalCards - index;
+                    }
+                });
             }
-            // If we're before the assignment section
+            // Transition to sticky or relative as we exit the section
+            else if (isExitingAssignmentSection) {
+                // Calculate exit progress (0 = just starting to exit, 1 = fully exited)
+                const exitProgress = (scrollY - (assignmentSectionBottom - viewportHeight)) / viewportHeight;
+
+                // Keep fixed but start fading out
+                contentContainer.style.position = 'fixed';
+                contentContainer.style.top = '10vh';
+                contentContainer.style.opacity = (1 - exitProgress).toString();
+                // Maintain center alignment
+                contentContainer.style.left = '50%';
+                contentContainer.style.transform = 'translateX(-50%)';
+
+                // Move cards down and away
+                cards.forEach((card, index) => {
+                    const baseOffset = -15 * (index);
+                    const exitOffset = 50 * exitProgress;
+                    card.style.transform = `translateY(${baseOffset + exitOffset}px) scale(${(1 - index * 0.03) * (1 - exitProgress * 0.5)})`;
+                    card.style.opacity = (1 - exitProgress).toString();
+                });
+            }
+            // Before or after assignment section
             else {
-                contentContainer.style.position = 'relative';
-                contentContainer.style.top = '0';
-                contentContainer.style.opacity = "1";
-                contentContainer.style.left = '10vw';
-                // contentContainer.style.transform = 'translate(-70px,50px)'
+                // If we're past the assignment section
+                if (scrollY >= assignmentSectionBottom) {
+                    contentContainer.style.position = 'relative';
+                    contentContainer.style.top = (assignmentSectionHeight - viewportHeight) + 'px';
+                    contentContainer.style.opacity = "0";
+                    // Maintain center alignment
+                    contentContainer.style.left = '50%';
+                    contentContainer.style.transform = 'translateX(-50%)';
+                }
+                // If we're before the assignment section
+                else {
+                    contentContainer.style.position = 'relative';
+                    contentContainer.style.top = '0';
+                    contentContainer.style.opacity = "1";
+                    // Maintain center alignment
+                    contentContainer.style.left = '50%';
+                    contentContainer.style.transform = 'translateX(-50%)';
+                }
             }
         }
-    }
 
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
 
-    // Initial call to set positions
-    handleScroll();
-});
+        // Initial call to set positions
+        handleScroll();
+    });
 </script>
 
 <script src="assets/js/navigation-bar-load.js"></script>
