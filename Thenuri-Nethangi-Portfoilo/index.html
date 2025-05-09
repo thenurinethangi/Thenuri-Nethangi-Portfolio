@@ -933,50 +933,39 @@
         const cards = document.querySelectorAll('.assignment');
         const totalCards = cards.length;
 
-        // Function to handle scroll events
         function handleScroll() {
-            // Get scroll position and element positions
             const scrollY = window.scrollY;
             const assignmentSectionTop = assignmentSection.offsetTop;
             const assignmentSectionBottom = assignmentSectionTop + assignmentSection.offsetHeight;
             const assignmentSectionHeight = assignmentSection.offsetHeight;
             const viewportHeight = window.innerHeight;
 
-            // Calculate our position within the assignment section
             const scrollRange = assignmentSectionHeight - viewportHeight;
             const relativeScrollPosition = scrollY - assignmentSectionTop;
 
-            // Determine if we're inside the assignment section
             const isInAssignmentSection = scrollY >= assignmentSectionTop && scrollY < assignmentSectionBottom - viewportHeight;
             const isExitingAssignmentSection = scrollY >= assignmentSectionBottom - viewportHeight && scrollY < assignmentSectionBottom;
 
-            // Fixed position when inside assignment section
             if (isInAssignmentSection) {
                 contentContainer.style.position = 'fixed';
                 contentContainer.style.top = '10vh';
                 contentContainer.style.bottom = 'auto';
-                // Always maintain center alignment
                 contentContainer.style.left = '50%';
                 contentContainer.style.transform = 'translateX(-50%)';
 
-                // Calculate which card should be visible based on scroll
                 const scrollProgress = relativeScrollPosition / scrollRange;
 
-                // Calculate active card index
                 const currentCardIndex = Math.min(
                     Math.floor(scrollProgress * (totalCards + 1)),
                     totalCards - 1
                 );
 
-                // Apply transformations to cards
                 cards.forEach((card, index) => {
                     if (index < currentCardIndex) {
-                        // Cards that should be fully out of view
                         card.style.transform = `translateY(${-100 * (index - currentCardIndex)}%) scale(${1 - (currentCardIndex - index) * 0.03})`;
                         card.style.opacity = "0";
                         card.style.zIndex = totalCards - index;
                     } else {
-                        // Default stacked position with slight offset
                         const offset = index - currentCardIndex;
                         card.style.transform = `translateY(${-15 * offset}px) scale(${1 - offset * 0.03})`;
                         card.style.opacity = "1";
@@ -984,20 +973,15 @@
                     }
                 });
             }
-            // Transition to sticky or relative as we exit the section
             else if (isExitingAssignmentSection) {
-                // Calculate exit progress (0 = just starting to exit, 1 = fully exited)
                 const exitProgress = (scrollY - (assignmentSectionBottom - viewportHeight)) / viewportHeight;
 
-                // Keep fixed but start fading out
                 contentContainer.style.position = 'fixed';
                 contentContainer.style.top = '10vh';
                 contentContainer.style.opacity = (1 - exitProgress).toString();
-                // Maintain center alignment
                 contentContainer.style.left = '50%';
                 contentContainer.style.transform = 'translateX(-50%)';
 
-                // Move cards down and away
                 cards.forEach((card, index) => {
                     const baseOffset = -15 * (index);
                     const exitOffset = 50 * exitProgress;
@@ -1005,33 +989,26 @@
                     card.style.opacity = (1 - exitProgress).toString();
                 });
             }
-            // Before or after assignment section
             else {
-                // If we're past the assignment section
                 if (scrollY >= assignmentSectionBottom) {
                     contentContainer.style.position = 'relative';
                     contentContainer.style.top = (assignmentSectionHeight - viewportHeight) + 'px';
                     contentContainer.style.opacity = "0";
-                    // Maintain center alignment
                     contentContainer.style.left = '50%';
                     contentContainer.style.transform = 'translateX(-50%)';
                 }
-                // If we're before the assignment section
                 else {
                     contentContainer.style.position = 'relative';
                     contentContainer.style.top = '0';
                     contentContainer.style.opacity = "1";
-                    // Maintain center alignment
                     contentContainer.style.left = '50%';
                     contentContainer.style.transform = 'translateX(-50%)';
                 }
             }
         }
 
-        // Add scroll event listener
         window.addEventListener('scroll', handleScroll);
 
-        // Initial call to set positions
         handleScroll();
     });
 </script>
